@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .custom-transform {
+    transform: translateX(381px) translateY(0) translateZ(0) !important;
+} */
+
+
+/* Banner About*/
+
+.banner_about {
+    background: url('/asset/about/abg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg_banner {
+    background: url('/asset/home/Landingpagebanner.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.banner_EC {
+    background: url('/asset/experience_center/xperienceCenter.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.swiper-button-next:after {
+    font-family: swiper-icons;
+    font-size: 0px;
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+}
+
+/* globals.css */
+.sidebar-transition {
+    will-change: transform;
+}
+
+.banner_BS {
+    background: url('/asset/brand-story/brandstorybg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1700) {
+    .banner_BS {
+        background: url('/asset/brand-story/brandstorybg.webp');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    .banner_BS {
+        background: url('/asset/brand-story/brandstorymob.webp');
+        background-size: contain;
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .banner_EC {
+        background: url('/asset/experience_center/ec_mobile.webp');
+        background-size: cover;
+        background-position: center !important;
+        height: 100vh;
+        background-repeat: no-repeat;
+    }
+}
+
+/* Add in global CSS or a Tailwind plugin setup */
+.custom-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    opacity: 1;
+    transition: opacity 0.3s;
+    border-radius: 1px;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: #000;
+}
+
+.custom-swiper-pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: #FFF1EA;
+}
+
+.carousel-3d {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+
+
+.swiper-button-prev,
+.swiper-button-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: white !important;
+    font-size: 20px !important;
+    border-radius: 100%;
+
+    width: 40px !important;
+    height: 40px !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.swiper-button-prev {
+    top: 470px !important;
+    left: 10px !important;
+}
+
+.swiper-button-next {
+    top: 470px !important;
+    left: 60px !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    /* font-size: 22px !important; */
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+}
+
+.swiper-pagination {
+    display: none;
+    position: absolute;
+    text-align: center;
+    transition: 300ms opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10 !important;
+    bottom: 39px !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and(max-width:1500px) {
+    .xxltop-50 {
+        top: -20%;
+    }
+}
+
+@font-face {
+    font-family: 'Onest';
+    src: url('../webfonts/Onest-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Onest';
+    src: url('../webfonts/Onest-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Onest';
+    src: url('../webfonts/Onest-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Onest';
+    src: url('../webfonts/Onest-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Onest';
+    src: url('../webfonts/Onest-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Onest';
+    src: url('../webfonts/Onest-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Onest';
+    src: url('../webfonts/Onest-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Onest';
+    src: url('../webfonts/Onest-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Onest';
+    src: url('../webfonts/Onest-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
