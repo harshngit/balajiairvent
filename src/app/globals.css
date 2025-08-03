@@ -9,21 +9,72 @@
 
 /* Banner About*/
 
-.banner_about {
-    background: url('/asset/about/abg.webp');
+
+.banner_cta {
+    background: url('/asset/home/cta.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.bg_banner {
-    background: url('/asset/home/Landingpagebanner.webp');
+.bg_bannerhome {
+    background: url('/asset/home/home.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    height: 130vh;
+    margin-top: -200px;
 }
 
+.writing-vertical-lr {
+    writing-mode: vertical-lr;
+}
 
+.page-wrapper {
+    height: 300vh;
+    /* Scroll length */
+    width: 100%;
+}
+
+.container {
+    position: sticky;
+    top: calc(50% - 10rem);
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.cards {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container {
+    height: 300vh;
+    /* or: calc(100vh * number of cards) */
+    position: relative;
+}
+
+.h_scroll {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 20rem;
+    height: 20rem;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .banner_EC {
     background: url('/asset/experience_center/xperienceCenter.webp');

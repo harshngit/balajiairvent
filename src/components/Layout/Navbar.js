@@ -6,10 +6,8 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 const navItems = [
   { label: "About Us", href: "#" },
-  { label: "Products", href: "#" },
   {
-    label: "Projects & Collaborations",
-    href: "#",
+    label: "Products", href: "#",
     children: [
       { label: "All", href: "#project1" },
       { label: "Data Centre", href: "#project2" },
@@ -18,6 +16,12 @@ const navItems = [
       { label: "Fans & Ventilation Accessories", href: "#collab1" },
       { label: "Fire Doors", href: "#collab1" },
     ]
+
+  },
+  {
+    label: "Projects & Collaborations",
+    href: "#",
+
   },
   { label: "Contact Us", href: "#" },
 ];
@@ -65,7 +69,7 @@ export default function NavbarCustom() {
         </Link>
 
         {/* Navigation Menu */}
-        <ul className={`hidden md:flex items-center gap-6 px-6 py-2 rounded-full ${scrolling ? "bg-white shadow-lg border-gray-200" : "bg-[#ffffff33] text-white"}`}>
+        <ul className={`hidden md:flex items-center justify-center px-6 py-2 rounded-full ${scrolling ? "bg-white shadow-lg border-gray-200" : "bg-[#ffffff33] text-white"}`}>
           {navItems.map((item, idx) => (
             <li
               key={idx}
@@ -82,7 +86,7 @@ export default function NavbarCustom() {
 
               {/* Show dropdown with delay when "Projects & Collaborations" is hovered */}
               {item.children && activeDropdown === idx && (
-                <ul className="absolute font-onest font-regular bg-[#ffffff33] text-white left-0 top-8 mt-2 space-y-2 px-[16px] py-[10px] shadow-lg rounded-lg">
+                <ul className={`absolute font-onest font-regular left-0 top-8 mt-2 space-y-2 px-[16px] py-[10px] w-[200px] shadow-lg rounded-lg ${scrolling ? "bg-white text-black" : "bg-[#ffffff33] text-white"}`}>
                   {item.children.map((child, idx) => (
                     <li key={idx}>
                       <Link href={child.href} className="hover:text-[#90C4FD]">

@@ -9,6 +9,9 @@ export default withMT({
   ],
   theme: {
     extend: {
+      writingMode: {
+        'vertical-lr': 'vertical-lr',
+      },
       fontFamily: {
         onest: ['Onest', 'sans-serif'],  // Default font
       },
@@ -40,8 +43,9 @@ export default withMT({
       },
       colors: {
         primary: "#1666B6",
-        secondary: "#11120D",
-        lightgrey: "#2F3435",
+        secondary: "#0F2850",
+        orange: "#E77853",
+        font: "#F0F0F0"
       },
     },
   },

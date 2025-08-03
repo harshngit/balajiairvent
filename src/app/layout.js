@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Hotjar from "@hotjar/browser";
 import Script from "next/script";
+import Scrollup from "@/components/Layout/Scrollup";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -76,7 +77,9 @@ export default function RootLayout({ children }) {
   type="image/png"
   sizes="any"
     /> */}
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>{children}
+        <Scrollup />
+      </body>
 
     </html>
   );

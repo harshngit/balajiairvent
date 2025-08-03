@@ -1,14 +1,41 @@
+'use client'
 import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+
 
 const AboutHome = () => {
 	return (
-		<div className='w-full lg:h-[516px] h-auto py-5 mt-[20px] lg:mt-0 px-5 flex justify-center items-center lg:gap-[38px] flex-col gap-[15px]'>
-			<div className=''>
-				<h2 className='font-helvetica font-normal lg:text-[36px] text-[22px] text-lightgrey'> We are the guardians of your homes & hearts </h2>
-			</div>
-			<div className='lg:w-[720px] w-full'>
-				<p className='text-[20px] font-helvetica text-lightgrey font-thin tracking-wide'>HAV'DOR is a luxury Indian brand specializing in the design and manufacturing of high-end wooden doors, tailored for discerning individuals who seek both quality and sophistication.</p>
-				<p className='text-[20px] font-helvetica text-lightgrey font-thin tracking-wide'>As a pioneer in the premium Indian market, HAV'DOR combines excetional design, exquisite craftsmanship, and an unparalleled attention to detail to deliver unique door solutions for mansions, villas, boutique, hotels, and high-end commercial spaces. HAV'DOR is more than a door designer; it is a guardian of homes and hearts. Each door embodies elegance, warmth, and a sense of belonging, where life and art converge</p>
+		<div className="bg-[#0F2850] px-6 py-12 w-full">
+			<div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-start gap-10">
+				{/* Left: Image + Button */}
+				<div className="md:w-[30%] w-full">
+					<Image
+						src={"/asset/home/abouthome.webp"}
+						alt="About Us Image"
+						width={426}
+						height={370}
+						className="rounded-xl w-full h-auto object-cover"
+					/>
+
+					<Link href="/about" className="inline-block mt-4">
+						<button className="flex items-center gap-4 border border-[#F0F0F0] text-[16px] w-[139px] text-[#F0F0F0] pl-[20px] pr-[7px] py-2 rounded-full hover:bg-primary hover:text-[#F0F0F0] transition-all text-sm">
+							About US
+							<Image
+								src={"/asset/rightotline.png"}
+								width={28}
+								height={28}
+							/>
+						</button>
+					</Link>
+				</div>
+
+				{/* Right: Text with full gradient */}
+				<div className="md:w-[70%] w-full">
+					<p className="lg:text-[32px] lg:w-[946px] lg:h-auto h-[300px] leading-relaxed bg-gradient-to-b from-[#F0F0F0] via-[#E77853] to-[#0F2850] text-transparent bg-clip-text">
+						Balaji Airvent Systems Private Limited is a Quality and Customer Conscious Company with long experience in Metal and Air Distribution field. We work with big OEMs and deeply understand the importance of quality and prompt services. Promoters have long & extensive Manufacturing and Commercial experience of this line of activity having worked for a leading Company in this field and Aluminium field for 16 years. We have deep technical and product designing knowledge.
+					</p>
+				</div>
 			</div>
 		</div>
 	)
