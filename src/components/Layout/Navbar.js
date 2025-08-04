@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 const navItems = [
-  { label: "About Us", href: "#" },
+  { label: "About Us", href: "/aboutus" },
   {
     label: "Products", href: "#",
     children: [

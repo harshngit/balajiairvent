@@ -13,9 +13,8 @@ export default withMT({
         'vertical-lr': 'vertical-lr',
       },
       fontFamily: {
-        onest: ['Onest', 'sans-serif'],  // Default font
+        onest: ['Onest', 'sans-serif'],
       },
-      // Adding custom font weights
       fontWeight: {
         black: 900,
         bold: 700,
@@ -27,7 +26,7 @@ export default withMT({
         thin: 100,
       },
       screens: {
-        xxl: '1728px', // Custom screen at ~110% of 1280px
+        xxl: '1728px',
       },
       keyframes: {
         marquee: {
@@ -39,13 +38,20 @@ export default withMT({
         marquee: "marquee 10s linear infinite",
       },
       backgroundImage: {
-        "banner": "url('/asset/Home/bannerhome.png')",
+        banner: "url('/asset/Home/bannerhome.png')",
+        'blue-gradient': 'linear-gradient(90deg, #1666B6 0%, #2270BF 25%, #2F7BC8 50%, #61A6EB 100%)',
       },
       colors: {
         primary: "#1666B6",
         secondary: "#0F2850",
         orange: "#E77853",
-        font: "#F0F0F0"
+        font: "#F0F0F0",
+        blueGradient: {
+          100: "#61A6EB",
+          200: "#2F7BC8",
+          300: "#2270BF",
+          400: "#1666B6",
+        },
       },
     },
   },
