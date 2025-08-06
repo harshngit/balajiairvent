@@ -11,7 +11,7 @@ const InsideStory = () => {
 							Inside the Factory
 						</h2>
 					</div>
-					<div className='lg:px-[25px] px-5 py-5 w-full lg:w-[40%] border-l-[2px] border-orange'>
+					<div className='lg:px-[25px] lg:px-5 py-5 w-full lg:w-[40%] lg:border-l-[2px] border-orange'>
 						<p className='font-light text-secondary text-[14px]'>
 							Step inside our state-of-the-art manufacturing facility and witness how quality products come to life.
 							Our factory is equipped with advanced machinery, streamlined production processes, and a skilled workforce dedicated to precision and innovation.

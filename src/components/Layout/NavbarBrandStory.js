@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import Image from "next/image";
 
 const navItems = [
 	{ label: "About Us", href: "/aboutus" },
@@ -29,6 +30,7 @@ const navItems = [
 export default function NavbarCustom() {
 	const [scrolling, setScrolling] = useState(false);
 	const pathname = usePathname();
+	const [menuOpen, setMenuOpen] = useState(false);
 
 	const isActive = (href) => pathname === href;
 
@@ -57,7 +59,7 @@ export default function NavbarCustom() {
 		setTimer(newTimer);
 	};
 	return (
-		<div className={`fixed font-onest top-0 left-0 w-full z-[9999] transition-all pt-[30px] pr-[40px] pb-[20px] pl-[40px] duration-300 ${scrolling ? "bg-white shadow-sm" : "bg-transparent"}`}>
+		<div className={`fixed font-onest top-0 left-0 w-full z-[9999] transition-all  lg:pt-[30px] lg:pr-[40px] lg:pb-[20px] lg:pl-[40px] p-[15px] duration-300 ${scrolling ? "bg-white shadow-sm" : "bg-transparent"}`}>
 			<div className="max-w-[1700px] mx-auto px-4 py-3 flex justify-between items-center">
 				{/* Logo */}
 				<Link href="/">
@@ -67,6 +69,13 @@ export default function NavbarCustom() {
 						className="h-[32px] md:h-[40px]"
 					/>
 				</Link>
+				<div className="block lg:hidden" onClick={() => setMenuOpen(true)}>
+					<Image
+						src={"/asset/navbar/iconblue.png"}
+						width={24}
+						height={24}
+					/>
+				</div>
 
 				{/* Navigation Menu */}
 				<ul className={`hidden md:flex items-center justify-center px-6 py-2 rounded-full ${scrolling ? "bg-white shadow-lg border-gray-200" : "bg-[#fff] text-white bg-white shadow-lg border-gray-200"}`}>
@@ -160,7 +169,59 @@ export default function NavbarCustom() {
 						/>
 					</button>
 				</Link>
+				{menuOpen && (
+					<div className="fixed inset-0 z-[99999] bg-[#002244cc] backdrop-blur-md flex flex-col justify-start items-start px-6 py-8 text-white transition-all duration-700">
+						{/* Close Button */}
+						<div className="absolute top-10 right-6 cursor-pointer" onClick={() => setMenuOpen(false)}>
+							<Image
+								src={"/asset/navbar/cross.png"}
+								width={24}
+								height={24}
+							/>
+						</div>
 
+						{/* Logo */}
+						<Link href="/" className="mb-10" onClick={() => setMenuOpen(false)}>
+							<img src="/asset/navbar/logo-white.webp" alt="Logo" className="h-[32px]" />
+						</Link>
+
+						{/* Navigation Links */}
+						<ul className="flex flex-col gap-[20px] text-[18px] font-light">
+							<li >
+								<Link href={"/"} className={`block hover:text-[#90C4FD] ${isActive("/") ? "text-[#90C4FD]" : ""}`}>
+									Home Page
+								</Link>
+							</li>
+							{navItems.map((item, idx) => (
+								<li key={idx}>
+									<Link href={item.href} onClick={() => setMenuOpen(false)} className={`block hover:text-[#90C4FD] ${isActive(item.href) ? "text-[#90C4FD]" : ""}`}>
+										{item.label}
+									</Link>
+								</li>
+							))}
+						</ul>
+
+						{/* CTA Button */}
+						<Link href="#" onClick={() => setMenuOpen(false)}>
+							<button
+								className={`group text-sm bg-white flex items-center mt-10 gap-[20px] pr-[7px] pl-[20px] py-[10px] rounded-full border transition-all duration-200 w-[162px] h-[40px]
+      ${scrolling ? "hidden" : "bg-transparent border-primary text-primary hover:border-[#1666B6] hover:bg-[#1666B6] hover:text-[#fff]"}`}
+							>
+								Send Inquiry
+								<img
+									src="/asset/Arrowoutlineblue.png"
+									className="w-[28px] h-[28px] group-hover:opacity-0  group-hover:hidden transition-all duration-200 opacity-100"
+									alt="Arrow Hover"
+								/>
+								<img
+									src="/asset/navbar/Arrow.png"
+									className="w-[28px] h-[28px] group-hover:opacity-100 hidden group-hover:block transition-all duration-200 opacity-100"
+									alt="Arrow Hover"
+								/>
+							</button>
+						</Link>
+					</div>
+				)}
 
 			</div>
 		</div>

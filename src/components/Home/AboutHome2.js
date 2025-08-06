@@ -18,8 +18,8 @@ const AboutHome2 = () => {
 				</div>
 
 				{/* Right Content Block */}
-				<div className="flex flex-col lg:w-1/2 w-full border-l-[2px] px-[25px] border-[#E77853]">
-					<div className="pl-4 text-[14px] text-[#0F2850] mb-4 leading-relaxed">
+				<div className="flex flex-col lg:w-1/2 w-full lg:border-l-[2px] lg:px-[25px] lg:border-[#E77853]">
+					<div className="lg:pl-4 text-[14px] text-[#0F2850] mb-4 leading-relaxed">
 						<p>
 							From large-scale factories to modern workspaces, our air vent systems power efficient environments.
 							We collaborate closely with industry leaders to solve complex air distribution challenges.
@@ -41,14 +41,23 @@ const AboutHome2 = () => {
 				</div>
 			</div>
 
-			<div className="w-full px-5 py-10 bg-white font-onset">
+			<div className="w-full lg:px-5 py-10 bg-white font-onset">
 				<div className="max-w-[1400px] mx-auto flex flex-col gap-6">
 					<div className="flex flex-wrap gap-6 justify-start">
 						{/* Card 1 */}
 
-						<Link href={"#"} className="lg:w-[40%] relative w-full">
+						<Link href={"#"} className="lg:w-[40%] lg:block hidden relative w-full">
 							<Image
 								src="/asset/home/projects/1.webp"
+								alt="75F Solutions"
+								width={602}
+								height={370}
+								className="object-cover"
+							/>
+						</Link>
+						<Link href={"#"} className="lg:w-[40%] lg:hidden block relative w-full">
+							<Image
+								src="/asset/home/projects/1mob.webp"
 								alt="75F Solutions"
 								width={602}
 								height={370}
@@ -69,7 +78,7 @@ const AboutHome2 = () => {
 										className="object-cover"
 									/>
 								</div>
-								<div className="p-4">
+								<div className="lg:p-4 pt-4">
 									<h3 className="text-[#0F2850] text-base font-semibold mb-1">GMR Airport-Mopa</h3>
 									<p className="text-sm text-[#0F2850] opacity-80 leading-relaxed">
 										Supplied Active Jet Nozzles with Booster Fan
@@ -90,7 +99,7 @@ const AboutHome2 = () => {
 										className="object-cover"
 									/>
 								</div>
-								<div className="p-4">
+								<div className="lg:p-4 pt-4">
 									<h3 className="text-[#0F2850] text-base font-semibold mb-1">
 										UNMS Army (Larsen & Tourbo Ltd)
 									</h3>

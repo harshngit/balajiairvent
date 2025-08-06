@@ -19,7 +19,7 @@ const AboutHome = () => {
 					/>
 
 					<Link href="/about" className="inline-block mt-4">
-						<button className="flex items-center gap-4 border border-[#F0F0F0] text-[16px] w-[139px] text-[#F0F0F0] pl-[20px] pr-[7px] py-2 rounded-full hover:bg-primary hover:text-[#F0F0F0] transition-all text-sm">
+						<button className="flex items-center gap-4 border border-[#F0F0F0] text-[16px] lg:w-[139px] py-[5px] pr-[5px] pl-[10px] text-[#F0F0F0] lg:pl-[20px] lg:pr-[7px] lg:py-2  rounded-full hover:bg-primary hover:text-[#F0F0F0] transition-all text-sm">
 							About US
 							<Image
 								src={"/asset/rightotline.png"}

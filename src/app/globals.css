@@ -175,6 +175,15 @@
         display: none;
     }
 
+    .bg_bannerhome {
+        background: url('/asset/home/bg-mobile.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 634px;
+        margin-top: 0px;
+    }
+
     .banner_BS {
         background: url('/asset/brand-story/brandstorymob.webp');
         background-size: contain;

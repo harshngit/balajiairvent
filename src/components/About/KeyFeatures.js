@@ -114,16 +114,16 @@ const KeyFeatures = () => {
 			{/* Heading */}
 			<div className='flex justify-start gap-[10px] lg:flex-row flex-col items-center'>
 				<div className="mb-10 lg:w-[30%] w-full px-5 space-y-4">
-					<p className="text-[#000000] font-light text-[28px]">
+					<p className="text-[#000000] font-light lg:text-[28px] text-[20px]">
 						<span className='text-transparent bg-clip-text bg-blue-gradient'>Key feature </span>
 						of our company</p>
-					<h2 className="text-2xl md:text-[30px] font-light whitespace-wrap lg:leading-[40px] text-[#0F2850] mt-2">
+					<h2 className="text-[32px] md:text-[30px] font-light whitespace-wrap lg:leading-[40px] text-[#0F2850] mt-2">
 						What Sets Balaji Airvent Systems Apart?
 					</h2>
 				</div>
 
 				{/* Swiper Container */}
-				<div className="lg:w-[70%] w-full lg:rounded-[10px] relative lg:pt-[100px] lg:pb-[50px] bg-[#0F2850] px-[50px] lg:h-[510px] py-10">
+				<div className="lg:w-[70%] w-full rounded-[10px] relative lg:left-0 left-[20px] lg:pt-[100px] lg:pb-[50px] bg-[#0F2850] px-[50px] lg:h-[510px] py-10">
 					<div className="flex  justify-end gap-3 mb-6">
 						<button ref={prevRef} className="">
 							<Image
@@ -187,8 +187,8 @@ const KeyFeatures = () => {
 							},
 						}}
 						breakpoints={{
-							0: { slidesPerView: 1.25, centeredSlides: true },
-							640: { slidesPerView: 1.5, centeredSlides: true },
+							0: { slidesPerView: 1.25, centeredSlides: false },
+							640: { slidesPerView: 1.5, centeredSlides: false },
 							768: { slidesPerView: 2, centeredSlides: false },
 							1024: { slidesPerView: 3, centeredSlides: false },
 						}}

@@ -31,7 +31,7 @@ const clientLogos = [
 
 const ClientsHome = () => {
 	return (
-		<div className="relative w-full !px-5 !py-10 bg-[#0F2850] overflow-hidden">
+		<div className="relative lg:block hidden w-full !px-5 !py-10 bg-[#0F2850] overflow-hidden">
 			{/* Top gradient for smooth blending */}
 			{/* <div className="absolute -top-[50px] left-0 w-full h-4 bg-gradient-to-t from-[#162e54] to-transparent z-20 pointer-events-none" /> */}
 
@@ -53,7 +53,7 @@ const ClientsHome = () => {
 					autoplay={{ delay: 0, disableOnInteraction: false }}
 					speed={3000}
 					allowTouchMove={false}
-					className="w-full"
+					className="w-full !flex !justify-center !items-center top-[83px]"
 				>
 					{clientLogos.map((logo, index) => (
 						<SwiperSlide key={index} className="!w-auto flex items-center justify-center">

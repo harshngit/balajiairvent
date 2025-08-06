@@ -38,7 +38,7 @@ const IndustriesHome = () => {
 			<div className="max-w-[1400px] mx-auto flex flex-col md:flex-row gap-[54px]">
 				{/* Left Text Section */}
 				<div className="md:w-[600px] w-full flex flex-col justify-center">
-					<div className='flex justify-start items-start gap-[30px] flex-col'>
+					<div className='flex justify-start items-start lg:gap-[30px] gap-1 flex-col'>
 						<h4 className="text-[#E77853] text-[28px] font-light mb-2">Industries we serve</h4>
 						<h2 className="text-3xl md:text-[40px] font-light text-[#0F2850] leading-snug mb-4">
 							Explore our precision-engineered{' '}
@@ -65,7 +65,7 @@ const IndustriesHome = () => {
 					</Link>
 				</div>
 
-				<div className="lg:w-1/2 w-full px-5 flex justify-start items-start gap-[20px]">
+				<div className="lg:w-1/2 w-full lg:px-5 flex lg:flex-row flex-col justify-start items-start gap-[20px]">
 					<div className='flex justify-start items-start flex-col gap-[20px]'>
 						<Link href={"#"}>
 							<div
@@ -96,7 +96,7 @@ const IndustriesHome = () => {
 								</div>
 							</div>
 						</Link>
-						<Link href={"#"}>
+						<Link href={"#"} className=''>
 							<div
 								className={`relative w-full rounded-xl overflow-hidden group  `}
 							>
@@ -111,7 +111,7 @@ const IndustriesHome = () => {
 
 								{/* Hover Gradient */}
 								<div className="absolute inset-0 bg-gradient-to-b from-[#0F2850]/80  opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
-								<div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white to-transparent z-10" />
+								<div className="absolute bottom-0 lg:block hidden left-0 w-full h-20 bg-gradient-to-t from-white to-transparent z-10" />
 								{/* Hover Text From Top */}
 								<div className="absolute -top-10 group-hover:top-4 left-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out text-[#fff] font-normal text-[12px] md:text-[20px] flex items-center justify-start gap-[10px]">
 									Industrial Dampers
@@ -125,6 +125,7 @@ const IndustriesHome = () => {
 								</div>
 							</div>
 						</Link>
+
 					</div>
 					<div className='flex justify-start items-start flex-col gap-[20px]'>
 						<Link href={"#"}>
@@ -171,7 +172,7 @@ const IndustriesHome = () => {
 
 								{/* Hover Gradient */}
 								<div className="absolute inset-0 bg-gradient-to-b from-[#0F2850]/80  opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
-								<div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent z-10" />
+								<div className="absolute bottom-0 left-0 w-full h-[200px] bg-gradient-to-t from-white to-transparent z-10" />
 								{/* Hover Text From Top */}
 								<div className="absolute -top-10 group-hover:top-4 left-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out text-[#fff] font-normal text-[12px] md:text-[20px] flex items-center justify-start gap-[10px]">
 									Fans & Ventilation Accessories

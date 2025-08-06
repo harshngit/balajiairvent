@@ -149,8 +149,8 @@ export default function Application() {
 					</div>
 
 					{/* Right */}
-					<div className="flex items-end justify-end flex-col lg:w-1/2 w-full border-l-[2px] py-0 px-[25px] border-[#E77853]">
-						<p className="pl-4 text-[14px] text-[#0F2850] mb-4 leading-relaxed">
+					<div className="flex items-end justify-end flex-col lg:w-1/2 w-full lg:border-l-[2px] py-0 lg:px-[25px] border-[#E77853]">
+						<p className="lg:pl-4 text-[14px] text-[#0F2850] mb-4 leading-relaxed">
 							We are able to simulate air flow in our customers premises and
 							suggest a suitable product. Our knowledge and years of experience
 							allow us to put hundreds of technical details together so as to
@@ -165,7 +165,7 @@ export default function Application() {
 			<section
 				ref={ref}
 				style={{ height: `${data.length * 100}vh` }}
-				className="relative bottom-[150px] max-w-[1400px] m-auto"
+				className="relative lg:block hidden bottom-[150px] max-w-[1400px] m-auto"
 			>
 				<div className="sticky top-0 left-0 right-0 h-screen overflow-hidden">
 					<motion.div style={{ x }} className="flex w-full h-[100%]">
@@ -233,6 +233,48 @@ export default function Application() {
 					<div className="absolute top-0 left-0 h-full w-16 z-20 bg-gradient-to-r from-white to-transparent pointer-events-none" />
 					<div className="absolute top-0 right-0 h-full w-16 z-20 bg-gradient-to-l from-white to-transparent pointer-events-none" />
 				</div>
+			</section>
+
+			<section className="w-full lg:hidden flex flex-col max-w-[1400px] mx-auto lg:px-10 px-5 lg:py-10 py-6">
+				{data?.map((item) => (
+					<div className="flex justify-start flex-col border-t-2 border-orange pb-5">
+						<div className="flex justify-start items-start flex-col gap-[7px]">
+							<h2 className="text-[32px] font-light  bg-gradient-to-b from-[#0052A0] to-[#A5C1E2] text-transparent bg-clip-text"
+							>
+								{item?.title}
+							</h2>
+							<p className="text-secondary text-[14px]">
+								{item?.description}
+							</p>
+						</div>
+						<div className="flex justify-center flex-col gap-[10px] items-center">
+							<div className="w-[350px] h-[150px]">
+								<Image
+									src={item?.images[0]}
+									width={350}
+									height={150}
+									className="w-full h-full"
+								/>
+							</div>
+							<div className="w-[350px] h-[150px]">
+								<Image
+									src={item?.images[1]}
+									width={350}
+									height={150}
+									className="w-full h-full"
+								/>
+							</div>
+							<div className="w-[350px] h-[150px]">
+								<Image
+									src={item?.images[2]}
+									width={350}
+									height={150}
+									className="w-full h-full"
+								/>
+							</div>
+						</div>
+					</div>
+				))}
 			</section>
 		</div>
 	);
