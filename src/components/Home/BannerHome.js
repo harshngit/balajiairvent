@@ -8,7 +8,7 @@ const BannerHome = () => {
 		<>
 			<div className="bg_bannerhome relative w-full">
 				{/* Floating Promo Box */}
-				<div className="absolute bottom-[8rem] right-[4rem] z-10 hidden lg:flex items-center rounded-2xl px-6 py-5 max-w-[872px]">
+				<div className="absolute bottom-[5rem] right-[4rem] z-10 hidden lg:flex items-center rounded-2xl px-6 py-5 max-w-[872px]">
 					{/* Orange vertical line */}
 					<div className="w-[3px] h-[151px] bg-[#E77853] rounded-full mr-5"></div>
 
@@ -43,7 +43,19 @@ const BannerHome = () => {
 						</Link>
 					</div>
 				</div>
+				<Link href="#" className='lg:hidden block absolute bottom-[4.25rem] left-3 '>
+					<button className="mt-4 flex items-center gap-2 bg-[#F0F0F066] text-font rounded-full px-3 py-[3px] text-[16px] font-light transition-all">
+						Send Inquiry
+						<Image
+							src={"/asset/ArrowFilled.png"}
+							alt="HVLS Fan"
+							width={28}
+							height={28}
+						/>
+					</button>
+				</Link>
 			</div>
+
 			<div className="lg:hidden flex bg-secondary items-start flex-col px-6 py-5 max-w-[872px]">
 				{/* Orange vertical line */}
 

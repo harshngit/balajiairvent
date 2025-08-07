@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <>
       <ConsultationSidebar open={isSidebarOpen} setOpen={setIsSidebarOpen} />
-      <div className=' font-onest'>
+      <div className=' font-onest lg:overflow-visible overflow-hidden'>
         <NavbarTwo />
         <BannerHome />
         <ClientsHome />
