@@ -8,14 +8,14 @@ import Image from "next/image";
 const navItems = [
 	{ label: "About Us", href: "/aboutus" },
 	{
-		label: "Products", href: "#",
+		label: "Products", href: "/products",
 		children: [
-			{ label: "All", href: "#project1" },
-			{ label: "Data Centre", href: "#project2" },
-			{ label: "Comfor Air Conditioning", href: "#collab1" },
-			{ label: "Industrial Dampers", href: "#collab1" },
-			{ label: "Fans & Ventilation Accessories", href: "#collab1" },
-			{ label: "Fire Doors", href: "#collab1" },
+			{ label: "All", href: "/products#all" },
+			{ label: "Data Centre", href: "/products#data" },
+			{ label: "Comfort Air Conditioning", href: "/products#industries" },
+			{ label: "Industrial Dampers", href: "/products#collab2" },
+			{ label: "Fans & Ventilation Accessories", href: "/products#fans" },
+			{ label: "Fire Doors", href: "/products#firedoor" },
 		]
 
 	},
