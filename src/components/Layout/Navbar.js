@@ -91,7 +91,7 @@ export default function NavbarCustom() {
             >
               <Link
                 href={item.href}
-                className={`text-[16px] font-light px-2 py-1 ${scrolling ? "text-[#141414] hover:text-[#1666B6]" : "text-white hover:text-[#A3A3A3]"} ${isActive(item.href) ? "!font-bold text-white" : ""}`}
+                className={`text-[16px] font-light px-2 py-1 ${scrolling ? "text-[#141414] hover:text-[#1666B6]" : "text-white hover:text-[#A3A3A3]"} ${isActive(item.href) ? `!font-bold text-white ${scrolling && "text-[#1666B6]"} ` : ""}`}
               >
                 {item.label}
               </Link>

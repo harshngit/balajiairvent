@@ -3,11 +3,12 @@ import NavbarTwo from '@/components/Layout/Navbar.js'
 import Footer from '@/components/Layout/Footer'
 import BannerProducts from '@/components/Products/BannerProducts'
 import ProductGrid from '@/components/Products/ProductGrid'
+import NavbarCustom1 from '@/components/Layout/NavbarWhite'
 
 const Products = () => {
 	return (
 		<div className=' font-onest lg:overflow-visible overflow-hidden'>
-			<NavbarTwo />
+			<NavbarCustom1 />
 			<BannerProducts />
 			<ProductGrid />
 			<Footer />

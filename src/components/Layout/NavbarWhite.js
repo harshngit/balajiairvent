@@ -1,281 +1,227 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import {
-	IconButton,
-	Menu,
-	MenuHandler,
-	MenuItem,
-	MenuList,
-	Typography,
-} from "@material-tailwind/react";
 import Link from "next/link";
-import { usePathname } from 'next/navigation';
-import { IoLogoFacebook } from "react-icons/io";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { usePathname } from "next/navigation";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { IoMdClose } from "react-icons/io";
+import Image from "next/image";
+
 const navItems = [
+	{ label: "About Us", href: "/aboutus" },
 	{
-		label: "About Us",
-		href: "/about",
+		label: "Products", href: "/products",
 		children: [
-			{ label: "Brand Story", href: "/brand-story" },
-		],
+			{ label: "All", href: "/products#all" },
+			{ label: "Data Centre", href: "/products#data" },
+			{ label: "Comfort Air Conditioning", href: "/products#industries" },
+			{ label: "Industrial Dampers", href: "/products#collab2" },
+			{ label: "Fans & Ventilation Accessories", href: "/products#fans" },
+			{ label: "Fire Doors", href: "/products#firedoor" },
+		]
+
 	},
 	{
-		label: "Door",
-		href: "/door",
+		label: "Projects & Collaborations",
+		href: "#",
+
 	},
-	{
-		label: "X'perience Centre",
-		href: "/experience-centre",
-	},
-	{
-		label: "Contact",
-		href: "/contact",
-	},
+	{ label: "Contact Us", href: "#" },
 ];
-const navItemsMobile = [
-	{ label: "Brand Story", path: "/brand-story" },
-	{ label: "Door", path: "/door" },
-	{ label: "X'perience Centre", path: "/experience-centre" },
-	{ label: "Contact", path: "/contact" },
-];
-export default function Navbar() {
+
+export default function NavbarCustom1() {
 	const [scrolling, setScrolling] = useState(false);
-	const [openDrawer, setOpenDrawer] = useState(false);
 	const pathname = usePathname();
-	const [openDropdown, setOpenDropdown] = useState(false);
+	const [menuOpen, setMenuOpen] = useState(false);
 
 	const isActive = (href) => pathname === href;
 
 	useEffect(() => {
-		const handleScroll = () => {
-			setScrolling(window.scrollY > window.innerHeight);
-		};
-
+		const handleScroll = () => setScrolling(window.scrollY > 10);
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
-	const [isOpen, setIsOpen] = useState(true);
-	const timeoutRef = useRef(null);
+	const [activeDropdown, setActiveDropdown] = useState(null);
+	const [timer, setTimer] = useState(null);
 
-	const handleMouseEnter = (label) => {
-		clearTimeout(timeoutRef.current);
-		setOpenDropdown(label);
+	const handleMouseEnter = (index) => {
+		// Clear any previous timer before setting the active dropdown
+		if (timer) {
+			clearTimeout(timer);
+		}
+		setActiveDropdown(index); // Show dropdown when hovering over the parent item
 	};
 
 	const handleMouseLeave = () => {
-		timeoutRef.current = setTimeout(() => {
-			setOpenDropdown(false);
-		}, 150); // delay to allow smooth mouse movement
+		// Set a timer to hide the dropdown after a short delay
+		const newTimer = setTimeout(() => {
+			setActiveDropdown(null); // Hide dropdown after cursor leaves
+		}, 300); // Adjust delay in milliseconds as per your preference
+
+		setTimer(newTimer);
 	};
-
-	useEffect(() => {
-		return () => clearTimeout(timeoutRef.current);
-	}, []);
-
-
-	const navList = (
-		<ul className="flex flex-col lg:flex-row items-start lg:items-center lg:flex-wrap gap-3 lg:gap-3 text-white font-medium !text-sm tracking-wide">
-			{navItems.map((item, idx) => {
-				const hasChildren = item.children && item.children.length > 0;
-				const isParentActive =
-					isActive(item.href) || item.children?.some((child) => isActive(child.href));
-
-				return (
-					<li key={idx} className="relative">
-						<div
-							onMouseEnter={() => handleMouseEnter(item.label)}
-							onMouseLeave={handleMouseLeave}
-						>
-							{item.label === "About Us" ?
-								(<Link
-									href={item.href}
-									className={`group px-3 py-2 flex justify-center items-center gap-[10px] transition  ${isParentActive ? "bg-[#89898933] text-lightgrey" : "bg-[#DDDDDD33] hover:bg-[#DDDDDD33] hover:border-[1px] text-lightgrey border-[#89898933]"
-										}`}
-								>
-									{item.label}
-									<img src="/asset/PlusNavbar.png" className="w-[12px]" alt="" />
-								</Link>) : (
-									<Link
-										href={item.href}
-										className={`group px-3 py-2 transition block ${isParentActive ? "bg-[#89898933] text-lightgrey" : "bg-[#DDDDDD33] hover:bg-[#DDDDDD33] hover:border-[1px] text-lightgrey border-[#89898933]"
-											}`}
-									>
-										{item.label}
-									</Link>
-								)
-							}
-
-
-							{/* Dropdown */}
-							{hasChildren && openDropdown === item.label && (
-								<div className="absolute left-0 mt-1 z-20 w-[150px]">
-									{item.children.map((child, i) => (
-										<Link key={i} href={child.href}>
-											<div
-												className={`px-4 py-2 transition cursor-pointer ${isActive(child.href)
-													? "bg-[#89898933] text-lightgrey"
-													: "bg-[#DDDDDD33] hover:bg-[#DDDDDD33] hover:border-[1px] text-lightgrey border-[#89898933]"
-													}`}
-											>
-												{child.label}
-											</div>
-										</Link>
-									))}
-								</div>
-							)}
-						</div>
-					</li>
-				);
-			})}
-		</ul>
-	);
-	const navListMobile = (
-		<ul className="flex flex-col lg:flex-row items-start lg:items-center lg:flex-wrap gap-[27px] lg:gap-4 text-white uppercase font-medium !text-sm tracking-wide">
-
-			<div className="flex flex-col items-center relative">
-				<div className="flex justify-center items-center gap-2">
-					<Link href="/about">
-						<li className="cursor-pointer text-[20px] text-[#2F3435] font-helvetica">
-							About Us
-						</li>
-					</Link>
-					<div onClick={() => setIsOpen(!isOpen)} className="cursor-pointer">
-						{/* {isOpen ? <img className="w-[20px]" src="asset/up.png" alt="dropdown icon" /> : <img className="w-[20px]" src="asset/down.png" alt="dropdown icon" />} */}
-					</div>
-				</div>
-			</div>
-
-
-			{navItemsMobile.map((item, i) => (
-				<li key={i}>
-					<Link
-						href={item.path}
-						className="cursor-pointer text-[20px] text-[#2F3435] font-helvetica transition"
-					>
-						{item.label}
-					</Link>
-				</li>
-			))}
-
-
-		</ul>
-	);
 	return (
-		<div className="fixed top-0 left-0 w-screen z-[9999]">
-			<div
-				className={`w-full px-4 lg:px-0 py-4 lg:py-0 transition-all  duration-300 ${scrolling ? "!backdrop-blur-3xl bg-[#eeeeee40] " : ""
-					}`}
-			>
-				<div className={`w-full ${scrolling ? "lg:pt-[3%] lg:pl-[3%] lg:pb-[3%]" : "lg:pt-[3%] lg:pl-[3%] lg:pb-[3%]"} flex items-center justify-between`}>
-					{/* Logo */}
-					<Link href="/"
-					>
-						<div className="lg:w-[60%] xl:w-[70%] w-[50%]">
+		<div className={`fixed font-onest top-0 left-0 w-full z-[9999] transition-all lg:pt-[30px] lg:pr-[40px] lg:pb-[20px] lg:pl-[40px] p-[15px] duration-300 ${scrolling ? "bg-white shadow-sm" : "bg-transparent"}`}>
+			<div className="max-w-[1700px] mx-auto px-4 py-3 flex justify-between items-center">
+				{/* Logo */}
+				<Link href="/">
+					<img
+						src={scrolling ? "/asset/navbar/logo.webp" : "/asset/navbar/logo-white.webp"}
+						alt="Logo"
+						className="h-[32px] md:h-[40px]"
+					/>
+				</Link>
+
+				<div className="block lg:hidden" onClick={() => setMenuOpen(true)}>
+					<Image
+						src={scrolling ? "/asset/navbar/iconblue.png" : "/asset/navbar/icon.png"}
+						width={24}
+						height={24}
+					/>
+				</div>
+
+
+				{/* Navigation Menu */}
+				<ul className={`hidden md:flex items-center justify-center px-6 py-2 rounded-full ${scrolling ? "bg-white shadow-lg border-gray-200" : "bg-[#ffffff33] text-white"}`}>
+					{navItems.map((item, idx) => (
+						<li
+							key={idx}
+							className="relative"
+							onMouseEnter={() => handleMouseEnter(idx)} // Trigger on hover
+							onMouseLeave={handleMouseLeave} // Reset on mouse leave
+						>
+							<Link
+								href={item.href}
+								className={`text-[16px] font-light px-2 py-1 ${scrolling ? "text-[#141414] hover:text-[#1666B6]" : "text-white hover:text-[#A3A3A3]"} ${isActive(item.href) ? `!font-bold text-white ${scrolling && "text-[#1666B6]"} ` : ""}`}
+							>
+								{item.label}
+							</Link>
+
+							{/* Show dropdown with delay when "Projects & Collaborations" is hovered */}
+							{item.children && activeDropdown === idx && (
+								<ul className={`absolute font-onest font-regular left-0 top-8 mt-2 space-y-2 px-[16px] py-[10px] w-[200px] shadow-lg rounded-lg ${scrolling ? "bg-white text-black" : "bg-[#ffffff33] text-white"}`}>
+									{item.children.map((child, idx) => (
+										<li key={idx}>
+											<Link href={child.href} className="hover:text-[#90C4FD]">
+												{child.label}
+											</Link>
+										</li>
+									))}
+								</ul>
+							)}
+
+							{/* Add separator if it's not the last item */}
+							{idx !== navItems.length - 1 && <span className={`mx-2 ${scrolling ? "text-gray-300" : "text-white/40"}`}>|</span>}
+						</li>
+					))}
+					<li>
+						<button
+							className={`group text-sm flex items-center gap-[20px] pr-[7px] pl-[20px] py-[10px] rounded-full border transition-all duration-200 w-[162px] h-[40px] group
+      ${scrolling ? "bg-primary hover:bg-[#fff] hover:border-primary hover:text-primary text-white border-primary shadow-md" : "hidden"}`}
+						>
+							Send Inquiry
 							<img
-								className="w-[250px] "
-								src="/asset/navbar/blacklogo.png"
-								alt="logo"
+								src="/asset/navbar/Arrow.png"
+								className="w-[28px] h-[28px] group-hover:opacity-0  group-hover:hidden transition-all duration-200 opacity-100"
+								alt="Arrow Hover"
+							/>
+							<img
+								src="/asset/navbar/Arrowblue.png"
+								className="w-[28px] h-[28px] group-hover:opacity-100 hidden group-hover:block transition-all duration-200 opacity-100"
+								alt="Arrow Hover"
+							/>
+						</button>
+					</li>
+				</ul>
+
+				{/* Send Inquiry Button */}
+				<Link href="" className="hidden lg:block">
+					<button
+						className={`group text-sm flex items-center gap-[20px] pr-[7px] pl-[20px] py-[10px] rounded-full border transition-all duration-200 w-[162px] h-[40px]
+      ${scrolling ? "hidden" : "bg-transparent border-white text-white hover:border-[#1666B6] hover:bg-[#1666B6] hover:text-[#fff]"}`}
+					>
+						Send Inquiry
+						<img
+							src="/asset/navbar/Arrow.png"
+							className="w-[28px] h-[28px] transition-all duration-200 opacity-100"
+							alt="Arrow"
+						/>
+					</button>
+
+					{/* Scrolling Button */}
+					<button
+						className={`group text-sm flex items-center gap-[20px] pr-[7px] pl-[20px] py-[10px] rounded-full border transition-all duration-200 w-[162px] h-[40px] group
+      ${scrolling ? "bg-primary hover:bg-[#fff] hover:border-primary hover:text-primary text-white border-primary shadow-md hidden" : "hidden"}`}
+					>
+						Send Inquiry
+						<img
+							src="/asset/navbar/Arrow.png"
+							className="w-[28px] h-[28px] group-hover:opacity-0  group-hover:hidden transition-all duration-200 opacity-100"
+							alt="Arrow Hover"
+						/>
+						<img
+							src="/asset/navbar/Arrowblue.png"
+							className="w-[28px] h-[28px] group-hover:opacity-100 hidden group-hover:block transition-all duration-200 opacity-100"
+							alt="Arrow Hover"
+						/>
+					</button>
+				</Link>
+
+				{menuOpen && (
+					<div className="fixed inset-0 z-[99999] bg-[#002244cc] backdrop-blur-md flex flex-col justify-start items-start px-6 py-8 text-white transition-all duration-700">
+						{/* Close Button */}
+						<div className="absolute top-10 right-6 cursor-pointer" onClick={() => setMenuOpen(false)}>
+							<Image
+								src={"/asset/navbar/cross.png"}
+								width={24}
+								height={24}
 							/>
 						</div>
-					</Link>
 
-					{/* Desktop Menu */}
-					<div className="hidden lg:block w-[40%]">{navList}</div>
+						{/* Logo */}
+						<Link href="/" className="mb-10" onClick={() => setMenuOpen(false)}>
+							<img src="/asset/navbar/logo-white.webp" alt="Logo" className="h-[32px]" />
+						</Link>
 
-					{/* Mobile Icon */}
-					<div
-						variant="text"
-						className="text-black lg:hidden w-[50px] h-[50px] flex justify-center items-center"
-						onClick={() => setOpenDrawer(true)}
-					>
-						{/* <svg
-              className="h-6 pt-0 w-6"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg> */}
-						<img className="w-[28px]" src="/asset/navbar/hamburger.png" alt="" />
+						{/* Navigation Links */}
+						<ul className="flex flex-col gap-[20px] text-[18px] font-light">
+							<li >
+								<Link href={"/"} className={`block hover:text-[#90C4FD] ${isActive("/") ? "text-[#90C4FD]" : ""}`}>
+									Home Page
+								</Link>
+							</li>
+							{navItems.map((item, idx) => (
+								<li key={idx}>
+									<Link href={item.href} onClick={() => setMenuOpen(false)} className={`block hover:text-[#90C4FD] ${isActive(item.href) ? "text-[#90C4FD]" : ""}`}>
+										{item.label}
+									</Link>
+								</li>
+							))}
+						</ul>
+
+						{/* CTA Button */}
+						<Link href="#" onClick={() => setMenuOpen(false)}>
+							<button
+								className={`group text-sm bg-white flex items-center mt-10 gap-[20px] pr-[7px] pl-[20px] py-[10px] rounded-full border transition-all duration-200 w-[162px] h-[40px]
+      ${scrolling ? "hidden" : "bg-transparent border-primary text-primary hover:border-[#1666B6] hover:bg-[#1666B6] hover:text-[#fff]"}`}
+							>
+								Send Inquiry
+								<img
+									src="/asset/Arrowoutlineblue.png"
+									className="w-[28px] h-[28px] group-hover:opacity-0  group-hover:hidden transition-all duration-200 opacity-100"
+									alt="Arrow Hover"
+								/>
+								<img
+									src="/asset/navbar/Arrow.png"
+									className="w-[28px] h-[28px] group-hover:opacity-100 hidden group-hover:block transition-all duration-200 opacity-100"
+									alt="Arrow Hover"
+								/>
+							</button>
+						</Link>
 					</div>
-				</div>
-			</div>
+				)}
 
-			{/* Mobile Menu */}
-			<div
-				className={`fixed top-0 right-0 w-screen h-screen bg-[#FFFFFF] z-[9998]  pt-6 transform transition-transform duration-700 ${openDrawer ? "translate-x-0" : "translate-x-full"
-					}`}
-			>
-				<div className="flex justify-end items-center mb-4 px-6">
-					{/* <Typography variant="h5" className="text-white">
-            Menu
-          </Typography> */}
-					<div
-						variant="text"
-						className="text-white"
-						onClick={() => setOpenDrawer(false)}
-					>
-						{/* <svg
-              className="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg> */}
-						<img className="w-[28px]" src="/asset/navbar/cancel.png" alt="" />
-					</div>
-				</div>
-				<div className="px-6">
-					{navListMobile}
-				</div>
-				<div className="mt-5 px-6">
-					<ul className="flex flex-col justify-start items-start gap-[15px]">
-						<Link href="contact/#FAQ">
-							<li className="cursor-pointer text-[14px] text-[#2F3435] font-light font-helvetica uppercase hover:text-primary">FAQS</li>
-						</Link>
-						<Link href="/#testimonials">
-							<li className="cursor-pointer text-[14px] text-[#2F3435] font-light font-helvetica uppercase hover:text-primary">Testimonials</li>
-						</Link>
-						<Link href="/#we-work-with">
-							<li className="cursor-pointer text-[14px] text-[#2F3435] font-light font-helvetica uppercase hover:text-primary">We work with</li>
-						</Link>
-						<Link href="/#send-inquiry">
-							<li className="cursor-pointer text-[14px] text-[#2F3435] font-light font-helvetica uppercase hover:text-primary">REQUEST CONSULTATION</li>
-						</Link>
-						<Link href="/#send-inquiry">
-							<li className="cursor-pointer text-[14px] text-[#2F3435] font-light font-helvetica uppercase hover:text-primary">Book your visit</li>
-						</Link>
-					</ul>
-				</div>
-				<div className="flex justify-start item-center gap-5 mt-5 px-6">
-					<Link href="https://www.facebook.com/share/1Ejfnddk9n/?mibextid=wwXIfr" target='_blank'>
-						{/* <img className="w-[24px]" src="/asset/footer/Facebookp.png" alt="" /> */}
-						<IoLogoFacebook className='text-[30px] hover:text-primary' />
-					</Link>
-					<Link href="https://www.instagram.com/havdorindia?igsh=MXF4YWZ4dmVuYTFsbg==" target='_blank'>
-						{/* <img className="w-[24px]" src="/asset/footer/Instagramp.png" alt="" /> */}
-						<FaInstagram className='text-[28px] hover:text-primary' />
-					</Link>
-					<Link href="https://www.linkedin.com/company/hav-dor-india/" target='_blank'>
-						<FaLinkedin className='text-[28px] hover:text-primary' />
-					</Link>
-				</div>
-				<div className="flex w-full absolute bottom-0 full !px-0 !py-0 justify-end item-end">
-					<img className="w-full h-[72.5px]" src="/asset/navbar/blacklogo.png" alt="" />
-				</div>
 			</div>
 		</div>
 	);
 }
+
