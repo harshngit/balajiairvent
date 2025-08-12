@@ -89,10 +89,20 @@ export default function NavbarCustom1() {
 							onMouseEnter={() => handleMouseEnter(idx)} // Trigger on hover
 							onMouseLeave={handleMouseLeave} // Reset on mouse leave
 						>
-							<Link
-								href={item.href}
-								className={`text-[16px] font-light px-2 py-1 ${scrolling ? "text-[#141414] hover:text-[#1666B6]" : "text-white hover:text-[#A3A3A3]"} ${isActive(item.href) ? `!font-bold text-white ${scrolling && "text-[#1666B6]"} ` : ""}`}
-							>
+                            <Link
+                                href={item.href}
+                                className={`text-[16px] px-2 py-1 ${
+                                    scrolling
+                                        ? "text-[#141414] hover:text-[#1666B6]"
+                                        : "text-white hover:text-[#A3A3A3]"
+                                } ${
+                                    isActive(item.href)
+                                        ? scrolling
+                                            ? "font-bold text-[#1666B6]"
+                                            : "font-bold text-white"
+                                        : "font-light"
+                                }`}
+                            >
 								{item.label}
 							</Link>
 

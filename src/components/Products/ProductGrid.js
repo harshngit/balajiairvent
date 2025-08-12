@@ -17,6 +17,11 @@ const ProductGrid = () => {
 	// ✅ Drive state by category (not href)
 	const [activeCategory, setActiveCategory] = useState("all");
 	const [filteredProducts, setFilteredProducts] = useState(productData);
+    // Expanded details per product
+    const [expandedProductId, setExpandedProductId] = useState(null);
+    const [activeTab, setActiveTab] = useState("Description");
+    const [activeImageSrc, setActiveImageSrc] = useState(null);
+    const [columns, setColumns] = useState(1);
 
 	// Filter whenever category changes
 	useEffect(() => {
@@ -40,7 +45,7 @@ const ProductGrid = () => {
 		}
 	}, []);
 
-	const handleClick = (tab) => {
+    const handleClick = (tab) => {
 		// update selected category
 		setActiveCategory(tab.category);
 		// update URL hash & optional scroll
@@ -50,6 +55,38 @@ const ProductGrid = () => {
 			if (section) section.scrollIntoView({ behavior: "smooth" });
 		}
 	};
+
+    const openDetails = (product) => {
+        const images = [product.img1, product.img2, product.img3, product.img4].filter(Boolean);
+        setExpandedProductId((prev) => (prev === product.id ? null : product.id));
+        setActiveTab("Description");
+        setActiveImageSrc(images[0] || product.img1 || "/placeholder.jpg");
+        // Smooth scroll to the inline details block
+        if (typeof window !== "undefined") {
+            setTimeout(() => {
+                const el = document.getElementById(`product-details-inline-${product.id}`);
+                if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+            }, 0);
+        }
+    };
+
+    // Track column count to insert details after the end of the row
+    useEffect(() => {
+        const updateColumns = () => {
+            if (typeof window === 'undefined') return;
+            const w = window.innerWidth;
+            if (w >= 768) {
+                setColumns(3); // md and up → 3 columns (md:w-1/3)
+            } else if (w >= 640) {
+                setColumns(2); // sm → 2 columns (sm:w-1/2)
+            } else {
+                setColumns(1); // base → 1 column
+            }
+        };
+        updateColumns();
+        window.addEventListener('resize', updateColumns);
+        return () => window.removeEventListener('resize', updateColumns);
+    }, []);
 
 	return (
 		<div className="max-w-[1400px] mx-auto pt-[50px]">
@@ -223,28 +260,103 @@ const ProductGrid = () => {
 							</div>
 						</>
 					}
-					<div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 mt-5 px-5 py-5 gap-6">
+                    <div className="flex flex-wrap mt-5  -mx-3 relative">
+                        {(() => {
+                            const expandedIndex = filteredProducts.findIndex(p => p.id === expandedProductId);
+                            const expandedProduct = expandedIndex >= 0 ? filteredProducts[expandedIndex] : null;
+                            return filteredProducts.map((product, index) => {
+                            const images = [product.img1, product.img2, product.img3, product.img4].filter(Boolean);
+                                const isExpanded = expandedProductId === product.id;
+                                const rowStart = index - (index % columns);
+                                const rowEnd = Math.min(rowStart + columns - 1, filteredProducts.length - 1);
+                                const insertPanel = index === rowEnd && expandedIndex >= rowStart && expandedIndex <= rowEnd && expandedProduct;
+                                return (
+                                    <React.Fragment key={product.id}>
+                                <div id={`product-card-${product.id}`} className="w-full sm:w-1/2 md:w-1/3 px-3">
+                                    <div className="group relative h-[220px] md:h-[260px] lg:h-[300px] overflow-hidden rounded-lg bg-white">
+                                        <Image
+                                            src={product.img1 || "/placeholder.jpg"}
+                                            alt={product.name}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                        <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-t from-[#0F2850] via-[#0F2850]/70 to-transparent" />
+                                        <div className="absolute left-4 bottom-4 translate-y-3 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                                            <button onClick={() => openDetails(product)} className="inline-flex items-center hover:bg-[#fff] hover:text-secondary gap-2 text-white text-sm font-medium pl-[10px] pr-[10px] py-[6px] rounded-full ring-1 ring-white/40 bg-white/10 backdrop-blur-sm">
+                                                View Details
+												<Image src={"/asset/Arrowview.png"} alt="arrow" width={24
 
-						{filteredProducts.map((product) => (
-							<div
-								key={product.id}
-								className=""
-							>
-								<Image
-									src={product.img1 || "/placeholder.jpg"}
-									alt={product.name}
-									width={480}
-									height={300}
-									className="lg:w-full lg:h-[300px] object-contain rounded-lg"
-								/>
-								<div className="p-3">
-									<h3 className="text-[20px] font-medium text-gray-800">
-										{product.name}
-									</h3>
-								</div>
-							</div>
-						))}
-					</div>
+												} height={24} />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div className="p-3">
+                                        <h3 className="text-[20px] font-medium text-gray-800">{product.name}</h3>
+                                    </div>
+                    
+                                </div>
+
+                                {insertPanel && expandedProduct && (
+                                    <div id={`product-details-inline-${expandedProduct.id}`} className="w-full basis-full ">
+                                      <div className="max-w-[100%] my-[10px] rounded-xl bg-[#F0F0F0] p-[50px] transition-all duration-500 ease-out">
+                                        <div className="flex justify-between items-start flex-col lg:flex-row gap-[84px]">
+                                                <div className="lg:w-[40%] w-full">
+                                                    <div className="relative w-full h-[240px] md:h-[300px] lg:h-[320px] rounded-lg overflow-hidden bg-gray-50">
+                                                        <Image src={activeImageSrc || expandedProduct.img1 || "/placeholder.jpg"} alt={expandedProduct.name} fill className="object-cover" />
+                                                    </div>
+                                                    <div className="mt-3 flex gap-3">
+                                                        {[expandedProduct.img1, expandedProduct.img2, expandedProduct.img3, expandedProduct.img4].filter(Boolean).map((img, i) => (
+                                                            <button key={i} onClick={() => setActiveImageSrc(img)} className="relative w-[70px] h-[70px] rounded-md overflow-hidden ring-1 ring-gray-200">
+                                                                <Image src={img} alt={`${product.name}-${i}`} fill className="object-cover" />
+                                                            </button>
+                                                        ))}
+                                                    </div>
+                                                </div>
+
+                                                <div className="lg:w-[60%] w-full">
+                                                    <div className="flex items-start  justify-between">
+                                                        <div>
+                                                            <h3 className="text-[18px] md:text-[24px] font-medium text-secondary">{expandedProduct.name}</h3>
+                                                            <p className="text-xs md:text-[24px] font-light text-secondary mt-1">{expandedProduct.category}</p>
+                                                        </div>
+                                                        <button onClick={() => setExpandedProductId(null)} className="text-gray-500 hover:text-gray-700">
+															<Image src={"/asset/crossnew.png"} alt="close" width={24} height={24} />
+														</button>
+                                                    </div>
+
+                                                    <div className="mt-[50px] border-b-[1px] border-secondary">
+                                                        <div className="flex gap-6 text-sm">
+                                                            {["Description", "Key Benefits"].map((tab) => (
+                                                                <button key={tab} onClick={() => setActiveTab(tab)} className={`pb-2 lg:text-[20px] text-[16px] relative ${activeTab === tab ? "text-secondary font-bold" : "text-secondary"}`}>
+                                                                    {tab}
+                                                                    {activeTab === tab && <span className="absolute left-0 right-0 -bottom-[1px] h-[2px] bg-secondary rounded-full" />}
+                                                                </button>
+                                                            ))}
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="mt-4 text-[12px] md:text-[14px] text-secondary">
+                                                        {activeTab === "Description" && <p className="text-[14px]">{expandedProduct.desc}</p>}
+                                                        {activeTab === "Key Benefits" && (
+                                                            <ul className="list-disc list-inside space-y-1">
+                                                                {(expandedProduct.KeyFeatures || []).map((k, i) => (
+                                                                    <li key={i}>{k}</li>
+                                                                ))}
+                                                            </ul>
+                                                        )}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                )}
+                                </React.Fragment>
+                            );
+                            });
+                        })()}
+                    </div>
+
+                    {/* Removed unified panel; now each expanded card shows its own panel directly below */}
 				</div>
 
 				{/* Example conditional wrapper if you ever need separate markup for "all":
