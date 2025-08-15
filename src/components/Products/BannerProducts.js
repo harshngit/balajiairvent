@@ -2,7 +2,7 @@ import React from 'react'
 
 const BannerProducts = () => {
 	return (
-		<div className='w-full bg-secondary flex justify-end pt-[180px] lg:px-[40px] px-5 lg:pb-[50px]'>
+		<div className='w-full bg-secondary flex justify-end pt-[100px] pb-[50px] lg:px-[40px] px-5 lg:pb-[50px]'>
 			<div className=''>
 				<h2 className=' text-font font-light lg:text-[36px]'>We offer various products to our clients and always ready to customise the same as per our clients requirement.</h2>
 			</div>

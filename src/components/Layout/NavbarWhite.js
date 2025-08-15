@@ -42,7 +42,7 @@ export default function NavbarCustom1() {
       if (!tickingRef.current) {
         window.requestAnimationFrame(() => {
           // keep your original threshold (10px)
-          setScrolling(y > 1000);
+          setScrolling(y > 100);
 
           // direction logic
           const lastY = lastYRef.current;

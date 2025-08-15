@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import React, { useState } from 'react'
 import projectsData from '@/data/projectsData'
+import ClientsProject from './ClientsProject';
 
 const ProjectGrid = () => {
   const [activeCategory, setActiveCategory] = useState("collabration");
@@ -19,10 +20,10 @@ const ProjectGrid = () => {
         <div className='w-full h-[260px] md:h-[70vh] bg-gradient-to-b from-[#0F2850] from-[40%] via-[#0f28507c] via-[80%] to-white to-[100%]' />
       </div>}
       {activeCategory === "projects" && <div className='absolute inset-x-0 top-0 -z-10 pointer-events-none'>
-        <div className='w-full h-[260px] md:h-[30vh] bg-secondary' />
+        <div className='w-full h-[180px] md:h-[30vh] bg-secondary' />
       </div>}
       {activeCategory === "clients" && <div className='absolute inset-x-0 top-0 -z-10 pointer-events-none'>
-        <div className='w-full h-[260px] md:h-[30vh] bg-secondary' />
+        <div className='w-full h-[360px] md:h-[60vh] bg-secondary' />
       </div>}
 
       <div className=' min-h-screen '>
@@ -47,7 +48,7 @@ const ProjectGrid = () => {
           </div>
         </div>
         {activeCategory === "collabration" && (
-          <div className="flex justify-start lg:gap-[50px] items-start flex-col gap-4 lg:py-[50px] lg:px-[20px]">
+          <div className="flex justify-start lg:gap-[50px] items-start flex-col gap-4 lg:py-[50px] lg:px-[20px] px-3 py-5">
             <div className='flex justify-start items-center gap-2'>
               <h3 className='font-light text-[#F0F0F0] text-[32px]'>75F Solutions</h3>
               <Image 
@@ -130,7 +131,7 @@ const ProjectGrid = () => {
 			</div>
             <div className='flex flex-col justify-start items-start gap-2'>
                 <h2 className='text-secondary text-[28px] font-light'>Product Advantages</h2>
-                <div className='grid grid-cols-1 lg:grid-cols-4 gap-[20px]'>
+                <div className='lg:grid grid-cols-1 lg:mx-[60px] mx-8 mt-5 lg:grid-cols-4 gap-[20px] flex flex-col justify-center items-center'>
                         <Image
                             src={"/asset/projects/collabration/advantages/1.webp"} 
                             alt="Product Advantages"
@@ -165,8 +166,8 @@ const ProjectGrid = () => {
           </div>
         )}
         {activeCategory === "projects" && (
-          <div className="w-full xxl:pt-[100px] lg:pt-[100px]">
-            <div className="grid grid-cols-1 xxl:pt-[50px] sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 px-6">
+          <div className="w-full xxl:pt-[100px] lg:pt-[50px] pt-[50px]">
+            <div className="grid grid-cols-1 pt-10 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 px-6">
               {projectsData.map((project) => (
                 <div key={project.id} className="">
                   <div className="relative group ">
@@ -205,10 +206,24 @@ const ProjectGrid = () => {
           </div>
         )}
         {activeCategory === "clients" && (
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col">
             <div className="flex flex-col gap-4">
-              <h2 className="text-2xl font-bold">Clients</h2>
+              <Image 
+              src={"/asset/projects/clients/mob.webp"}
+              alt="Clients"
+              width={1512}
+              height={700}
+              className='lg:hidden block'
+              />
+              <Image 
+              src={"/asset/projects/clients/dektop.webp"}
+              alt="Clients"
+              width={1440}
+              height={1000}
+              className='lg:block hidden   w-full h-full object-cover'
+              />
             </div>
+            <ClientsProject/>
           </div>
         )}
       </div>

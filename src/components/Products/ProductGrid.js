@@ -89,10 +89,10 @@ const ProductGrid = () => {
     }, []);
 
 	return (
-		<div className="mx-10 pt-[50px]">
+		<div className="lg:mx-10 mx-5 pt-[50px]">
 			<div className="lg:pt-[0px] pb-[50px]">
 				{/* Tabs */}
-				<div className="flex space-x-6 border-b border-gray-200">
+				<div className="flex space-x-6 border-b border-gray-200 lg:w-full w-[370px] lg:overflow-auto overflow-scroll">
 					{productTabs.map((tab) => (
 						<button
 							key={tab.href}
@@ -260,7 +260,7 @@ const ProductGrid = () => {
 							</div>
 						</>
 					}
-                    <div className="flex flex-wrap mt-5 xl:gap-2  lg:gap-[50px] md:gap-[20px] lg:px-0 px-5 xl:mx-auto lg:-mx-3 relative">
+                    <div className="flex flex-wrap mt-5 xl:gap-2  lg:gap-[50px] md:gap-[20px] lg:px-0 px-1 xl:mx-auto lg:-mx-3 relative">
                         {(() => {
                             const expandedIndex = filteredProducts.findIndex(p => p.id === expandedProductId);
                             const expandedProduct = expandedIndex >= 0 ? filteredProducts[expandedIndex] : null;
