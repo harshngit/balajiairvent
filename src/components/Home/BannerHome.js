@@ -30,8 +30,8 @@ const BannerHome = () => {
 							Firstfan HVLS Fans available in 5 sizes ranging from 12ft - 24 ft equipped with PMSM motor.
 						</p>
 
-						<Link href="/products/hvls-fan">
-							<button className="mt-4 flex items-center gap-2 bg-[#F0F0F066] text-font rounded-full text-[16px] lg:pl-[20px] lg:pr-[7px] lg:py-2 font-light ">
+						<Link href="/products#fans">
+							<button className="mt-4 flex items-center gap-2 hover:bg-primary hover:text-white bg-[#F0F0F066] text-font rounded-full text-[16px] lg:pl-[20px] lg:pr-[7px] lg:py-2 font-light ">
 								View Product
 								<Image
 									src={"/asset/rightbutton.png"}
@@ -61,13 +61,13 @@ const BannerHome = () => {
 				{/* Orange vertical line */}
 
 				{/* Fan Image */}
-				<div className="rounded-xl overflow-hidden w-[330px] h-[150px] flex-shrink-0 bg-white">
+				<div className="rounded-xl overflow-hidden w-full h-[150px] flex-shrink-0 bg-white">
 					<Image
 						src={"/asset/home/home-product.webp"}
 						alt="HVLS Fan"
 						width={350}
 						height={150}
-						className="object-contain w-[350px] h-[150px]"
+						className="object-contain  !w-full h-full"
 					/>
 				</div>
 

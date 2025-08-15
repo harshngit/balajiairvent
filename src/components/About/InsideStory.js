@@ -4,7 +4,7 @@ import React from 'react'
 const InsideStory = () => {
 	return (
 		<>
-			<div className='max-w-[1400px] lg:mx-auto'>
+			<div className='mx-10'>
 				<div className='flex justify-between items-start lg:pb-[100px] lg:px-[40px] py-5 px-5  lg:flex-row flex-col'>
 					<div className='flex w-full lg:w-[60%] justify-start items-center'>
 						<h2 className='text-secondary font-light lg:text-[40px] text-[30px]'>

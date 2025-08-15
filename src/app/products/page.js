@@ -13,7 +13,7 @@ const Products = () => {
 			<ProductGrid />
 			<Footer />
 		</div>
-	)
+	)			
 }
 
 export default Products

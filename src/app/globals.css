@@ -161,14 +161,15 @@
     background-repeat: no-repeat;
 }
 
-@media screen and (max-wid) {
+
+@media screen and (max-width:1000px) {
     .bg_bannerhome {
-        background: url('/asset/home/home.webp');
+        background: url('/asset/home/bg-mobile.webp');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 1000px;
-        margin-top: 0px;
+        height:1000px;
+        margin-top: -400px;
     }
 }
 

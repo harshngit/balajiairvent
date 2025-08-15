@@ -133,7 +133,7 @@ export default function Application() {
 	return (
 		<div className="font-onset bg-white my-[50px]">
 			{/* Header */}
-			<div className="w-full lg:px-10 px-5 lg:py-10 py-6 max-w-[1400px] mx-auto">
+			<div className="w-full lg:px-10 px-5 lg:py-10 py-6 xxl:max-w-[1600px] xl:max-w-[1400px] lg:max-w-[1200px] mx-auto">
 				<div className="flex flex-col lg:flex-row justify-between items-end gap-8">
 					{/* Left */}
 					<div className="flex flex-col text-left lg:w-1/2 w-full">
@@ -247,7 +247,7 @@ export default function Application() {
 								{item?.description}
 							</p>
 						</div>
-						<div className="flex justify-center flex-col gap-[10px] items-center">
+						<div className="flex justify-start flex-col gap-[10px] items-start mt-2">
 							<div className="w-[350px] h-[150px]">
 								<Image
 									src={item?.images[0]}

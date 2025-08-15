@@ -6,7 +6,7 @@ import Image from 'next/image'
 const AboutHome2 = () => {
 	return (
 		<div className="w-full lg:px-10 px-5 lg:py-10 py-6 font-onset mt-10">
-			<div className="max-w-[1400px] lg:h-[200px] mx-auto flex flex-col lg:flex-row justify-between items-start gap-8">
+			<div className=" lg:h-[200px] mx-6 flex flex-col lg:flex-row justify-between items-start gap-8">
 				{/* Left Title Section */}
 				<div className="flex flex-col text-left lg:w-1/2 w-full">
 					<h2 className="text-3xl md:text-[54px] font-light text-[#0F2850] leading-snug">
@@ -42,7 +42,7 @@ const AboutHome2 = () => {
 			</div>
 
 			<div className="w-full lg:px-5 py-10 bg-white font-onset">
-				<div className="max-w-[1400px] mx-auto flex flex-col gap-6">
+				<div className=" mx-6 flex flex-col gap-6">
 					<div className="flex flex-wrap gap-6 justify-start">
 						{/* Card 1 */}
 
@@ -67,9 +67,9 @@ const AboutHome2 = () => {
 
 
 						{/* Card 2 */}
-						<Link href={"#"} className='lg:w-[28%] w-full'>
+						<Link href={"#"} className='lg:w-[28%] w-full relative group'>
 							<div className="">
-								<div className="relative w-full ">
+								<div className="relative w-full  ">
 									<Image
 										src="/asset/home/projects/2.webp"
 										alt="GMR Airport-Mopa"
@@ -77,7 +77,9 @@ const AboutHome2 = () => {
 										height={250}
 										className="object-cover"
 									/>
+									<div className="absolute group-hover:opacity-100 opacity-0 inset-0 bg-gradient-to-b from-secondary to-transparent rounded-xl" />
 								</div>
+								
 								<div className="lg:p-4 pt-4">
 									<h3 className="text-[#0F2850] text-base font-semibold mb-1">GMR Airport-Mopa</h3>
 									<p className="text-sm text-[#0F2850] opacity-80 leading-relaxed">
@@ -88,9 +90,9 @@ const AboutHome2 = () => {
 						</Link>
 
 						{/* Card 3 */}
-						<Link href={"#"} className='lg:w-[28%] w-full'>
+						<Link href={"#"} className='lg:w-[28%] w-full relative group'>
 							<div className="">
-								<div className="relative w-full ">
+								<div className="relative w-full group">
 									<Image
 										src="/asset/home/projects/3.webp"
 										alt="UNMS Army"
@@ -98,6 +100,7 @@ const AboutHome2 = () => {
 										height={250}
 										className="object-cover"
 									/>
+									<div className="absolute group-hover:opacity-100 opacity-0 inset-0 bg-gradient-to-b from-secondary to-transparent rounded-xl" />
 								</div>
 								<div className="lg:p-4 pt-4">
 									<h3 className="text-[#0F2850] text-base font-semibold mb-1">

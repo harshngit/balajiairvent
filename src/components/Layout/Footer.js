@@ -9,23 +9,23 @@ import Image from 'next/image';
 const footerLink = [
     {
         label: "Home Page",
-        href: "#"
+        href: "/"
     },
     {
         label: "About Us",
-        href: "#"
+        href: "/aboutus"
     },
     {
         label: "Projects & Collaborations",
-        href: "#"
+        href: "/projects"
     },
     {
         label: "Products",
-        href: "#"
+        href: "/products"
     },
     {
         label: "Contact Us",
-        href: "#"
+        href: "/contactus"
     },
 ]
 
@@ -112,11 +112,15 @@ const Footer = () => {
                     <h2 className='font-light text-[14px]'>All Rights Reserved</h2>
                 </div>
                 <div className='flex justify-start items-center'>
-                    <h2 className='font-light text-[14px]'>Terms & Conditions</h2>
+                    <Link href="/terms-and-conditions">
+                        <h2 className='font-light text-[14px] hover:text-[#90C4FD]'>Terms & Conditions</h2>
+                    </Link>
                 </div>
 
                 <div className='flex justify-start items-center'>
-                    <h2 className='font-light text-[14px]'>Privacy Policy</h2>
+                    <Link href="/privacy-policy">
+                        <h2 className='font-light text-[14px] hover:text-[#90C4FD]'>Privacy Policy</h2>
+                    </Link>
                 </div>
             </div>
         </footer>

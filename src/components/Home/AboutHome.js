@@ -7,7 +7,7 @@ import Link from 'next/link'
 const AboutHome = () => {
 	return (
 		<div className="bg-[#0F2850] px-6 py-12 w-full">
-			<div className="max-w-[1400px] mx-auto mb-[50px] flex flex-col md:flex-row items-start gap-10">
+			<div className="mx-6 mb-[50px] flex flex-col md:flex-row items-start gap-10">
 				{/* Left: Image + Button */}
 				<div className="md:w-[30%] w-full">
 					<Image
@@ -18,7 +18,7 @@ const AboutHome = () => {
 						className="rounded-xl w-full h-auto object-cover"
 					/>
 
-					<Link href="/about" className="inline-block mt-4">
+					<Link href="/aboutus" className="inline-block mt-4">
 						<button className="flex items-center gap-4 border border-[#F0F0F0] text-[16px]  py-[5px] pr-[5px] pl-[10px] text-[#F0F0F0] lg:pl-[20px] lg:pr-[7px] lg:py-2 font-light  rounded-full hover:bg-primary hover:text-[#F0F0F0] transition-all">
 							About US
 							<Image

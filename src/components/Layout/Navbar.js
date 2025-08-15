@@ -17,8 +17,8 @@ const navItems = [
       { label: "Fire Doors", href: "/products#firedoor" },
     ]
   },
-  { label: "Projects & Collaborations", href: "#" },
-  { label: "Contact Us", href: "#" },
+  { label: "Projects & Collaborations", href: "/projects" },
+  { label: "Contact Us", href: "/contactus" },
 ];
 
 export default function NavbarCustom() {
@@ -102,7 +102,7 @@ export default function NavbarCustom() {
         "font-onest"
       ].join(" ")}
     >
-      <div className="max-w-[1700px] mx-auto px-4 py-3 flex justify-between items-center">
+      <div className=" mx-0 px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
           <img
@@ -123,7 +123,7 @@ export default function NavbarCustom() {
         </button>
 
         {/* Desktop nav */}
-        <ul className={`hidden md:flex items-center justify-center px-6 py-2 rounded-full ${scrolled ? "bg-white shadow-lg border-gray-200" : "bg-[#ffffff33] text-white"}`}>
+        <ul className={`hidden lg:flex items-center justify-center px-6 py-2 rounded-full ${scrolled ? "bg-white shadow-lg border-gray-200" : "bg-[#ffffff33] text-white"}`}>
           {navItems.map((item, idx) => (
             <li
               key={idx}
@@ -154,6 +154,7 @@ export default function NavbarCustom() {
             </li>
           ))}
           <li>
+            <Link href="#">
             <button
               className={`group text-sm flex items-center gap-[20px] ml-5 lg:pl-[20px] lg:pr-[7px] lg:py-2 font-light  rounded-full border transition-all duration-200 text-[16px]
               ${scrolled ? "bg-primary hover:bg-[#fff] hover:border-primary hover:text-primary text-white border-primary shadow-md" : "hidden"}`}
@@ -162,11 +163,12 @@ export default function NavbarCustom() {
               <img src="/asset/navbar/Arrow.png" className="w-[28px] h-[28px] group-hover:opacity-0 group-hover:hidden transition-all duration-200 opacity-100" alt="Arrow Hover" />
               <img src="/asset/navbar/Arrowblue.png" className="w-[28px] h-[28px] group-hover:opacity-100 hidden group-hover:block transition-all duration-200 opacity-100" alt="Arrow Hover" />
             </button>
+            </Link>
           </li>
         </ul>
 
         {/* Right CTA (desktop) */}
-        <Link href="" className="hidden lg:block">
+        <Link href="#" className="hidden lg:block">
           <button
             className={`group text-sm flex items-center gap-[20px] pr-[7px] pl-[20px] py-[10px] rounded-full border transition-all duration-200 w-[162px] h-[40px]
             ${scrolled ? "hidden" : "bg-transparent border-white text-white hover:border-[#1666B6] hover:bg-[#1666B6] hover:text-[#fff]"}`}

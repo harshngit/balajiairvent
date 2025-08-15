@@ -12,7 +12,7 @@ const CTA = () => {
 					<p>Rajbahadur Yadav – 9819903151 | 9320113151</p>
 				</div>
 				<Link href="#">
-					<button className="mt-4 flex items-center gap-2 bg-[#F0F0F066] text-font rounded-full lg:pl-[20px] lg:pr-[7px] lg:py-2  text-[16px] font-light transition-all">
+					<button className="mt-4 flex items-center gap-2 bg-[#F0F0F066] hover:bg-primary hover:text-white text-font rounded-full lg:pl-[20px] lg:pr-[7px] lg:py-2  text-[16px] font-light transition-all">
 						Send Inquiry
 						<Image
 							src={"/asset/ArrowFilled.png"}

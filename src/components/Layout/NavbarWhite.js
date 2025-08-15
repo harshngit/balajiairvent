@@ -19,8 +19,8 @@ const navItems = [
       { label: "Fire Doors", href: "/products#firedoor" },
     ]
   },
-  { label: "Projects & Collaborations", href: "#" },
-  { label: "Contact Us", href: "#" },
+  { label: "Projects & Collaborations", href: "/projects" },
+  { label: "Contact Us", href: "/contactus" },
 ];
 
 export default function NavbarCustom1() {
@@ -90,7 +90,7 @@ export default function NavbarCustom1() {
         scrolling ? "bg-white shadow-sm" : "bg-transparent"
       } ${pinned ? "translate-y-0" : "-translate-y-full"} will-change-transform`}
     >
-      <div className="max-w-[1700px] mx-auto px-4 py-3 flex justify-between items-center">
+      <div className=" mx-0 px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
           <img
@@ -111,7 +111,7 @@ export default function NavbarCustom1() {
 
         {/* Navigation Menu */}
         <ul
-          className={`hidden md:flex items-center justify-center px-6 py-2 rounded-full ${
+          className={`hidden lg:flex items-center justify-center px-6 py-2 rounded-full ${
             scrolling ? "bg-white shadow-lg border-gray-200" : "bg-[#ffffff33] text-white"
           }`}
         >

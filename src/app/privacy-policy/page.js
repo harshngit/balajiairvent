@@ -5,7 +5,7 @@ import React from 'react'
 
 const PrivacyPage = () => {
 	return (
-		<div className='relative '>
+		<div className='relative font-onest '>
 			{/* <ThemeProvider> */}
 			<NavbarBrandStory />
 			<PrivacyContent />
