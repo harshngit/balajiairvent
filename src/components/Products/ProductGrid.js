@@ -260,7 +260,7 @@ const ProductGrid = () => {
 							</div>
 						</>
 					}
-                    <div className="flex flex-wrap mt-5  -mx-3 relative">
+                    <div className="flex flex-wrap mt-5 xl:gap-5 gap-[50px] lg:px-0 px-5 xl:mx-auto lg:-mx-3 relative">
                         {(() => {
                             const expandedIndex = filteredProducts.findIndex(p => p.id === expandedProductId);
                             const expandedProduct = expandedIndex >= 0 ? filteredProducts[expandedIndex] : null;
@@ -272,7 +272,7 @@ const ProductGrid = () => {
                                 const insertPanel = index === rowEnd && expandedIndex >= rowStart && expandedIndex <= rowEnd && expandedProduct;
                                 return (
                                     <React.Fragment key={product.id}>
-                                <div id={`product-card-${product.id}`} className="w-full sm:w-1/2 md:w-1/3 px-3">
+                                <div id={`product-card-${product.id}`} className="w-full xl:w-[32.33%]  lg:w-[30.333%] px-3">
                                     <div className="group relative h-[220px] md:h-[260px] lg:h-[300px] overflow-hidden rounded-lg bg-white">
                                         <Image
                                             src={product.img1 || "/placeholder.jpg"}
@@ -282,7 +282,7 @@ const ProductGrid = () => {
                                         />
                                         <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-t from-[#0F2850] via-[#0F2850]/70 to-transparent" />
                                         <div className="absolute left-4 bottom-4 translate-y-3 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <button onClick={() => openDetails(product)} className="inline-flex items-center hover:bg-[#fff] hover:text-secondary gap-2 text-white text-sm font-medium pl-[10px] pr-[10px] py-[6px] rounded-full ring-1 ring-white/40 bg-white/10 backdrop-blur-sm">
+                                            <button onClick={() => openDetails(product)} className="inline-flex items-center hover:bg-[#fff] hover:text-secondary gap-2 text-white text-[16px] font-light pl-[10px] pr-[10px] py-[6px] rounded-full ring-1 ring-white/40 bg-white/10 backdrop-blur-sm">
                                                 View Details
 												<Image src={"/asset/Arrowview.png"} alt="arrow" width={24
 
@@ -291,7 +291,7 @@ const ProductGrid = () => {
                                         </div>
                                     </div>
                                     <div className="p-3">
-                                        <h3 className="text-[20px] font-medium text-gray-800">{product.name}</h3>
+                                        <h3 className={`text-[20px] font-medium ${isExpanded ? 'text-primary' : 'text-gray-800'}`}>{product.name}</h3>
                                     </div>
                     
                                 </div>
@@ -317,7 +317,12 @@ const ProductGrid = () => {
                                                     <div className="flex items-start  justify-between">
                                                         <div>
                                                             <h3 className="text-[18px] md:text-[24px] font-medium text-secondary">{expandedProduct.name}</h3>
-                                                            <p className="text-xs md:text-[24px] font-light text-secondary mt-1">{expandedProduct.category}</p>
+                                                           {activeCategory == "all" &&  <p className="text-xs md:text-[24px] font-light text-secondary mt-1">All</p>}
+														   {activeCategory == "Data Centre" &&  <p className="text-xs md:text-[24px] font-light text-secondary mt-1">Data Center</p>}
+														   {activeCategory == "Air" &&  <p className="text-xs md:text-[24px] font-light text-secondary mt-1">Comfort Air Conditioning</p>}
+														   {activeCategory == "Industries" &&  <p className="text-xs md:text-[24px] font-light text-secondary mt-1">Industrial Dampers</p>}
+														   {activeCategory == "Fans" &&  <p className="text-xs md:text-[24px] font-light text-secondary mt-1">Fans & Ventilation Accessories</p>}
+														   {activeCategory == "Fire Door" &&  <p className="text-xs md:text-[24px] font-light text-secondary mt-1">Fans & Ventilation Accessories</p>}
                                                         </div>
                                                         <button onClick={() => setExpandedProductId(null)} className="text-gray-500 hover:text-gray-700">
 															<Image src={"/asset/crossnew.png"} alt="close" width={24} height={24} />

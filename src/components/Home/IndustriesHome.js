@@ -53,7 +53,7 @@ const IndustriesHome = () => {
 					</p>
 					<Link href="/products">
 						<button className="flex items-center gap-2 border border-[#0F2850] text-[#0F2850] 
-						pr-[7px] pl-[20px] py-[10px] rounded-full hover:bg-[#0F2850] hover:text-white transition-all text-sm ">
+						pr-[7px] pl-[20px] py-[10px] rounded-full hover:bg-[#0F2850] hover:text-white transition-all text-[16px] ">
 							Explore All Products
 							<Image
 								src={"/asset/rightbutton.png"}

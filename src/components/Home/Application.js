@@ -142,7 +142,7 @@ export default function Application() {
 						</h2>
 						<h2 className="text-3xl md:text-[54px] font-light text-[#0F2850] leading-snug">
 							Expanding Horizons, Creating
-							<span className="text-3xl pl-4 md:text-[54px] font-light bg-gradient-to-r from-[#0052A0] to-[#A5C1E2] text-transparent bg-clip-text">
+							<span className="text-3xl pl-4 md:text-[54px] font-light bg-blue-gradient  text-transparent bg-clip-text">
 								Opportunities.
 							</span>
 						</h2>
@@ -150,7 +150,7 @@ export default function Application() {
 
 					{/* Right */}
 					<div className="flex items-end justify-end flex-col lg:w-1/2 w-full lg:border-l-[2px] py-0 lg:px-[25px] border-[#E77853]">
-						<p className="lg:pl-4 text-[14px] text-[#0F2850] mb-4 leading-relaxed">
+						<p className="lg:pl-4 text-[15px] text-[#0F2850] mb-4 leading-relaxed">
 							We are able to simulate air flow in our customers premises and
 							suggest a suitable product. Our knowledge and years of experience
 							allow us to put hundreds of technical details together so as to
@@ -168,7 +168,7 @@ export default function Application() {
 				className="relative lg:block hidden bottom-[150px] max-w-[1400px] m-auto"
 			>
 				<div className="sticky top-0 left-0 right-0 h-screen overflow-hidden">
-					<motion.div style={{ x }} className="flex w-full h-[100%]">
+					<motion.div style={{ x }} className="flex w-full h-[90%] xxl:h-[100%]">
 						{data.map((item, i) => (
 							<div
 								key={i}
@@ -212,7 +212,7 @@ export default function Application() {
 										{/* Text content */}
 										<div className="flex items-end ml-5">
 											{/* Main vertical text "Airports" */}
-											<div className="writing-mode-vertical text-[54px] font-light   transform rotate-180 bg-gradient-to-b from-[#0052A0] to-[#A5C1E2] text-transparent bg-clip-text"
+											<div className="writing-mode-vertical text-[54px] font-light   transform rotate-180 bg-blue-gradient text-transparent bg-clip-text"
 												style={{ writingMode: 'vertical-rl' }}>
 												{item?.title}
 											</div>

@@ -48,7 +48,7 @@ const ClientsHome = () => {
 				<Swiper
 					modules={[Autoplay]}
 					slidesPerView="auto"
-					spaceBetween={40}
+					spaceBetween={85}
 					loop={true}
 					autoplay={{ delay: 0, disableOnInteraction: false }}
 					speed={3000}
@@ -56,13 +56,13 @@ const ClientsHome = () => {
 					className="w-full !flex !justify-center !items-center top-[83px]"
 				>
 					{clientLogos.map((logo, index) => (
-						<SwiperSlide key={index} className="!w-auto flex items-center justify-center">
+						<SwiperSlide key={index} className="!w-auto flex !gap-[85px] items-center justify-center">
 							<Image
 								src={logo}
 								alt={`Client ${index + 1}`}
 								height={126}
 								width={200}
-								className="object-contain h-[75px] w-[200px]"
+								className="object-contain h-[50px]"
 							/>
 						</SwiperSlide>
 					))}

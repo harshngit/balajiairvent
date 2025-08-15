@@ -21,11 +21,12 @@ const InsideStory = () => {
 				</div>
 
 			</div>
-			<div className='lg:pb-[100px]'>
+			<div className='lg:pb-[100px] w-full'>
 				<Image
 					src={"/asset/about/inside.webp"}
 					width={1512}
 					height={800}
+					className='w-full'
 				/>
 			</div>
 		</>

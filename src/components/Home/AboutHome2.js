@@ -29,7 +29,7 @@ const AboutHome2 = () => {
 					</div>
 
 					<Link href="/projects">
-						<button className="flex items-center gap-2 border border-[#0F2850] text-[#0F2850] pl-[20px] pr-[7px] py-2 rounded-full hover:bg-[#0F2850] hover:text-white transition-all text-sm w-fit">
+						<button className="flex items-center gap-2 border border-[#0F2850] text-[#0F2850] pl-[20px] pr-[7px] py-2 rounded-full hover:bg-[#0F2850] hover:text-white transition-all text-[16px] w-fit">
 							View All Projects
 							<Image
 								src={"/asset/rightbutton.png"}

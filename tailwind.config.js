@@ -1,7 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import withMT from "@material-tailwind/react/utils/withMT";
-
-export default withMT({
+export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -26,7 +24,13 @@ export default withMT({
         thin: 100,
       },
       screens: {
-        xxl: '1728px',
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+        '3xl': '1920px',
+        'xxl': '1728px',
       },
       keyframes: {
         marquee: {
@@ -56,4 +60,4 @@ export default withMT({
     },
   },
   plugins: [],
-});
+};

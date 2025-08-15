@@ -79,7 +79,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 130vh;
+    height: 1000px;
     margin-top: -200px;
 }
 
@@ -161,12 +161,14 @@
     background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 1700) {
-    .banner_BS {
-        background: url('/asset/brand-story/brandstorybg.webp');
-        background-size: contain;
+@media screen and (max-wid) {
+    .bg_bannerhome {
+        background: url('/asset/home/home.webp');
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        height: 1000px;
+        margin-top: 0px;
     }
 }
 

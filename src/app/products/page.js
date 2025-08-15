@@ -7,7 +7,7 @@ import NavbarCustom1 from '@/components/Layout/NavbarWhite'
 
 const Products = () => {
 	return (
-		<div className=' font-onest lg:overflow-visible overflow-hidden'>
+		<div className=' font-onest overflow-hidden'>
 			<NavbarCustom1 />
 			<BannerProducts />
 			<ProductGrid />

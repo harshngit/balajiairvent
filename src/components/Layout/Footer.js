@@ -96,7 +96,7 @@ const Footer = () => {
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.247804534766!2d72.85509397520913!3d19.228029082008163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b0d1674a67cd%3A0x10b7e2d404b3d1e3!2sParas%20Business%20Center!5e0!3m2!1sen!2sin!4v1753901159743!5m2!1sen!2sin" width="305" className=' rounded-lg' height="241" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-            <div className='border-t-[1px] border-[#E77853] lg:mt-[80px] lg:h-[124px] lg:pt-[50px] mt-[50px] py-10 lg:pl-[40px] lg:pr-[20rem] lg:pb-[50px] flex lg:flex-row flex-col lg:gap-[10rem] gap-5'>
+            <div className='border-t-[1px] border-[#E77853] lg:mt-[80px] xl:mb-[67px] lg:mb-[67px] lg:h-[130px] lg:pt-[45px] mt-[50px] py-10 lg:pl-[40px] lg:pr-[20rem] lg:pb-[50px] flex lg:flex-row flex-col lg:gap-[10rem] gap-5'>
                 <div className='flex justify-start items-center lg:gap-[40px] gap-5'>
                     <Link href="#" target='_blank'>
                         <IoLogoFacebook className='text-[24px] text-[white] hover:text-[#90C4FD]' />
