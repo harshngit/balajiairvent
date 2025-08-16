@@ -13,8 +13,8 @@ const navItems = [
     children: [
       { label: "All", href: "/products#all" },
       { label: "Data Centre", href: "/products#data" },
-      { label: "Comfort Air Conditioning", href: "/products#industries" },
-      { label: "Industrial Dampers", href: "/products#collab2" },
+      { label: "Comfort Air Conditioning", href: "/products#comfort" },
+      { label: "Industrial Dampers", href: "/products#industries" },
       { label: "Fans & Ventilation Accessories", href: "/products#fans" },
       { label: "Fire Doors", href: "/products#firedoor" },
     ]
@@ -86,8 +86,8 @@ export default function NavbarCustom1() {
 
   return (
     <div
-      className={`fixed font-onest top-0 left-0 w-full z-[9999] transition-all lg:pt-[30px] lg:pr-[40px] lg:pb-[20px] lg:pl-[40px] p-[15px] duration-300 ${
-        scrolling ? "bg-white shadow-sm" : "bg-transparent"
+      className={`fixed font-onest top-0 left-0 w-full z-[9999] transition-all lg:pt-[30px] lg:pr-[40px] lg:pb-[20px] lg:pl-[40px] p-[15px] duration-300  ${
+        scrolling ? "bg-white shadow-sm" : ` ${isActive("/contactus") && "bg-secondary lg:bg-transparent"} `
       } ${pinned ? "translate-y-0" : "-translate-y-full"} will-change-transform`}
     >
       <div className=" mx-0 px-4 py-3 flex justify-between items-center">

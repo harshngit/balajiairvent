@@ -7,8 +7,8 @@ import React, { useEffect, useState } from "react";
 const productTabs = [
 	{ label: "All", href: "#all", category: "all" },
 	{ label: "Data Centre", href: "#data", category: "Data Centre" },
-	{ label: "Comfort Air Conditioning", href: "#industries", category: "Air" },
-	{ label: "Industrial Dampers", href: "#collab2", category: "Industries" },
+	{ label: "Comfort Air Conditioning", href: "#comfort", category: "Air" },
+	{ label: "Industrial Dampers", href: "#industries", category: "Industries" },
 	{ label: "Fans & Ventilation Accessories", href: "#fans", category: "Fans" },
 	{ label: "Fire Doors", href: "#firedoor", category: "Fire Door" },
 ];

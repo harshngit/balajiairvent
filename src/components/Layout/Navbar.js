@@ -11,8 +11,8 @@ const navItems = [
     children: [
       { label: "All", href: "/products#all" },
       { label: "Data Centre", href: "/products#data" },
-      { label: "Comfort Air Conditioning", href: "/products#industries" },
-      { label: "Industrial Dampers", href: "/products#collab2" },
+      { label: "Comfort Air Conditioning", href: "/products#comfort" },
+      { label: "Industrial Dampers", href: "/products#industries" },
       { label: "Fans & Ventilation Accessories", href: "/products#fans" },
       { label: "Fire Doors", href: "/products#firedoor" },
     ]

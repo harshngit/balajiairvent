@@ -7,27 +7,27 @@ const industries = [
 	{
 		title: 'View all Data Centre Products',
 		image: '/asset/home/industries/1.webp',
-		href: '#',
+		href: '/products#data',
 		showArrow: true,
 		spanClass: 'row-span-2',
 	},
 	{
 		title: 'Comfort Air Conditioning',
 		image: '/asset/home/industries/1.webp',
-		href: '#',
+		href: '/products#comfort',
 		showArrow: true,
 
 	},
 	{
 		title: 'Industrial Dampers',
 		image: '/asset/home/industries/1.webp',
-		href: '#',
+		href: '/products#collab2',
 		showArrow: true,
 	},
 	{
 		title: 'Fans & Ventilation Accessories',
 		image: '/asset/home/industries/1.webp',
-		href: '#',
+		href: '/products#fans',
 		showArrow: true,
 	},
 ]
@@ -67,7 +67,7 @@ const IndustriesHome = () => {
 
 				<div className="lg:w-1/2 w-full lg:px-5 flex lg:flex-row flex-col justify-start items-start gap-[20px]">
 					<div className='flex justify-start items-start flex-col gap-[20px]'>
-						<Link href={"#"}>
+						<Link href={"/products#data"}>
 							<div
 								className={`relative w-full rounded-xl overflow-hidden group `}
 							>
@@ -96,7 +96,7 @@ const IndustriesHome = () => {
 								</div>
 							</div>
 						</Link>
-						<Link href={"#"} className=''>
+						<Link href={"/products#industries"} className=''>
 							<div
 								className={`relative w-full rounded-xl overflow-hidden group  `}
 							>
@@ -128,7 +128,7 @@ const IndustriesHome = () => {
 
 					</div>
 					<div className='flex justify-start items-start flex-col gap-[20px]'>
-						<Link href={"#"}>
+						<Link href={"/products#comfort"}>
 							<div
 								className={`relative w-full rounded-xl overflow-hidden group `}
 							>
@@ -157,7 +157,7 @@ const IndustriesHome = () => {
 								</div>
 							</div>
 						</Link>
-						<Link href={"#"}>
+						<Link href={"/products#fans"}>
 							<div
 								className={`relative w-full rounded-xl overflow-hidden group  `}
 							>
