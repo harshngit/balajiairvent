@@ -3,13 +3,13 @@ import Image from 'next/image'
 
 const AboutBanner = () => {
 	return (
-		<div className="mx-10  px-6 py-12 space-y-10">
+		<div className="lg:mx-10  lg:px-6 px-2 py-12 space-y-10">
 			{/* Text Section */}
 			<div className="flex flex-col lg:flex-row lg:pt-[100px] pt-[80px] lg:pb-[40px] justify-between items-end gap-10">
 				{/* Left Heading */}
 				<div className="lg:w-[40%] w-full">
-					<h2 className="text-[24px] lg:text-[32px] text-[#0F2850] font-light">
-						Your one stop source for <br />
+					<h2 className="text-[32px] lg:text-[32px] text-[#0F2850] font-light">
+						Your one stop source for <br className='lg:block hidden' />
 						<span className=" bg-blue-gradient text-transparent bg-clip-text font-light lg:text-[40px]">
 							Air Management Solutions
 						</span>
@@ -46,7 +46,7 @@ const AboutBanner = () => {
 					alt="Air Management System"
 					width={1400}
 					height={400}
-					className="lg:w-full lg:h-auto w-[350px] h-[200px] object-cover"
+					className="lg:w-full lg:h-auto w-full h-[200px] object-cover"
 				/>
 			</div>
 			<div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>

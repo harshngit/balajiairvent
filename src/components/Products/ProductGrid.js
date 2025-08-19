@@ -89,7 +89,7 @@ const ProductGrid = () => {
     }, []);
 
 	return (
-		<div className="lg:mx-10 mx-5 pt-[50px]">
+		<div className="lg:mx-10 mx-1 pt-[50px]">
 			<div className="lg:pt-[0px] pb-[50px]">
 				{/* Tabs */}
 				<div className="flex space-x-6 border-b border-gray-200 lg:w-full w-[370px] lg:overflow-auto overflow-scroll">
@@ -97,7 +97,7 @@ const ProductGrid = () => {
 						<button
 							key={tab.href}
 							onClick={() => handleClick(tab)}
-							className={`relative pb-2 px-[20px] text-sm md:text-[20px] transition-colors ${activeCategory === tab.category
+							className={`relative pb-2 px-[20px] text-[20px] lg:w-full md:text-[20px] transition-colors ${activeCategory === tab.category
 								? "font-medium text-[#0F2850]"
 								: "font-light text-[#0F2850]/80"
 								}`}

@@ -9,7 +9,7 @@ const About = () => {
 	return (
 		<>
 
-			<div className=' font-onest'>
+			<div className=' font-onest lg:overflow-visible overflow-hidden'>
 				<NavbarBrandStory />
 				<AboutBanner />
 				<KeyFeatures />

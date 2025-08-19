@@ -35,7 +35,7 @@ const industries = [
 const IndustriesHome = () => {
 	return (
 		<div className="w-full lg:px-10 px-5 lg:py-10 py-6 font-onset mt-10">
-			<div className=" mx-6 flex flex-col md:flex-row gap-[54px]">
+			<div className=" lg:mx-6 flex flex-col md:flex-row gap-[54px]">
 				{/* Left Text Section */}
 				<div className="md:w-[600px] w-full flex flex-col justify-center">
 					<div className='flex justify-start items-start lg:gap-[30px] gap-1 flex-col'>

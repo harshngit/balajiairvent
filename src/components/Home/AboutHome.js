@@ -7,7 +7,7 @@ import Link from 'next/link'
 const AboutHome = () => {
 	return (
 		<div className="bg-[#0F2850] px-6 py-12 w-full">
-			<div className="mx-6 mb-[50px] flex flex-col md:flex-row items-start gap-10">
+			<div className="lg:mx-6 mb-[50px] flex flex-col md:flex-row items-start gap-10">
 				{/* Left: Image + Button */}
 				<div className="md:w-[30%] w-full">
 					<Image
