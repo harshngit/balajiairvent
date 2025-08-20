@@ -75,7 +75,7 @@ const AboutHome2 = () => {
 										alt="GMR Airport-Mopa"
 										width={396}
 										height={250}
-										className="object-cover"
+										className="object-cover w-full h-full"
 									/>
 									<div className="absolute group-hover:opacity-100 opacity-0 inset-0 bg-gradient-to-b from-secondary to-transparent rounded-xl" />
 								</div>
@@ -98,7 +98,7 @@ const AboutHome2 = () => {
 										alt="UNMS Army"
 										width={396}
 										height={250}
-										className="object-cover"
+										className="object-cover w-full h-full"
 									/>
 									<div className="absolute group-hover:opacity-100 opacity-0 inset-0 bg-gradient-to-b from-secondary to-transparent rounded-xl" />
 								</div>

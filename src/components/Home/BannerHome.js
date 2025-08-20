@@ -44,14 +44,17 @@ const BannerHome = () => {
 						</Link>
 					</div>
 				</div>
-				<Link href="#" className='lg:hidden block absolute bottom-[3.25rem] left-3 '>
-					<button className="mt-4 flex items-center gap-2 bg-[#F0F0F066] text-font rounded-full px-3 py-[3px] text-[16px] font-light transition-all">
+				{/* bottom gradient */}
+				<div className="lg:block hidden absolute bottom-0 left-0 w-full h-[100px] bg-gradient-to-t from-[#0F2850] to-transparent"></div>
+				{/* Mobile Banner */}
+				<Link href="#" className='lg:hidden block absolute bottom-[3.25rem] left-5 '>
+					<button className="mt-5  flex items-center gap-2 bg-[#F0F0F066] text-font rounded-full px-3 py-[5px] text-[16px] font-light transition-all">
 						Send Inquiry
 						<Image
 							src={"/asset/ArrowFilled.png"}
 							alt="HVLS Fan"
-							width={28}
-							height={28}
+							width={24}
+							height={24}
 						/>
 					</button>
 				</Link>

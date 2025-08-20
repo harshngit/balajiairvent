@@ -111,7 +111,7 @@ export default function NavbarCustom1() {
 
         {/* Navigation Menu */}
         <ul
-          className={`hidden lg:flex items-center justify-center px-6 py-2 rounded-full ${
+          className={`hidden lg:flex items-center justify-center pl-6 pr-[7px] py-2 rounded-full ${
             scrolling ? "bg-white shadow-lg border-gray-200" : "bg-[#ffffff33] text-white"
           }`}
         >
@@ -214,7 +214,7 @@ export default function NavbarCustom1() {
         </Link>
 
         {menuOpen && (
-          <div className="fixed inset-0 z-[99999] bg-[#002244cc] backdrop-blur-md flex flex-col justify-start items-start px-6 py-8 text-white transition-all duration-700 ease-in-out h-[100vh]">
+          <div className="fixed inset-0 z-[99999] bg-[#0F2850] opacity-[80%] backdrop-blur-md flex flex-col justify-start items-start px-6 py-8 text-white transition-all duration-700 ease-in-out h-[100vh]">
             {/* Close Button */}
             <div className="absolute top-10 right-6 cursor-pointer" onClick={() => setMenuOpen(false)}>
               <Image src={"/asset/navbar/cross.png"} width={24} height={24} alt="close" />

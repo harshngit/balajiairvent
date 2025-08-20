@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const InsideStory = () => {
@@ -21,14 +22,14 @@ const InsideStory = () => {
 				</div>
 
 			</div>
-			<div className='lg:pb-[100px] w-full'>
+			<Link href={"https://youtu.be/ZOVaV7ozBC0?si=OHAttt2eVeA-XJMV"} target='_blank' className='lg:pb-[100px] w-full'>
 				<Image
 					src={"/asset/about/inside.webp"}
 					width={1512}
 					height={800}
 					className='w-full'
 				/>
-			</div>
+			</Link>
 		</>
 	)
 }

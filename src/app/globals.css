@@ -10,33 +10,32 @@
 
 .custom-pagination {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     gap: 8px;
     margin-top: 32px;
 }
 
 .swiper-bullet {
-    width: 12px;
-    height: 12px;
+    width: 8px !important;
+    height: 8px !important;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: #90C4FD !important; /* dark blue */
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.25s ease;
     border: none;
     outline: none;
 }
 
-.swiper-bullet-active {
-    width: 15px;
-    height: 15px;
-    border-radius: 100%;
-    background-color: #FF6B35;
-    transform: none;
+.custom-pagination .swiper-bullet:nth-child(odd):not(.swiper-bullet-active) {
+    background-color: #90C4FD !important; /* light blue */
 }
 
-.swiper-bullet:hover:not(.swiper-bullet-active) {
-    background-color: rgba(255, 255, 255, 0.6);
+.swiper-bullet-active {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+    background-color: #E77853 !important; /* active orange */
 }
 
 /* Add this in global CSS if needed */
@@ -51,7 +50,12 @@
     opacity: 1;
 }
 
-.swiper-wrapper {
+/* Make the last pagination dot darker when not active */
+.custom-pagination .swiper-bullet:last-child:not(.swiper-bullet-active) {
+    background-color: #0F2850 !important;
+}
+
+.swiper-wrapper {   
     position: relative;
     width: 100%;
     height: 100%;
@@ -182,7 +186,7 @@
     }
 
     .custom-pagination {
-        display: none;
+        display: flex;
     }
 
     .bg_bannerhome {

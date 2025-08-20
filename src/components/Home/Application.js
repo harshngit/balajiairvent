@@ -133,8 +133,8 @@ export default function Application() {
 	return (
 		<div className="font-onset bg-white my-[50px]">
 			{/* Header */}
-			<div className="w-full lg:px-10 px-5 lg:py-10 py-6 xxl:max-w-[1600px] xl:max-w-[1400px] lg:max-w-[1200px] mx-auto">
-				<div className="flex flex-col lg:flex-row justify-between items-end gap-8">
+			<div className="w-full lg:px-10 px-5 lg:py-10 py-6 xxl:max-w-[1800px] lg:w-full mx-auto">
+				<div className="flex flex-col lg:flex-row justify-between items-end gap-8 mx-6">
 					{/* Left */}
 					<div className="flex flex-col text-left lg:w-1/2 w-full">
 						<h2 className="font-light lg:text-[28px] text-[18px] text-orange">
@@ -165,15 +165,16 @@ export default function Application() {
 			<section
 				ref={ref}
 				style={{ height: `${data.length * 100}vh` }}
-				className="relative lg:block hidden bottom-[150px] max-w-[1400px] m-auto"
+				className="relative lg:block hidden bottom-[150px]  m-auto"
 			>
 				<div className="sticky top-0 left-0 right-0 h-screen overflow-hidden">
-					<motion.div style={{ x }} className="flex w-full h-[90%] xxl:h-[100%]">
-						{data.map((item, i) => (
-							<div
-								key={i}
-								className="w-[90vw] relative flex-shrink-0 flex items-end justify-center gap-[50px]"
-							>
+					<div className="relative h-[90%] xxl:h-[80%]">
+						<motion.div style={{ x }} className="absolute inset-0 flex w-full">
+							{data.map((item, i) => (
+								<div
+									key={i}
+									className="w-[99vw] relative flex-shrink-0 flex items-end justify-center gap-[50px] mx-auto"
+								>
 								{/* Image section */}
 								<div className="flex gap-6">
 									{/* Left column (2 images stacked) */}
@@ -227,11 +228,11 @@ export default function Application() {
 
 							</div>
 						))}
-					</motion.div>
-
-					{/* Gradient edges */}
-					<div className="absolute top-0 left-0 h-full w-16 z-20 bg-gradient-to-r from-white to-transparent pointer-events-none" />
-					<div className="absolute top-0 right-0 h-full w-16 z-20 bg-gradient-to-l from-white to-transparent pointer-events-none" />
+						</motion.div>
+						{/* Gradient edges limited to motion area */}
+						<div className="pointer-events-none absolute top-0 left-0 h-full w-16 z-20 bg-gradient-to-r from-white to-transparent" />
+						<div className="pointer-events-none absolute top-0 right-0 h-full w-16 z-20 bg-gradient-to-l from-white to-transparent" />
+					</div>
 				</div>
 			</section>
 

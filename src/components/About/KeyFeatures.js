@@ -64,7 +64,7 @@ const KeyFeatures = () => {
 
 		if (index === currentIndex) {
 			// Active slide - white background
-			return 'bg-white text-[#000]';
+			return 'bg-white text-[#000] scale-y-1';
 		} else if (index === nextIndex) {
 			// Next two slides - lighter blue
 			return 'bg-[#63B0FF] text-white';
@@ -82,9 +82,6 @@ const KeyFeatures = () => {
 		const bullets = Array.from(paginationEl.children);
 		const totalBullets = bullets.length;
 
-		// Clear container
-		paginationEl.innerHTML = '';
-
 		// Calculate order: active in center, others around it
 		const orderedIndices = [];
 
@@ -97,18 +94,21 @@ const KeyFeatures = () => {
 			orderedIndices.unshift(leftIdx);
 		}
 
-		// Add bullets after active (right side)  
+		// Add bullets after active (right side)
 		for (let i = 1; i <= Math.floor(totalBullets / 2); i++) {
 			const rightIdx = (activeIdx + i) % totalBullets;
 			orderedIndices.push(rightIdx);
 		}
 
-		// Recreate bullets in new order
-		orderedIndices.forEach(idx => {
-			const bullet = bullets[idx].cloneNode(true);
-			paginationEl.appendChild(bullet);
-		});
+		// Re-append existing nodes to avoid losing handlers
+		const orderedNodes = orderedIndices.map((idx) => bullets[idx]);
+		paginationEl.innerHTML = '';
+		orderedNodes.forEach((node) => paginationEl.appendChild(node));
 	};
+
+	React.useEffect(() => {
+		reorderPagination(activeIndex);
+	}, [activeIndex]);
 	return (
 		<section className=" lg:py-[120px] lg:pl-[40px]">
 			{/* Heading */}
@@ -219,40 +219,9 @@ const KeyFeatures = () => {
 
 
 					{/* Custom Pagination Bottom Left */}
-					<div className="custom-pagination flex justify-center mt-8"></div>
+					<div className="custom-pagination flex justify-start mt-8"></div>
 
-					<style jsx>{`
-          .custom-pagination {
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            gap: 8px;
-            margin-top: 32px;
-          }
-
-          .swiper-bullet {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #90C4FD !important;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: none;
-            outline: none;
-          }
-
-          .swiper-bullet-active {
-            width: 32px;
-            height: 12px;
-            border-radius: 6px;
-            background-color: #90C4FD !important ;
-            transform: none;
-          }
-
-          .swiper-bullet:hover:not(.swiper-bullet-active) {
-            background-color: rgba(255, 255, 255, 0.6);
-          }
-        `}</style>
+					{/* Styles moved to globals.css */}
 					<div className="absolute right-10 top-0 h-full w-16 z-10 pointer-events-none bg-gradient-to-l from-[#0F2850] to-transparent" />
 				</div>
 			</div>

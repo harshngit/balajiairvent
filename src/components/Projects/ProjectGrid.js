@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React, { useState } from 'react'
 import projectsData from '@/data/projectsData'
 import ClientsProject from './ClientsProject';
+import Link from 'next/link';
 
 const ProjectGrid = () => {
   const [activeCategory, setActiveCategory] = useState("collabration");
@@ -41,7 +42,7 @@ const ProjectGrid = () => {
             >
               {tab.label} {}
               {activeCategory === tab.category && (
-                <span className="absolute left-0 right-0 bottom-0 h-[2px] bg-orange rounded-full"></span>
+                <span className="absolute left-0 right-0 -bottom-[1px] h-[2px] bg-orange rounded-full"></span>
               )}
             </button>
           ))}
@@ -51,15 +52,17 @@ const ProjectGrid = () => {
           <div className="flex justify-start lg:gap-[50px] items-start flex-col gap-4 lg:py-[50px] lg:px-[20px] px-3 py-5">
             <div className='flex justify-start items-center gap-2'>
               <h3 className='font-light text-[#F0F0F0] text-[32px]'>75F Solutions</h3>
+              <Link href={"https://www.75f.io/en-in/"} target='_blank'>
               <Image 
                 src={"/asset/Arrowsideup.png"}
                 alt="75F Solutions"
                 width={28}
                 height={28}
                 className='w-[28px] h-[28px]'
-              />            
+              />    
+              </Link>        
             </div>
-            <div className='w-full shadow-lg rounded-2xl overflow-hidden'>
+            <div className='w-full lg:block hidden shadow-lg rounded-2xl overflow-hidden'>
               <Image 
                 src={"/asset/projects/collabration/1.webp"}
                 alt="75F Solutions"
@@ -68,9 +71,18 @@ const ProjectGrid = () => {
                 className='w-full'
               />
             </div>
+            <div className='w-full lg:hidden block'>
+              <Image 
+                src={"/asset/projects/collabration/2.webp"}
+                alt="75F Solutions"
+                width={1472}
+                height={300}
+                className='w-full'
+              />
+            </div>
             {/* Below image: Description + Key Features */}
             <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 mt-6 lg:mt-10">
-              <div className="text-secondary text-[14px] leading-relaxed p-4 lg:p-6 ">
+              <div className="text-secondary text-[14px] leading-relaxed lg:p-6 ">
                 <p className="mb-4">75F offers a vertically-integrated suite of wireless sensors, equipment controllers and cloud-based software delivering predictive, proactive building automation right out of the box.</p>
                 <p className="mb-4">It takes control of your commercial building indoor environments, proactively eliminating hot and cold spots before they occur, improving air quality and saving energy, regardless of which heating or cooling systems you have. It understands when to take advantage of outside air to provide free cooling and improve the health and well-being of your staff and guests.</p>
                 <p>The suite of products and solutions can be implemented at commercial real estate, office, tech parks, hospitality, restaurants and retail etc.</p>
@@ -96,48 +108,48 @@ const ProjectGrid = () => {
 				<div className='lg:w-[70%] w-full'>
 					<p className='lg:text-[26px] text-[18px] text-secondary font-light'>75F’s proactive zone control system with smart dampers prevents hot & cold spots before they occur.</p>
 				</div>
-			</div>
-            <div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
-				<div className='lg:w-[30%] flex justify-start items-center'>
-					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[32px] font-light '>Outside Air <br/> Optimizer</h3>
+			      </div>
+            <div className='w-full flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
+				<div className='lg:w-[30%] w-full flex justify-start items-center'>
+					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[24px] font-light '>Outside Air <br className='lg:block hidden' /> Optimizer</h3>
 				</div>
-				<div className='lg:w-[65%] w-full'>
+				<div className='lg:w-[70%] w-full'>
 					<p className='lg:text-[26px] text-[18px] text-secondary font-light'>75F’s Intelligent Economizer & Enthalpy HVAC Control for RTUs, MUAs & DOAS.</p>
 				</div>
-			</div>
+			      </div>
             <div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
 				<div className='lg:w-[30%] flex justify-start items-center'>
-					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[32px] font-light '>Indoor Air Quality Management</h3>
+					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[24px] font-light '>Indoor Air Quality Management</h3>
 				</div>
 				<div className='lg:w-[70%] w-full'>
 					<p className='lg:text-[26px] text-[18px] text-secondary font-light'>The 75F smart system detects levels of CO2, NO2 and other VOCs in the building and proactively adjusts outside air dampers to maintain air quality at appropriate levels.</p>
 				</div>
-			</div>
+			      </div>
             <div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
 				<div className='lg:w-[30%] flex justify-start items-center'>
-					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[32px] font-light '>Dynamic Chilled Water Balancing</h3>
+					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[24px] font-light '>Dynamic Chilled <br/> Water Balancing</h3>
 				</div>
 				<div className='lg:w-[70%] w-full'>
 					<p className='lg:text-[26px] text-[18px] text-secondary font-light'>75F designed an end-to-end solution for the chilled water system to maintain comfort while using less chilled water and saving more energy.</p>
 				</div>
-			</div>
+	    		  </div>
             <div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
 				<div className='lg:w-[30%] flex justify-start items-center'>
-					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[32px] font-light '>Advanced Lighting</h3>
+					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[24px] font-light '>Advanced Lighting</h3>
 				</div>
 				<div className='lg:w-[70%] w-full'>
 					<p className='lg:text-[26px] text-[18px] text-secondary font-light'>The 75F advanced system considers factors about your building before determining the ideal time to adjust the lighting.</p>
 				</div>
-			</div>
+			      </div>
             <div className='flex flex-col justify-start items-start gap-2'>
                 <h2 className='text-secondary text-[28px] font-light'>Product Advantages</h2>
-                <div className='lg:grid grid-cols-1 lg:mx-[60px] mx-8 mt-5 lg:grid-cols-4 gap-[20px] flex flex-col justify-center items-center'>
+                <div className='lg:grid grid-cols-1 lg:mx-0 mx-8 mt-5 lg:grid-cols-4 gap-[20px] flex flex-col lg:justify-center lg:items-center'>
                         <Image
                             src={"/asset/projects/collabration/advantages/1.webp"} 
                             alt="Product Advantages"
                             width={350}
                             height={380}
-                            className='w-[350px] h-[380px]'
+                            className='lg:w-[350px] lg:h-[380px] w-[350px] h-[200px]'
                         />
                          <Image
                             src={"/asset/projects/collabration/advantages/2.webp"} 

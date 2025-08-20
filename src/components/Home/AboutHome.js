@@ -20,7 +20,7 @@ const AboutHome = () => {
 
 					<Link href="/aboutus" className="inline-block mt-4">
 						<button className="flex items-center gap-4 border border-[#F0F0F0] text-[16px]  py-[5px] pr-[5px] pl-[10px] text-[#F0F0F0] lg:pl-[20px] lg:pr-[7px] lg:py-2 font-light  rounded-full hover:bg-primary hover:text-[#F0F0F0] transition-all">
-							About US
+							About Us
 							<Image
 								src={"/asset/rightotline.png"}
 								width={28}

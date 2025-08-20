@@ -1,9 +1,5 @@
 'use client'
 import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/autoplay'
 import Image from 'next/image'
 
 // List of logo paths (make sure all files exist)
@@ -44,29 +40,40 @@ const ClientsHome = () => {
 				{/* Gradient fade after "Clients" */}
 				<div className="absolute left-[210px] top-0 h-full w-24 bg-gradient-to-r from-[#0F2850] to-transparent z-10 pointer-events-none" />
 
-				{/* Swiper Carousel */}
-				<Swiper
-					modules={[Autoplay]}
-					slidesPerView="auto"
-					spaceBetween={85}
-					loop={true}
-					autoplay={{ delay: 0, disableOnInteraction: false }}
-					speed={3000}
-					allowTouchMove={false}
-					className="w-full !flex !justify-center !items-center top-[83px]"
-				>
-					{clientLogos.map((logo, index) => (
-						<SwiperSlide key={index} className="!w-auto flex !gap-[85px] items-center justify-center">
-							<Image
-								src={logo}
-								alt={`Client ${index + 1}`}
-								height={126}
-								width={200}
-								className="object-contain h-[50px]"
-							/>
-						</SwiperSlide>
-					))}
-				</Swiper>
+				{/* Marquee (continuous) */}
+				<div className="relative w-full overflow-hidden top-[0px] py-10">
+					<div className="marquee flex items-center" style={{ animationDuration: '30s' }}>
+						{/* Track A */}
+						<div className="flex items-center gap-[85px] mr-[85px]">
+							{clientLogos.map((logo, index) => (
+								<div key={`a-${index}`} className="flex items-center justify-center w-[200px] h-[50px]">
+									<Image src={logo} alt={`Client ${index + 1}`} width={200} height={50} className="w-[200px] h-[50px] object-contain" />
+								</div>
+							))}
+						</div>
+						{/* Track B (duplicate) */}
+						<div className="flex items-center gap-[85px]">
+							{clientLogos.map((logo, index) => (
+								<div key={`b-${index}`} className="flex items-center justify-center w-[200px] h-[50px]">
+									<Image src={logo} alt={`Client ${index + 1}`} width={200} height={50} className="w-[200px] h-[50px] object-contain" />
+								</div>
+							))}
+						</div>
+					</div>
+					<style jsx>{`
+						.marquee {
+							display: flex;
+							width: max-content;
+							animation-name: marqueeScroll;
+							animation-timing-function: linear;
+							animation-iteration-count: infinite;
+						}
+						@keyframes marqueeScroll {
+							0% { transform: translateX(0); }
+							100% { transform: translateX(-50%); }
+						}
+					`}</style>
+				</div>
 			</div>
 
 			{/* Right gradient */}
