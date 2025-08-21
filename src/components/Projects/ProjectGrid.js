@@ -1,21 +1,38 @@
 "use client"
 import Image from 'next/image';
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import projectsData from '@/data/projectsData'
 import ClientsProject from './ClientsProject';
 import Link from 'next/link';
 
 const ProjectGrid = () => {
   const [activeCategory, setActiveCategory] = useState("collabration");
+  const [activeCollab, setActiveCollab] = useState("collab1");
   const productTabs = [
     { label: "Collabration", category: "collabration" },
     { label: "Projects", category: "projects" },
     { label: "Clients", category: "clients" },
   ];
   const handleClick = (tab) => setActiveCategory(tab.category);
+  const [isCollabDropdownOpen, setIsCollabDropdownOpen] = useState(false);
+  const collabDropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (collabDropdownRef.current && !collabDropdownRef.current.contains(event.target)) {
+        setIsCollabDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+  const collabConfig = {
+    collab1: { title: '75F Solutions', link: 'https://www.75f.io/en-in/' },
+    collab2: { title: 'Teryair', link: null },
+  };
 
   return (
-    <div className='relative w-full overflow-hidden pt-[88px] lg:pt-[120px]'>
+    <div className={`relative w-full ${isCollabDropdownOpen ? 'overflow-visible' : 'overflow-hidden'} pt-[88px] lg:pt-[120px]`}>
       {/* Top background gradient effect */}
       {activeCategory === "collabration" && <div className='absolute inset-x-0 top-0 -z-10 pointer-events-none'>
         <div className='w-full h-[260px] md:h-[70vh] bg-gradient-to-b from-[#0F2850] from-[40%] via-[#0f28507c] via-[80%] to-white to-[100%]' />
@@ -31,25 +48,69 @@ const ProjectGrid = () => {
         <div className="">
           <div className='flex mt-8 space-x-6 border-b border-gray-200 lg:mb-[20px] mx-6'>
           {productTabs.map((tab) => (
+            tab.category === 'collabration' ? (
+              <div key={tab.category} className='relative flex items-center' ref={collabDropdownRef}>
+                <button
+                  onClick={() => handleClick(tab)}
+                  className={`relative pb-2 lg:px-[20px] px-2 w-[120px] lg:w-auto flex justify-between items-center text-sm md:text-[20px] lg:gap-5 gap-2 transition-colors ${
+                    activeCategory === tab.category
+                      ? "font-medium text-[#fff]"
+                      : "font-light text-[#fff]/80"}
+                  `}
+                >
+                  {tab.label}
+                  {activeCategory === tab.category && (
+                    <span className="absolute left-0 right-0 -bottom-[1px] h-[2px] bg-orange rounded-full"></span>
+                  )}
+                  <div className='cursor-pointer'
+                  onClick={() => setIsCollabDropdownOpen((prev) => !prev)}
+                  >
+                    <Image src={'/asset/downsmall.png'} alt='toggle' width={24} height={24} className={`${isCollabDropdownOpen ? 'rotate-180' : ''} transition-transform w-[20px] h-[20px] md:w-[24px] md:h-[24px]`} />
+                  </div>
+                </button>
+                {isCollabDropdownOpen && (
+                  <ul className='absolute top-[120%] left-0 bg-white text-[#0F2850] shadow-lg rounded-md py-2 w-[220px] z-[10000] min-w-[200px] md:min-w-[220px] max-w-[90vw]'>
+                    <li>
+                      <button
+                        className='w-full text-left px-4 py-3 hover:bg-gray-100'
+                        onClick={() => { setActiveCollab('collab1'); setActiveCategory('collabration'); setIsCollabDropdownOpen(false); }}
+                      >
+                        75F Solutions
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        className='w-full text-left px-4 py-3 hover:bg-gray-100'
+                        onClick={() => { setActiveCollab('collab2'); setActiveCategory('collabration'); setIsCollabDropdownOpen(false); }}
+                      >
+                        Teryair
+                      </button>
+                    </li>
+                  </ul>
+                )}
+              </div>
+            ) : (
             <button
               key={tab.category}
               onClick={() => handleClick(tab)}
               className={`relative pb-2 px-[20px] text-sm md:text-[20px] transition-colors ${
                 activeCategory === tab.category
                   ? "font-medium text-[#fff]"
-                  : "font-light text-[#fff]/80"
-              }`}
+                    : "font-light text-[#fff]/80"}
+                `}
             >
-              {tab.label} {}
+                {tab.label}
               {activeCategory === tab.category && (
                 <span className="absolute left-0 right-0 -bottom-[1px] h-[2px] bg-orange rounded-full"></span>
               )}
             </button>
+            )
           ))}
           </div>
         </div>
         {activeCategory === "collabration" && (
           <div className="flex justify-start lg:gap-[50px] items-start flex-col gap-4 lg:py-[50px] lg:px-[20px] px-3 py-5">
+            {activeCollab === "collab1" && (<div>
             <div className='flex justify-start items-center gap-2'>
               <h3 className='font-light text-[#F0F0F0] text-[32px]'>75F Solutions</h3>
               <Link href={"https://www.75f.io/en-in/"} target='_blank'>
@@ -99,7 +160,6 @@ const ProjectGrid = () => {
     </ul>
   </div>
             </div>
-
             </div>
             <div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
 				<div className='lg:w-[30%] flex justify-start items-center'>
@@ -143,30 +203,182 @@ const ProjectGrid = () => {
 			      </div>
             <div className='flex flex-col justify-start items-start gap-2'>
                 <h2 className='text-secondary text-[28px] font-light'>Product Advantages</h2>
-                <div className='lg:grid grid-cols-1 lg:mx-0 mx-8 mt-5 lg:grid-cols-4 gap-[20px] flex flex-col lg:justify-center lg:items-center'>
+                <div className='lg:grid grid-cols-1 lg:mx-0 mt-5 lg:grid-cols-4 gap-[20px] flex flex-col justify-start lg:justify-center lg:items-center'>
                         <Image
                             src={"/asset/projects/collabration/advantages/1.webp"} 
                             alt="Product Advantages"
                             width={350}
                             height={380}
-                            className='lg:w-[350px] lg:h-[380px] w-[350px] h-[200px]'
+                            className='w-[350px] h-[380px] lg:block hidden'
                         />
                          <Image
                             src={"/asset/projects/collabration/advantages/2.webp"} 
                             alt="Product Advantages"
                             width={350}
                             height={380}
-                            className='w-[350px] h-[380px]'
+                            className='w-[350px] h-[380px] lg:block hidden'
                         />
                          <Image
                             src={"/asset/projects/collabration/advantages/3.webp"} 
                             alt="Product Advantages"
                             width={350}
                             height={380}
-                            className='w-[350px] h-[380px]'
+                            className='w-[350px] h-[380px] lg:block hidden'
                         />
                          <Image
                             src={"/asset/projects/collabration/advantages/4.webp"} 
+                            alt="Product Advantages"
+                            width={350}
+                            height={380}
+                            className='w-[350px] h-[380px] lg:block hidden'
+                        />
+
+                        {/* Mobile Images */}
+
+                        <Image
+                            src={"/asset/projects/collabration/advantages/5.webp"} 
+                            alt="Product Advantages"
+                            width={350}
+                            height={200}
+                            className='w-[350px] h-[200px] lg:hidden block'
+                        />
+                         <Image
+                            src={"/asset/projects/collabration/advantages/6.webp"} 
+                            alt="Product Advantages"
+                            width={350}
+                            height={200}
+                            className='w-[350px] h-[200px] lg:hidden block'
+                        />
+                         <Image
+                            src={"/asset/projects/collabration/advantages/7.webp"} 
+                            alt="Product Advantages"
+                            width={350}
+                            height={200}
+                            className='w-[350px] h-[200px] lg:hidden block'
+                        />
+                         <Image
+                            src={"/asset/projects/collabration/advantages/8.webp"} 
+                            alt="Product Advantages"
+                            width={350}
+                            height={200}
+                            className='w-[350px] h-[200px] lg:hidden block'
+                        />
+                        
+
+                </div>
+            </div>
+            </div>)}
+            {activeCollab === "collab2" && (
+              <div>
+              <div className='flex justify-start items-center gap-2'>
+              <h3 className='font-light text-[#F0F0F0] text-[32px]'>Teryair</h3>
+              <Link href={"https://www.teryair.com"} target='_blank'>
+              <Image 
+                src={"/asset/Arrowsideup.png"}
+                alt="75F Solutions"
+                width={28}
+                height={28}
+                className='w-[28px] h-[28px]'
+              />    
+              </Link>        
+            </div>
+            <div className='w-full lg:block hidden shadow-lg rounded-2xl overflow-hidden'>
+              <Image 
+                src={"/asset/projects/collabration/3.webp"}
+                alt="75F Solutions"
+                width={1472}
+                height={300}
+                className='w-full'
+              />
+            </div>
+            <div className='w-full lg:hidden block'>
+              <Image 
+                src={"/asset/projects/collabration/3.webp"}
+                alt="75F Solutions"
+                width={1472}
+                height={300}
+                className='w-full'
+              />
+            </div>
+            {/* Below image: Description + Key Features */}
+            <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 mt-6 lg:mt-10">
+              <div className="text-secondary text-[14px] leading-relaxed lg:p-6 ">
+                <p className="mb-4">Teryair, a premier name in pneumatic equipment manufacturing since 2003, commands a state-of-the-art 65,000 sq. ft. facility in Vasai, located 30 km from Mumbai’s city center. The company specializes in designing and producing a comprehensive range of cost-efficient products, including pneumatic diaphragm pumps, surface preparation equipment, air motors, airless painting systems, ventilation fans, industrial high-pressure jetting systems, and an array of handheld pneumatic tools.</p>
+                <p className="mb-4">With a global footprint across 30+ countries, Teryair has established a sterling reputation for reliability and superior performance. Distributors in key markets like Germany and Holland have partnered with the brand for over two decades, collectively generating sales worth millions of Euros. The extensive deployment of Teryair products aboard seagoing vessels is evidenced by consistent worldwide demand for consumables, a need expertly fulfilled by our responsive distributor network.</p>
+              </div>
+              <div className="p-[1px] rounded-2xl bg-blue-gradient">
+              <div className="rounded-2xl p-5 lg:p-6 bg-white h-full flex flex-col justify-center items-start">
+                  <h4 className="text-[#0F2850] text-lg font-medium mb-3">Teryair’s Philosophy</h4>
+                  <p className="text-[14px] text-secondary ">Robust, straightforward designs crafted under stringent quality controls within a cutting-edge manufacturing environment. This commitment, coupled with assured global spare parts availability and highly competitive manufacturing standards, delivers an unparalleled value proposition for distributors and end users alike.</p>
+        </div>
+              </div>
+            </div>
+            <div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
+				<div className='lg:w-[30%] flex justify-start items-center'>
+					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[32px] font-light '>ATEX-Certified Products</h3>
+				</div>
+				<div className='lg:w-[70%] w-full'>
+					<p className='lg:text-[26px] text-[18px] text-secondary font-light'>All Teryair air motors and AODD pumps meet stringent ATEX certification standards, ensuring safety and reliability in hazardous environments.</p>
+				</div>
+			      </div>
+            <div className='w-full flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
+				<div className='lg:w-[30%] w-full flex justify-start items-center'>
+					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[24px] font-light '>Innovative <br className='lg:block hidden' /> Engineering</h3>
+				</div>
+				<div className='lg:w-[70%] w-full'>
+					<p className='lg:text-[26px] text-[18px] text-secondary font-light'>Teryair excels in designing high-quality, innovative fluid power solutions tailored to industrial needs.</p>
+				</div>
+			      </div>
+            <div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
+				<div className='lg:w-[30%] flex justify-start items-center'>
+					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[24px] font-light '>Comprehensive Product Range</h3>
+				</div>
+				<div className='lg:w-[70%] w-full'>
+					<p className='lg:text-[26px] text-[18px] text-secondary font-light'>A diverse lineup of industrial products, including air motors, AODD pumps, pneumatic tools, tank cleaning equipment, and more.</p>
+				</div>
+			      </div>
+            <div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
+				<div className='lg:w-[30%] flex justify-start items-center'>
+					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[24px] font-light '>Environmentally Friendly Solutions</h3>
+				</div>
+				<div className='lg:w-[70%] w-full'>
+					<p className='lg:text-[26px] text-[18px] text-secondary font-light'>Teryair emphasizes sustainability by offering energy-efficient and eco-friendly products.</p>
+				</div>
+	    		  </div>
+            <div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
+				<div className='lg:w-[30%] flex justify-start items-center'>
+					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[24px] font-light '>Global Reach with Local Expertise</h3>
+				</div>
+				<div className='lg:w-[70%] w-full'>
+					<p className='lg:text-[26px] text-[18px] text-secondary font-light'>A strong distribution network ensures timely delivery and local support across the globe.</p>
+				</div>
+			      </div>
+            <div className='flex flex-col justify-start items-start gap-2'>
+                <h2 className='text-secondary text-[28px] font-light'>Product Advantages</h2>
+                <div className='xxl:grid lg:grid grid-cols-1 lg:mx-0 mx-8 mt-5 lg:grid-cols-4 gap-[20px] flex flex-col lg:justify-center lg:items-center'>
+                        <Image
+                            src={"/asset/projects/collabration/advantages2/1.webp"} 
+                            alt="Product Advantages"
+                            width={350}
+                            height={380}
+                            className='lg:w-[350px] lg:h-[380px] w-[350px] h-[200px]'
+                        />
+                         <Image
+                            src={"/asset/projects/collabration/advantages2/2.webp"} 
+                            alt="Product Advantages"
+                            width={350}
+                            height={380}
+                            className='w-[350px] h-[380px]'
+                        />
+                         <Image
+                            src={"/asset/projects/collabration/advantages2/3.webp"} 
+                            alt="Product Advantages"
+                            width={350}
+                            height={380}
+                            className='w-[350px] h-[380px]'
+                        />
+                         <Image
+                            src={"/asset/projects/collabration/advantages2/4.webp"} 
                             alt="Product Advantages"
                             width={350}
                             height={380}
@@ -174,7 +386,8 @@ const ProjectGrid = () => {
                         />
                 </div>
             </div>
-
+              </div>
+            )}
           </div>
         )}
         {activeCategory === "projects" && (

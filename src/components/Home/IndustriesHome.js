@@ -37,7 +37,8 @@ const IndustriesHome = () => {
 		<div className="w-full lg:px-10 px-5 lg:py-10 py-6 font-onset mt-10">
 			<div className=" lg:mx-6 flex flex-col md:flex-row gap-[54px]">
 				{/* Left Text Section */}
-				<div className="md:w-[600px] w-full flex flex-col justify-center">
+				<div className="lg:w-[50%]  w-full ">
+					<div className='w-[600px]'>
 					<div className='flex justify-start items-start lg:gap-[30px] gap-1 flex-col'>
 						<h4 className="text-[#E77853] text-[28px] font-light mb-2">Industries we serve</h4>
 						<h2 className="text-3xl md:text-[40px] font-light text-[#0F2850] leading-snug mb-4">
@@ -47,6 +48,7 @@ const IndustriesHome = () => {
 							</span>
 							.
 						</h2>
+					</div>
 					</div>
 					<p className="text-[#0F2850] mb-6 text-[16px] lg:w-[464px] w-full  leading-relaxed">
 						From concept to completion, every AirVent solution is meticulously crafted for maximum efficiency, durability, and ease of installation. Whether it’s Louvers , Industrial Dampers, or Specialized products for Data Centers and Cleanrooms, our focus is on delivering precision-engineered solutions that enhance comfort, safety, and energy efficiency.
