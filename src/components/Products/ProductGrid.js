@@ -116,6 +116,13 @@ const ProductGrid = () => {
 					{activeCategory == "Data Centre" &&
 						<>
 							<div className="grid grid-cols-1 lg:grid-cols-2 mt-5 px-5 py-5 gap-6">
+								<div className="lg:hidden flex justify-center items-center">
+									<Image
+										src={"/asset/product/dataimg/data.webp"}
+										width={620}
+										height={300}
+									/>
+								</div>
 								<div className="flex flex-col lg:w-[620px] w-full space-y-3 justify-start items-start">
 									<h2 className=" bg-blue-gradient text-[32px] text-transparent bg-clip-text">Data Centre</h2>
 									<p className="text-secondary text-[14px]">
@@ -128,7 +135,7 @@ const ProductGrid = () => {
 										The design of the air handling ductwork or raised floor has a significant effect on the overall system performance, and also greatly affects the uniformity of temperature within the data center. The adoption of a simple, standardized, and modular air distribution system architecture, combined with the simple heat load estimation method described, could significantly reduce the engineering requirements for data center design.
 									</p>
 								</div>
-								<div className="flex justify-center items-center">
+								<div className="lg:flex hidden justify-center items-center">
 									<Image
 										src={"/asset/product/dataimg/data.webp"}
 										width={620}
@@ -141,6 +148,13 @@ const ProductGrid = () => {
 					{activeCategory == "Air" &&
 						<>
 							<div className="grid grid-cols-1 lg:grid-cols-2 mt-5 px-5 py-5 gap-6">
+							<div className="lg:hidden flex justify-center items-center">
+									<Image
+										src={"/asset/product/air/air.webp"}
+										width={620}
+										height={300}
+									/>
+								</div>
 								<div className="flex flex-col lg:w-[620px] w-full space-y-3 justify-start items-start">
 									<h2 className=" bg-blue-gradient text-[32px] text-transparent bg-clip-text">Comfort Air Conditioning</h2>
 									<p className="text-secondary text-[14px]">
@@ -166,7 +180,7 @@ const ProductGrid = () => {
 										</li>
 									</ul>
 								</div>
-								<div className="flex justify-center items-center">
+								<div className="lg:flex hidden justify-center items-center">
 									<Image
 										src={"/asset/product/air/air.webp"}
 										width={620}
@@ -179,6 +193,13 @@ const ProductGrid = () => {
 					{activeCategory == "Industries" &&
 						<>
 							<div className="grid grid-cols-1 lg:grid-cols-2 mt-5 px-5 py-5 gap-6">
+							<div className="lg:hidden flex justify-center items-center">
+									<Image
+										src={"/asset/product/industries/industries.webp"}
+										width={620}
+										height={300}
+									/>
+								</div>
 								<div className="flex flex-col lg:w-[620px] w-full space-y-3 justify-start items-start">
 									<h2 className=" bg-blue-gradient text-[32px] text-transparent bg-clip-text">Industrial Dampers</h2>
 									<p className="text-secondary text-[14px]">
@@ -212,7 +233,7 @@ const ProductGrid = () => {
 										</li>
 									</ul>
 								</div>
-								<div className="flex justify-center items-center">
+								<div className="lg:flex hidden justify-center items-center">
 									<Image
 										src={"/asset/product/industries/industries.webp"}
 										width={620}
@@ -225,13 +246,20 @@ const ProductGrid = () => {
 					{activeCategory == "Fans" &&
 						<>
 							<div className="grid grid-cols-1 lg:grid-cols-2 mt-5 px-5 py-5 gap-6">
+							<div className="lg:hidden flex justify-center items-center">
+									<Image
+										src={"/asset/product/fans/fans.webp"}
+										width={620}
+										height={300}
+									/>
+								</div>
 								<div className="flex flex-col lg:w-[620px] w-full space-y-3 justify-start items-start">
 									<h2 className=" bg-blue-gradient text-[32px] text-transparent bg-clip-text">Fans & Ventilation Accessories</h2>
 									<p className="text-secondary text-[14px]">
 										Fans and ventilation accessories are crucial for maintaining good air quality and comfort in homes and buildings. Fans, including exhaust fans, ceiling fans, and cooling fans, are used to circulate air, remove stale air and pollutants, and regulate temperature. Ventilation accessories, like ducting, louvers, and filters, complement fans by directing airflow, preventing backdrafts, and filtering out contaminants.
 									</p>
 								</div>
-								<div className="flex justify-center items-center">
+								<div className="lg:flex hidden justify-center items-center">
 									<Image
 										src={"/asset/product/fans/fans.webp"}
 										width={620}
@@ -244,13 +272,20 @@ const ProductGrid = () => {
 					{activeCategory == "Fire Door" &&
 						<>
 							<div className="grid grid-cols-1 lg:grid-cols-2 mt-5 px-5 py-5 gap-6">
+							<div className="lg:hidden flex justify-center items-center">
+									<Image
+										src={"/asset/product/firedoor/fire.webp"}
+										width={620}
+										height={300}
+									/>
+								</div>
 								<div className="flex flex-col lg:w-[620px] w-full space-y-3 justify-start items-start">
 									<h2 className=" bg-blue-gradient text-[32px] text-transparent bg-clip-text">Fire doors</h2>
 									<p className="text-secondary text-[14px]">
 										Fire doors are specialized doors designed to resist the spread of fire and smoke, providing crucial time for safe evacuation and limiting property damage. They are a critical component of passive fire protection systems in buildings. These doors are engineered to withstand fire for a specific duration, preventing flames and toxic gases from passing through.
 									</p>
 								</div>
-								<div className="flex justify-center items-center">
+								<div className="lg:flex hidden justify-center items-center">
 									<Image
 										src={"/asset/product/firedoor/fire.webp"}
 										width={620}
@@ -260,7 +295,7 @@ const ProductGrid = () => {
 							</div>
 						</>
 					}
-                    <div className="flex flex-wrap mt-5 xl:gap-2  lg:gap-[50px] md:gap-[20px] lg:px-0 px-1 xl:mx-auto lg:-mx-3 relative">
+                    <div className="flex flex-wrap mt-5 xl:gap-2  lg:gap-[50px] md:gap-[20px] gap-[20px] lg:px-0 px-1 xl:mx-auto lg:-mx-3 relative">
                         {(() => {
                             const expandedIndex = filteredProducts.findIndex(p => p.id === expandedProductId);
                             const expandedProduct = expandedIndex >= 0 ? filteredProducts[expandedIndex] : null;
@@ -290,7 +325,7 @@ const ProductGrid = () => {
                                             </button>
                                         </div>
                                     </div>
-                                    <div className="p-3">
+                                    <div className="p-3 lg:mt-0 mt-2">
                                         <h3 className={`text-[20px] font-medium ${isExpanded ? 'text-primary' : 'text-gray-800'}`}>{product.name}</h3>
                                     </div>
                     
@@ -298,7 +333,7 @@ const ProductGrid = () => {
 
                                 {insertPanel && expandedProduct && (
                                     <div id={`product-details-inline-${expandedProduct.id}`} className="w-full basis-full ">
-                                      <div className="max-w-[100%] my-[10px] rounded-xl bg-[#F0F0F0] p-[50px] transition-all duration-500 ease-out">
+                                      <div className="max-w-[100%] my-[10px] rounded-xl bg-[#F0F0F0] lg:p-[50px] p-[20px] transition-all duration-500 ease-out">
                                         <div className="flex justify-between items-start flex-col lg:flex-row gap-[84px]">
                                                 <div className="lg:w-[40%] w-full">
                                                     <div className="relative w-full h-[240px] md:h-[300px] lg:h-[320px] rounded-lg overflow-hidden bg-gray-50">
