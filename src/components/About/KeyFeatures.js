@@ -1,7 +1,7 @@
 'use client';
 import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -64,10 +64,10 @@ const KeyFeatures = () => {
 
 		if (index === currentIndex) {
 			// Active slide - white background
-			return 'bg-white text-[#000] scale-y-1';
+			return 'bg-white text-[#000]';
 		} else if (index === nextIndex) {
 			// Next two slides - lighter blue
-			return 'bg-[#63B0FF] text-white';
+			return 'bg-[#61A6EB] text-white';
 		} else if (index === nextNextIndex) {
 			// All other slides - darker blue
 			return 'bg-[#1666B6] text-white';
@@ -124,7 +124,7 @@ const KeyFeatures = () => {
 
 				{/* Swiper Container */}
 				<div className="lg:w-[70%] w-full rounded-[10px] relative lg:left-0 left-[20px] lg:pt-[100px] lg:pb-[50px] bg-[#0F2850] px-[50px] lg:h-[510px] py-10">
-					<div className="flex  justify-end gap-3 mb-6">
+					<div className="flex  justify-start gap-3 mb-6">
 						<button ref={prevRef} className="">
 							<Image
 								src={"/asset/leftswipe.png"}
@@ -159,11 +159,15 @@ const KeyFeatures = () => {
 
 					{/* Swiper */}
 					<Swiper
-						modules={[Navigation, Pagination]}
+						modules={[Navigation, Pagination, Autoplay]}
+						autoplay={{
+							delay: 2500,
+							disableOnInteraction: false
+						}}
 						loop={true}
-						centeredSlides={true}
-						slidesPerView={2.5}
-						spaceBetween={10}
+						centeredSlides={false}
+						slidesPerView={3}
+						spaceBetween={24}
 						navigation={{
 							prevEl: prevRef.current,
 							nextEl: nextRef.current,
@@ -187,26 +191,26 @@ const KeyFeatures = () => {
 							},
 						}}
 						breakpoints={{
-							0: { slidesPerView: 1.25, centeredSlides: false },
-							640: { slidesPerView: 1.5, centeredSlides: false },
-							768: { slidesPerView: 2, centeredSlides: false },
-							1024: { slidesPerView: 3, centeredSlides: false },
+							0: { slidesPerView: 1.1, centeredSlides: false, spaceBetween: 16 },
+							640: { slidesPerView: 1.6, centeredSlides: false, spaceBetween: 16 },
+							768: { slidesPerView: 2.2, centeredSlides: false, spaceBetween: 20 },
+							1024: { slidesPerView: 3, centeredSlides: false, spaceBetween: 24 },
 						}}
 						className=""
 					>
 						{features.map((feature, index) =>
 						(
-							<SwiperSlide key={index} className="!flex !justify-center !h-[220px] relative !items-center">
+							<SwiperSlide key={index} className="!flex !justify-start !h-[220px] relative !items-center">
 								<div
-									className={`rounded-xl px-6 py-8 flex flex-col gap-6 justify-center items-start transition-all duration-500 ease-in-out !w-[280px] h-[260px] ${getSlideStyle(index)}`}
+									className={`rounded-xl px-6 py-8 flex flex-col gap-6 justify-center items-start transition-all duration-500 ease-in-out !w-full h-[260px] ${getSlideStyle(index)}`}
 								>
 									<div
-										className={`flex justify-center bg-[#F0F0F0] items-center rounded-full border-2 border-[#E77853] transition-all duration-300 ${index === activeIndex ? 'w-[100px] h-[100px] rounded-full' : 'w-[80px] h-[80px]'
+										className={`flex justify-center bg-[#F0F0F0] items-center rounded-full border-2 border-[#E77853] transition-all duration-300 ${index === activeIndex ? 'w-[80px] h-[80px] rounded-full' : 'w-[80px] h-[80px]'
 											}`}
 									>
 										<Image src={feature.icon} width={45} height={60} alt="" />
 									</div>
-									<p className={` font-medium transition-all duration-300 ${index === activeIndex ? 'text-[15px]' : 'text-[14px]'
+									<p className={` font-light transition-all duration-300 ${index === activeIndex ? 'text-[15px]' : 'text-[15px]'
 										}`}>
 										{feature.title}
 									</p>

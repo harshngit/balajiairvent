@@ -113,15 +113,22 @@ const ProjectGrid = () => {
             {activeCollab === "collab1" && (<div>
             <div className='flex justify-start items-center gap-2'>
               <h3 className='font-light text-[#F0F0F0] text-[32px]'>75F Solutions</h3>
-              <Link href={"https://www.75f.io/en-in/"} target='_blank'>
+              <Link href={"https://www.teryair.com"} target='_blank' className='group'>
               <Image 
                 src={"/asset/Arrowsideup.png"}
                 alt="75F Solutions"
                 width={28}
                 height={28}
-                className='w-[28px] h-[28px]'
+                className='w-[28px] h-[28px] group-hover:opacity-0 group-hover:hidden opacity-100 transition-all duration-300'
               />    
-              </Link>        
+              <Image 
+                src={"/asset/lightbluearrow.png"}
+                alt="75F Solutions"
+                width={28}
+                height={28}
+                className='w-[28px] h-[28px] group-hover:opacity-100 group-hover:block hidden opacity-0 transition-all duration-300'
+              />    
+              </Link>
             </div>
             <div className='w-full lg:block hidden shadow-lg rounded-2xl overflow-hidden'>
               <Image 
@@ -149,7 +156,7 @@ const ProjectGrid = () => {
                 <p>The suite of products and solutions can be implemented at commercial real estate, office, tech parks, hospitality, restaurants and retail etc.</p>
               </div>
               <div className="p-[1px] rounded-2xl bg-blue-gradient">
-  <div className="rounded-2xl p-5 lg:p-6 bg-white h-full">
+  <div className="rounded-2xl p-5 lg:p-6 bg-[#F0F0F0] h-full">
     <h4 className="text-[#0F2850] text-lg font-medium mb-3">Key Features</h4>
     <ul className="list-disc pl-5 space-y-2 text-[#0F2850]/90 text-sm">
       <li>Multi-site, zone-specific and equipment-specific monitoring and control</li>
@@ -163,7 +170,7 @@ const ProjectGrid = () => {
             </div>
             <div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
 				<div className='lg:w-[30%] flex justify-start items-center'>
-					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[32px] font-light '>Dynamic Airflow Balancing</h3>
+					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[32px] font-light '>Dynamic Airflow <br className='lg:block   hidden' /> Balancing</h3>
 				</div>
 				<div className='lg:w-[70%] w-full'>
 					<p className='lg:text-[26px] text-[18px] text-secondary font-light'>75F’s proactive zone control system with smart dampers prevents hot & cold spots before they occur.</p>
@@ -201,7 +208,7 @@ const ProjectGrid = () => {
 					<p className='lg:text-[26px] text-[18px] text-secondary font-light'>The 75F advanced system considers factors about your building before determining the ideal time to adjust the lighting.</p>
 				</div>
 			      </div>
-            <div className='flex flex-col justify-start items-start gap-2'>
+            <div className='lg:py-[20px] lg:pl-[40px] flex flex-col justify-start items-start gap-2'>
                 <h2 className='text-secondary text-[28px] font-light'>Product Advantages</h2>
                 <div className='lg:grid grid-cols-1 lg:mx-0 mt-5 lg:grid-cols-4 gap-[20px] flex flex-col justify-start lg:justify-center lg:items-center'>
                         <Image
@@ -272,13 +279,20 @@ const ProjectGrid = () => {
               <div>
               <div className='flex justify-start items-center gap-2'>
               <h3 className='font-light text-[#F0F0F0] text-[32px]'>Teryair</h3>
-              <Link href={"https://www.teryair.com"} target='_blank'>
+              <Link href={"https://www.teryair.com"} target='_blank' className='group'>
               <Image 
                 src={"/asset/Arrowsideup.png"}
                 alt="75F Solutions"
                 width={28}
                 height={28}
-                className='w-[28px] h-[28px]'
+                className='w-[28px] h-[28px] group-hover:opacity-0 group-hover:hidden opacity-100 transition-all duration-300'
+              />    
+              <Image 
+                src={"/asset/lightbluearrow.png"}
+                alt="75F Solutions"
+                width={28}
+                height={28}
+                className='w-[28px] h-[28px] group-hover:opacity-100 group-hover:block hidden opacity-0 transition-all duration-300'
               />    
               </Link>        
             </div>
@@ -307,7 +321,7 @@ const ProjectGrid = () => {
                 <p className="mb-4">With a global footprint across 30+ countries, Teryair has established a sterling reputation for reliability and superior performance. Distributors in key markets like Germany and Holland have partnered with the brand for over two decades, collectively generating sales worth millions of Euros. The extensive deployment of Teryair products aboard seagoing vessels is evidenced by consistent worldwide demand for consumables, a need expertly fulfilled by our responsive distributor network.</p>
               </div>
               <div className="p-[1px] rounded-2xl bg-blue-gradient">
-              <div className="rounded-2xl p-5 lg:p-6 bg-white h-full flex flex-col justify-center items-start">
+              <div className="rounded-2xl p-5 lg:p-6 bg-[#F0F0F0] h-full flex flex-col justify-center items-start">
                   <h4 className="text-[#0F2850] text-lg font-medium mb-3">Teryair’s Philosophy</h4>
                   <p className="text-[14px] text-secondary ">Robust, straightforward designs crafted under stringent quality controls within a cutting-edge manufacturing environment. This commitment, coupled with assured global spare parts availability and highly competitive manufacturing standards, delivers an unparalleled value proposition for distributors and end users alike.</p>
         </div>
@@ -315,7 +329,7 @@ const ProjectGrid = () => {
             </div>
             <div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
 				<div className='lg:w-[30%] flex justify-start items-center'>
-					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[32px] font-light '>ATEX-Certified Products</h3>
+					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[32px] font-light '>ATEX-Certified <br className='lg:block hidden' /> Products</h3>
 				</div>
 				<div className='lg:w-[70%] w-full'>
 					<p className='lg:text-[26px] text-[18px] text-secondary font-light'>All Teryair air motors and AODD pumps meet stringent ATEX certification standards, ensuring safety and reliability in hazardous environments.</p>
@@ -331,7 +345,7 @@ const ProjectGrid = () => {
 			      </div>
             <div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
 				<div className='lg:w-[30%] flex justify-start items-center'>
-					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[24px] font-light '>Comprehensive Product Range</h3>
+					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[24px] font-light '>Comprehensive <br className='lg:block hidden' /> Product Range</h3>
 				</div>
 				<div className='lg:w-[70%] w-full'>
 					<p className='lg:text-[26px] text-[18px] text-secondary font-light'>A diverse lineup of industrial products, including air motors, AODD pumps, pneumatic tools, tank cleaning equipment, and more.</p>
@@ -339,7 +353,7 @@ const ProjectGrid = () => {
 			      </div>
             <div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
 				<div className='lg:w-[30%] flex justify-start items-center'>
-					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[24px] font-light '>Environmentally Friendly Solutions</h3>
+					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[24px] font-light '>Environmentally <br className='lg:block hidden' /> Friendly Solutions</h3>
 				</div>
 				<div className='lg:w-[70%] w-full'>
 					<p className='lg:text-[26px] text-[18px] text-secondary font-light'>Teryair emphasizes sustainability by offering energy-efficient and eco-friendly products.</p>
@@ -347,13 +361,13 @@ const ProjectGrid = () => {
 	    		  </div>
             <div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
 				<div className='lg:w-[30%] flex justify-start items-center'>
-					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[24px] font-light '>Global Reach with Local Expertise</h3>
+					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[24px] font-light '>Global Reach with <br className='lg:block hidden' /> Local Expertise</h3>
 				</div>
 				<div className='lg:w-[70%] w-full'>
 					<p className='lg:text-[26px] text-[18px] text-secondary font-light'>A strong distribution network ensures timely delivery and local support across the globe.</p>
 				</div>
 			      </div>
-            <div className='flex flex-col justify-start items-start gap-2'>
+            <div className='lg:py-[20px] lg:pl-[40px]  flex flex-col justify-start items-start gap-2'>
                 <h2 className='text-secondary text-[28px] font-light'>Product Advantages</h2>
                 <div className='xxl:grid lg:grid grid-cols-1 lg:mx-0 mx-8 mt-5 lg:grid-cols-4 gap-[20px] flex flex-col lg:justify-center lg:items-center'>
                         <Image
@@ -392,7 +406,7 @@ const ProjectGrid = () => {
         )}
         {activeCategory === "projects" && (
           <div className="w-full xxl:pt-[100px] lg:pt-[50px] pt-[50px]">
-            <div className="grid grid-cols-1 pt-10 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 px-6">
+            <div className="grid grid-cols-1 pt-10 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-x-6 lg:gap-y-[50px] px-6">
               {projectsData.map((project) => (
                 <div key={project.id} className="">
                   <div className="relative group ">

@@ -51,6 +51,14 @@ export default function NavbarCustom() {
           // Maintain your original styling threshold
           setScrolled(y > THRESHOLD);
 
+          // Ensure navbar is visible when at the very top (Safari bounce/top snap)
+          if (y <= 0) {
+            setPinned(true);
+            lastYRef.current = 0;
+            tickingRef.current = false;
+            return;
+          }
+
           // Direction logic
           const lastY = lastYRef.current;
           const diff = y - lastY;
@@ -123,7 +131,7 @@ export default function NavbarCustom() {
         </button>
 
         {/* Desktop nav */}
-        <ul className={`hidden lg:flex items-center justify-center pl-6 pr-[7px] py-2 rounded-full ${scrolled ? "bg-white shadow-lg border-gray-200" : "bg-[#ffffff33] text-white"}`}>
+        <ul className={`hidden lg:flex items-center justify-center pl-[7px] pr-[7px] py-2 rounded-full ${scrolled ? "bg-white shadow-lg border-gray-200" : "bg-[#ffffff33] text-white"}`}>
           {navItems.map((item, idx) => (
             <li
               key={idx}
@@ -133,7 +141,7 @@ export default function NavbarCustom() {
             >
               <Link
                 href={item.href}
-                className={`text-[16px] font-light px-2 py-1 ${scrolled ? "text-[#141414] hover:text-[#1666B6]" : "text-white hover:text-[#A3A3A3]"} ${isActive(item.href) ? `!font-bold text-white ${scrolled && "text-[#1666B6]"}` : ""}`}
+                className={`text-[16px] font-light px-2 py-1 ${scrolled ? "text-[#141414] hover:text-[#1666B6]" : "text-white hover:text-[#90C4FD]"} ${isActive(item.href) ? `!font-bold text-white ${scrolled && "text-[#1666B6]"}` : ""}`}
               >
                 {item.label}
               </Link>

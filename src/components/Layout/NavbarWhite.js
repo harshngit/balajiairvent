@@ -37,12 +37,20 @@ export default function NavbarCustom1() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const y = window.scrollY;
+      const y = (typeof window !== 'undefined' && (window.pageYOffset ?? document.documentElement.scrollTop ?? window.scrollY ?? 0)) || 0;
 
       if (!tickingRef.current) {
         window.requestAnimationFrame(() => {
           // keep your original threshold (10px)
           setScrolling(y > 100);
+
+          // ensure visible at very top (Safari bounce/top snap)
+          if (y <= 0) {
+            setPinned(true);
+            lastYRef.current = 0;
+            tickingRef.current = false;
+            return;
+          }
 
           // direction logic
           const lastY = lastYRef.current;
@@ -61,8 +69,8 @@ export default function NavbarCustom1() {
       }
     };
 
-    lastYRef.current = window.scrollY;
-    setScrolling(window.scrollY > 10);
+    lastYRef.current = (typeof window !== 'undefined' && (window.pageYOffset ?? document.documentElement.scrollTop ?? window.scrollY ?? 0)) || 0;
+    setScrolling(lastYRef.current > 10);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -111,7 +119,7 @@ export default function NavbarCustom1() {
 
         {/* Navigation Menu */}
         <ul
-          className={`hidden lg:flex items-center justify-center pl-6 pr-[7px] py-2 rounded-full ${
+          className={`hidden lg:flex items-center justify-center pl-[7px] pr-[7px] py-2 rounded-full ${
             scrolling ? "bg-white shadow-lg border-gray-200" : "bg-[#ffffff33] text-white"
           }`}
         >
@@ -125,7 +133,7 @@ export default function NavbarCustom1() {
               <Link
                 href={item.href}
                 className={`text-[16px] px-2 py-1 ${
-                  scrolling ? "text-[#141414] hover:text-[#1666B6]" : "text-white hover:text-[#A3A3A3]"
+                  scrolling ? "text-[#141414] hover:text-[#1666B6]" : "text-white hover:text-[#90C4FD]"
                 } ${
                   isActive(item.href)
                     ? scrolling

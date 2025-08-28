@@ -12,6 +12,7 @@ import ConsultationSidebar from '@/components/ConsultationSidebar.js';
 import ClientsHome from '@/components/Home/ClientsHome'
 import Application from '@/components/Home/Application'
 import CTA from '@/components/Home/CTA'
+import Testinomial from '@/components/Home/Testinomial'
 const Home = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
@@ -23,6 +24,7 @@ const Home = () => {
         <ClientsHome />
         <AboutHome />
         <IndustriesHome />
+        <Testinomial />
         <AboutHome2 />
         <Application />
         <CTA />

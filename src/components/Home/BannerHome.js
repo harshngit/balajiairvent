@@ -30,7 +30,7 @@ const BannerHome = () => {
 							Firstfan HVLS Fans available in 5 sizes ranging from 12ft - 24 ft equipped with PMSM motor.
 						</p>
 
-						<Link href="/products#fans">
+						<Link href="/products#all">
 							<button className="mt-4 flex items-center gap-2 hover:bg-primary hover:text-white bg-[#F0F0F066] text-font rounded-full text-[16px] lg:pl-[20px] lg:pr-[7px] lg:py-2 font-light ">
 								View Product
 								<Image
@@ -47,7 +47,7 @@ const BannerHome = () => {
 				{/* bottom gradient */}
 				<div className="lg:block hidden absolute bottom-0 left-0 w-full h-[100px] bg-gradient-to-t from-[#0F2850] to-transparent"></div>
 				{/* Mobile Banner */}
-				<Link href="#" className='lg:hidden block absolute bottom-[3.25rem] left-5 '>
+				<Link href="https://forms.gle/LFuvgta8s3Qe29T8A" target='_blank' className='lg:hidden block absolute bottom-[3.25rem] left-5 '>
 					<button className="mt-5  flex items-center gap-2 bg-[#F0F0F066] text-font rounded-full px-3 py-[5px] text-[16px] font-light transition-all">
 						Send Inquiry
 						<Image
@@ -81,7 +81,7 @@ const BannerHome = () => {
 						Firstfan HVLS Fans available in 5 sizes ranging from 12ft - 24 ft equipped with PMSM motor.
 					</p>
 
-					<Link href="/products/hvls-fan">
+					<Link href="/products#all">
 						<button className="mt-5  flex items-center gap-2 bg-[#F0F0F066] text-font rounded-full px-3 py-[5px] text-[16px] font-light transition-all">
 							View Product
 							<Image

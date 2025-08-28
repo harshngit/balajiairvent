@@ -40,7 +40,7 @@
 
 /* Add this in global CSS if needed */
 .swiper-bullet {
-    background-color: #ccc;
+    background-color: #90C4FD;
     opacity: 0.5;
     transition: all 0.3s;
 }
@@ -52,7 +52,7 @@
 
 /* Make the last pagination dot darker when not active */
 .custom-pagination .swiper-bullet:last-child:not(.swiper-bullet-active) {
-    background-color: #0F2850 !important;
+    background-color: #90C4FD !important;
 }
 
 .swiper-wrapper {   
@@ -215,25 +215,6 @@
     }
 }
 
-/* Add in global CSS or a Tailwind plugin setup */
-.custom-pagination .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    background-color: #fff;
-    opacity: 1;
-    transition: opacity 0.3s;
-    border-radius: 1px;
-}
-
-.custom-pagination .swiper-pagination-bullet-active {
-    opacity: 1;
-    background-color: #000;
-}
-
-.custom-swiper-pagination .swiper-pagination-bullet-active {
-    opacity: 1;
-    background-color: #FFF1EA;
-}
 
 .carousel-3d {
     perspective: 1000px;

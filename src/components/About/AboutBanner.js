@@ -50,18 +50,18 @@ const AboutBanner = () => {
 				/>
 			</div>
 			<div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
-				<div className='lg:w-[50%] flex justify-start items-center'>
+				<div className='lg:w-[30%] w-full flex justify-start items-center'>
 					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[48px] text-[32px] font-light '>Our Vision</h3>
 				</div>
-				<div className=''>
+				<div className='lg:w-[70%] w-full'>
 					<p className='lg:text-[32px] text-[18px] text-secondary font-light'>To make the name "Balaji Airvent Systems Private Limited" synonymous with Air Distribution Products.</p>
 				</div>
 			</div>
 			<div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
-				<div className='lg:w-[30%] flex justify-start items-center'>
+				<div className='lg:w-[30%] w-full flex justify-start items-center'>
 					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[48px] text-[32px] font-light '>Our Mission</h3>
 				</div>
-				<div className='lg:w-[936px] w-full'>
+				<div className='lg:w-[70%] w-full'>
 					<p className='lg:text-[32px] text-[18px] text-secondary font-light'>To provide superlative, yet cost effective air management solutions using best quality products and efficient technical support constantly boosted by continuous R&D and innovations.</p>
 				</div>
 			</div>

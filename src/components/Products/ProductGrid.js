@@ -295,7 +295,7 @@ const ProductGrid = () => {
 							</div>
 						</>
 					}
-                    <div className="flex flex-wrap mt-5 xl:gap-2  lg:gap-[50px] md:gap-[20px] gap-[20px] lg:px-0 px-1 xl:mx-auto lg:-mx-3 relative">
+                    <div className="flex flex-wrap mt-5 gap-x-[20px] gap-y-[50px] lg:px-0 px-1 xl:mx-auto relative">
                         {(() => {
                             const expandedIndex = filteredProducts.findIndex(p => p.id === expandedProductId);
                             const expandedProduct = expandedIndex >= 0 ? filteredProducts[expandedIndex] : null;
@@ -307,7 +307,7 @@ const ProductGrid = () => {
                                 const insertPanel = index === rowEnd && expandedIndex >= rowStart && expandedIndex <= rowEnd && expandedProduct;
                                 return (
                                     <React.Fragment key={product.id}>
-                                <div id={`product-card-${product.id}`} className="w-full xl:w-[32.33%]  lg:w-[30.333%] px-3">
+                                <div id={`product-card-${product.id}`} className="w-full xl:w-[32.33%]  lg:w-[30.333%]">
                                     <div className="group relative h-[220px] md:h-[260px] lg:h-[300px] overflow-hidden rounded-lg bg-white">
                                         <Image
                                             src={product.img1 || "/placeholder.jpg"}

@@ -22,14 +22,21 @@ const InsideStory = () => {
 				</div>
 
 			</div>
-			<Link href={"https://youtu.be/ZOVaV7ozBC0?si=OHAttt2eVeA-XJMV"} target='_blank' className='lg:pb-[100px] w-full'>
-				<Image
-					src={"/asset/about/inside.webp"}
-					width={1512}
-					height={800}
-					className='w-full'
-				/>
-			</Link>
+			<div className='lg:pb-[100px] w-full'>
+				<div className="relative w-full lg:h-[800px] h-[300px] overflow-hidden">
+					<video
+						className="w-full h-full object-cover"
+						controls
+						autoplay
+						playsInline
+						// poster="/asset/about/factory-thumbnail.webp"
+					>
+						<source src="/asset/about/videoplayback.mp4" type="video/mp4" />
+						Your browser does not support the video tag.
+					</video>
+					
+				</div>
+			</div>
 		</>
 	)
 }

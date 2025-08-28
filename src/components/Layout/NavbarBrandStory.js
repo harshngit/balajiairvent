@@ -40,11 +40,19 @@ export default function NavbarCustom() {
     const DELTA = 8;
 
     const onScroll = () => {
-      const y = window.scrollY;
+      const y = (typeof window !== 'undefined' && (window.pageYOffset ?? document.documentElement.scrollTop ?? window.scrollY ?? 0)) || 0;
 
       if (!tickingRef.current) {
         window.requestAnimationFrame(() => {
           setScrolling(y > THRESHOLD);
+
+          // ensure visible at very top (Safari bounce/top snap)
+          if (y <= 0) {
+            setPinned(true);
+            lastYRef.current = 0;
+            tickingRef.current = false;
+            return;
+          }
 
           const lastY = lastYRef.current;
           const diff = y - lastY;
@@ -61,8 +69,8 @@ export default function NavbarCustom() {
       }
     };
 
-    lastYRef.current = window.scrollY;
-    setScrolling(window.scrollY > THRESHOLD);
+    lastYRef.current = (typeof window !== 'undefined' && (window.pageYOffset ?? document.documentElement.scrollTop ?? window.scrollY ?? 0)) || 0;
+    setScrolling(lastYRef.current > THRESHOLD);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -109,7 +117,7 @@ export default function NavbarCustom() {
         </div>
 
         {/* Navigation Menu (desktop) */}
-        <ul className={`hidden lg:flex items-center justify-center pl-6 pr-[7px] py-2 rounded-full ${scrolling ? "bg-white shadow-lg border-gray-200" : "bg-white shadow-lg border-gray-200 text-white"}`}>
+        <ul className={`hidden lg:flex items-center justify-center pl-[7px] pr-[7px] py-2 rounded-full ${scrolling ? "bg-white shadow-lg border-gray-200" : "bg-white shadow-lg border-gray-200 text-white"}`}>
           {navItems.map((item, idx) => (
             <li
               key={idx}
