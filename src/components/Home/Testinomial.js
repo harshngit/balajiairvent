@@ -22,7 +22,7 @@ const Testinomial = () => {
           <div className="">
             <div className="relative rounded-xl bg-[#F0F0F0] border border-[#E6A694] shadow-sm p-4 md:p-6">
               {/* comma icon */}
-              <Image src={'/asset/commaup.png'} alt="quote" width={36} height={36} className="absolute -left-3 -top-5 w-[28px] h-[28px] md:w-[36px] md:h-[36px]" />
+              <Image src={'/asset/commaup.png'} alt="quote" width={36} height={36} className="absolute lg:-left-14 -left-3 lg:-top-3 -top-5 w-[38px] h-[38px] md:w-[76px] md:h-[76px]" />
 
               <div className="text-[#0F2850] text-[14px] md:text-[24px] font-light leading-relaxed">
                 <p>Balaji AirVent’s team has consistently demonstrated a deep understanding of our needs and delivered innovative solutions that meet our expectations. Their customer-focused approach is truly commendable.</p>
@@ -34,7 +34,7 @@ const Testinomial = () => {
                  <div className='flex justify-center items-center'>
                   <Image src={'/asset/logoexternal.png'} alt="quote" width={102} height={70} className="" />
                  </div>
-                <div className="text-[#61A6EB] text-[12px] md:text-[18px] leading-snug">
+                <div className="text-[#63B0FF] text-[12px] md:text-[18px] leading-snug">
                   <p className="font-medium">Airody Trading LLC, Dubai</p>
                   <p>Jason Joseph P.</p>
                   <p>Admin Officer</p>
