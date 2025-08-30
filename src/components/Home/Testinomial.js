@@ -14,16 +14,34 @@ const Testinomial = () => {
           </h2>
         </div>
 
-        {/* Right image - only right part visible */}
-        <div className="relative w-full h-[260px] md:h-[360px] lg:h-[420px] rounded-xl">
-          <Image
-            src={"/asset/home/testimonial.webp"}
-            alt="Testimonial"
-            width={710}
-            height={408}
-            priority={false}
-            className="object-cover object-right"
-          />
+        {/* Right image with testimonial card on the right side */}
+        <div className=" w-full rounded-xl ">
+          
+
+          {/* Testimonial card */}
+          <div className="">
+            <div className="relative rounded-xl bg-[#F0F0F0] border border-[#E6A694] shadow-sm p-4 md:p-6">
+              {/* comma icon */}
+              <Image src={'/asset/commaup.png'} alt="quote" width={36} height={36} className="absolute -left-3 -top-5 w-[28px] h-[28px] md:w-[36px] md:h-[36px]" />
+
+              <div className="text-[#0F2850] text-[14px] md:text-[24px] font-light leading-relaxed">
+                <p>Balaji AirVent’s team has consistently demonstrated a deep understanding of our needs and delivered innovative solutions that meet our expectations. Their customer-focused approach is truly commendable.</p>
+                <p className="mt-2">We appreciate your business.<br/>Thank you!</p>
+              </div>
+
+              {/* Footer strip */}
+              <div className="mt-4 md:mt-5 flex justify-start lg:gap-[40px] gap-[20px] items-center rounded-lg bg-white p-3 md:p-4">
+                 <div className='flex justify-center items-center'>
+                  <Image src={'/asset/logoexternal.png'} alt="quote" width={102} height={70} className="" />
+                 </div>
+                <div className="text-[#61A6EB] text-[12px] md:text-[18px] leading-snug">
+                  <p className="font-medium">Airody Trading LLC, Dubai</p>
+                  <p>Jason Joseph P.</p>
+                  <p>Admin Officer</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

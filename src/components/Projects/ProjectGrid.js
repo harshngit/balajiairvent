@@ -52,7 +52,7 @@ const ProjectGrid = () => {
               <div key={tab.category} className='relative flex items-center' ref={collabDropdownRef}>
                 <button
                   onClick={() => handleClick(tab)}
-                  className={`relative pb-2 lg:px-[20px] px-2 w-[120px] lg:w-auto flex justify-between items-center text-sm md:text-[20px] lg:gap-5 gap-2 transition-colors ${
+                  className={`relative pb-2 lg:px-[20px] hover:text-[#90C4FD] transition-all duration-300 px-2 w-[120px] lg:w-auto flex justify-between items-center text-sm md:text-[20px] lg:gap-5 gap-2 transition-colors ${
                     activeCategory === tab.category
                       ? "font-medium text-[#fff]"
                       : "font-light text-[#fff]/80"}
@@ -72,7 +72,7 @@ const ProjectGrid = () => {
                   <ul className='absolute top-[120%] left-0 bg-white text-[#0F2850] shadow-lg rounded-md py-2 w-[220px] z-[10000] min-w-[200px] md:min-w-[220px] max-w-[90vw]'>
                     <li>
                       <button
-                        className='w-full text-left px-4 py-3 hover:bg-gray-100'
+                        className='w-full text-left px-4 py-3 hover:bg-gray-100 hover:text-[#90C4FD] transition-all duration-300'
                         onClick={() => { setActiveCollab('collab1'); setActiveCategory('collabration'); setIsCollabDropdownOpen(false); }}
                       >
                         75F Solutions
@@ -80,7 +80,7 @@ const ProjectGrid = () => {
                     </li>
                     <li>
                       <button
-                        className='w-full text-left px-4 py-3 hover:bg-gray-100'
+                        className='w-full text-left px-4 py-3 hover:bg-gray-100 hover:text-[#90C4FD] transition-all duration-300  '
                         onClick={() => { setActiveCollab('collab2'); setActiveCategory('collabration'); setIsCollabDropdownOpen(false); }}
                       >
                         Teryair
@@ -93,7 +93,7 @@ const ProjectGrid = () => {
             <button
               key={tab.category}
               onClick={() => handleClick(tab)}
-              className={`relative pb-2 px-[20px] text-sm md:text-[20px] transition-colors ${
+              className={`relative pb-2 px-[20px] hover:text-[#90C4FD]  duration-300 text-sm md:text-[20px] transition-colors ${
                 activeCategory === tab.category
                   ? "font-medium text-[#fff]"
                     : "font-light text-[#fff]/80"}
@@ -111,9 +111,10 @@ const ProjectGrid = () => {
         {activeCategory === "collabration" && (
           <div className="flex justify-start lg:gap-[50px] items-start flex-col gap-4 lg:py-[50px] lg:px-[20px] px-3 py-5">
             {activeCollab === "collab1" && (<div>
-            <div className='flex justify-start items-center gap-2'>
-              <h3 className='font-light text-[#F0F0F0] text-[32px]'>75F Solutions</h3>
-              <Link href={"https://www.teryair.com"} target='_blank' className='group'>
+            <div className='flex justify-start items-center gap-2 '>
+              <Link href={"https://www.75f.io/en-in/"} target='_blank' className='group flex justify-start items-center gap-2'>
+              <h3 className='font-light text-[#F0F0F0] text-[32px] group-hover:text-[#90C4FD] transition-all duration-300'>75F Solutions</h3>
+              <Link href={"https://www.teryair.com"} target='_blank' className=''>
               <Image 
                 src={"/asset/Arrowsideup.png"}
                 alt="75F Solutions"
@@ -128,6 +129,7 @@ const ProjectGrid = () => {
                 height={28}
                 className='w-[28px] h-[28px] group-hover:opacity-100 group-hover:block hidden opacity-0 transition-all duration-300'
               />    
+              </Link>
               </Link>
             </div>
             <div className='w-full lg:block hidden shadow-lg rounded-2xl overflow-hidden'>
@@ -278,8 +280,9 @@ const ProjectGrid = () => {
             {activeCollab === "collab2" && (
               <div>
               <div className='flex justify-start items-center gap-2'>
-              <h3 className='font-light text-[#F0F0F0] text-[32px]'>Teryair</h3>
-              <Link href={"https://www.teryair.com"} target='_blank' className='group'>
+                <Link href={"https://www.teryair.com"} target='_blank' className='flex justify-start items-center gap-2 group'>
+                <h3 className='font-light text-[#F0F0F0] text-[32px] group-hover:text-[#90C4FD] transition-all duration-300'>Teryair</h3>
+              <div className='group'>
               <Image 
                 src={"/asset/Arrowsideup.png"}
                 alt="75F Solutions"
@@ -294,7 +297,8 @@ const ProjectGrid = () => {
                 height={28}
                 className='w-[28px] h-[28px] group-hover:opacity-100 group-hover:block hidden opacity-0 transition-all duration-300'
               />    
-              </Link>        
+              </div>    
+                </Link>
             </div>
             <div className='w-full lg:block hidden shadow-lg rounded-2xl overflow-hidden'>
               <Image 
