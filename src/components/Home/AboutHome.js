@@ -32,9 +32,11 @@ const AboutHome = () => {
 
 				{/* Right: Text with full gradient */}
 				<div className="md:w-[70%] w-full">
+					<Link href="/aboutus">
 					<p className="lg:text-[32px] lg:w-[100%] lg:h-auto h-[300px] leading-relaxed bg-gradient-to-b from-[#F0F0F0] via-[#E77853] to-[#0F2850] text-transparent bg-clip-text">
 						Balaji Airvent Systems Private Limited is a Quality and Customer Conscious Company with long experience in Metal and Air Distribution field. We work with big OEMs and deeply understand the importance of quality and prompt services. Promoters have long & extensive Manufacturing and Commercial experience of this line of activity having worked for a leading Company in this field and Aluminium field for 16 years. We have deep technical and product designing knowledge.
 					</p>
+					</Link>
 				</div>
 			</div>
 		</div>
