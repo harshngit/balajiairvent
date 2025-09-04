@@ -162,7 +162,7 @@ export default function NavbarCustom() {
             </li>
           ))}
           <li>
-            <Link href="#">
+            <Link href="https://forms.gle/a242JP24gPfsH7yG8" target="_blank">
             <button
               className={`group text-sm flex items-center gap-[20px] ml-5 lg:pl-[20px] lg:pr-[7px] lg:py-2 font-light  rounded-full border transition-all duration-200 text-[16px]
               ${scrolled ? "bg-primary hover:bg-[#fff] hover:border-primary hover:text-primary text-white border-primary shadow-md" : "hidden"}`}
@@ -176,7 +176,7 @@ export default function NavbarCustom() {
         </ul>
 
         {/* Right CTA (desktop) */}
-        <Link href="#" className="hidden lg:block">
+        <Link href="https://forms.gle/a242JP24gPfsH7yG8" target="_blank" className="hidden lg:block">
           <button
             className={`group text-sm flex items-center gap-[20px] pr-[7px] pl-[20px] py-[10px] rounded-full border transition-all duration-200 w-[162px] h-[40px]
             ${scrolled ? "hidden" : "bg-transparent border-white text-white hover:border-[#1666B6] hover:bg-[#1666B6] hover:text-[#fff]"}`}
@@ -221,7 +221,7 @@ export default function NavbarCustom() {
               ))}
             </ul>
 
-            <Link href="#" onClick={() => setMenuOpen(false)}>
+            <Link href="https://forms.gle/a242JP24gPfsH7yG8" target="_blank" onClick={() => setMenuOpen(false)}>
               <button
                 className={`group text-sm bg-white flex items-center mt-10 gap-[20px] pr-[7px] pl-[20px] py-[10px] rounded-full border transition-all duration-200 w-[162px] h-[40px]
                 ${scrolled ? "hidden" : "bg-transparent border-primary text-primary hover:border-[#1666B6] hover:bg-[#1666B6] hover:text-[#fff]"}`}

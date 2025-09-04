@@ -8,7 +8,7 @@ const BannerHome = () => {
 		<>
 			<div className="bg_bannerhome relative w-full">
 				{/* Floating Promo Box */}
-				<div className="absolute bottom-[14rem] lg:bottom-[1.rem] xl:bottom-[5rem] right-[0rem] z-10 hidden lg:flex items-center rounded-2xl px-6 py-5 max-w-[50%] w-full lg:w-auto xxl:bottom-[2rem] ">
+				<div className="absolute bottom-[14rem] lg:bottom-[1.5rem] md:bottom-[5rem] xl:bottom-[5rem] right-[0rem] z-10 hidden lg:flex items-center rounded-2xl px-6 py-5 max-w-[50%] w-full lg:w-auto xxl:bottom-[2rem] ">
 					{/* Orange vertical line */}
 					<div className="w-[3px] h-[151px] bg-[#E77853] rounded-full mr-5"></div>
 

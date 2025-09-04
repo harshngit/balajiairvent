@@ -23,7 +23,7 @@ const navItems = [
   { label: "Contact Us", href: "/contactus" },
 ];
 
-export default function NavbarCustom1() {
+export default function NavbarCustom2() {
   const [scrolling, setScrolling] = useState(false);
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -98,7 +98,7 @@ export default function NavbarCustom1() {
         scrolling ? "bg-white shadow-sm" : ` ${isActive("/contactus") && "bg-secondary lg:bg-transparent"} `
       } ${pinned ? "translate-y-0" : "-translate-y-full"} will-change-transform`}
     >
-      <div className=" mx-0 px-4 py-3 flex justify-start gap-[250px] items-center">
+      <div className=" mx-0 px-4 py-3 flex justify-between  items-center">
         {/* Logo */}
         <Link href="/">
           <img
@@ -191,7 +191,7 @@ export default function NavbarCustom1() {
         </ul>
 
         {/* Send Inquiry Button */}
-        {/* <Link href="" className="hidden lg:block">
+        <Link href="https://forms.gle/a242JP24gPfsH7yG8" target="_blank" className="hidden lg:block">
           <button
             className={`group text-sm flex items-center gap-[20px] pr-[7px] pl-[20px] py-[10px] rounded-full border transition-all duration-200 w-[162px] h-[40px]
             ${scrolling ? "hidden" : "bg-transparent border-white text-white hover:border-[#1666B6] hover:bg-[#1666B6] hover:text-[#fff]"}`}
@@ -220,7 +220,7 @@ export default function NavbarCustom1() {
               alt="Arrow Hover"
             />
           </button>
-        </Link> */}
+        </Link>
 
         {menuOpen && (
           <div className="fixed inset-0 z-[99999] bg-[#0F2850] opacity-[80%] backdrop-blur-md flex flex-col justify-start items-start px-6 py-8 text-white transition-all duration-700 ease-in-out h-[100vh]">

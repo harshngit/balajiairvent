@@ -79,7 +79,7 @@
 }
 
 .bg_bannerhome {
-    background: url('/asset/home/home.webp');
+    background: url('/asset/home/homebanner.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -165,6 +165,16 @@
     background-repeat: no-repeat;
 }
 
+@media screen and (max-width:1400px) {
+        .bg_bannerhome {
+            background: url('/asset/home/homebanner.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height:800px;
+            margin-top: -200px;
+    }
+}
 
 @media screen and (max-width:1000px) {
     .bg_bannerhome {
