@@ -29,7 +29,7 @@ export const metadata = {
     siteName: "Balaji Airvent",
     images: [
       {
-        url: "/asset/favicon_balaji.png",
+        		url: "/asset/favicon_balaji.png",
         width: 1200,
         height: 630,
         alt: "Balaji Airvent Products - HVAC Equipment & Air Ventilation Systems",
