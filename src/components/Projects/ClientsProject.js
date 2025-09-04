@@ -36,9 +36,9 @@ const clientLogos = [
 			{/* Top gradient for smooth blending */}
 			{/* <div className="absolute -top-[50px] left-0 w-full h-4 bg-gradient-to-t from-[#162e54] to-transparent z-20 pointer-events-none" /> */}
 
-			<div className="max-w-[1700px] mx-auto flex flex-col items-start h-full px-6 relative z-10">
+			<div className="max-w-[1700px] mx-auto flex flex-col items-start h-full lg:px-6 relative z-10">
 				{/* Left Title */}
-				<div className="flex-shrink-0 w-[200px] text-[#F0F0F0] text-[40px] font-light pr-6 z-20">
+				<div className="flex-shrink-0 w-[200px] text-[#F0F0F0] lg:text-[40px] text-[24px] font-light pr-6 z-20">
 					Clients
 				</div>
 

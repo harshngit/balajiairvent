@@ -41,10 +41,11 @@ const IndustriesHome = () => {
 					<div className='w-[600px]'>
 					<div className='flex justify-start items-start lg:gap-[30px] gap-1 flex-col'>
 						<h4 className="text-[#E77853] text-[28px] font-light mb-2">Industries we serve</h4>
-						<h2 className="text-3xl md:text-[40px] font-light text-[#0F2850] leading-snug mb-4">
-							Explore our precision-engineered{' '}
-							<span className="bg-gradient-to-r from-[#0052A0] to-primary bg-clip-text text-transparent">
-								Airvent Solutions
+						<h2 className="text-[32px] md:text-[40px] font-light text-[#0F2850] leading-snug mb-4">
+							Explore our precision-<br className='lg:hidden block' />
+							engineered <span className="bg-gradient-to-r from-[#0052A0] to-primary bg-clip-text text-transparent">
+								Airvent <br className='lg:hidden block' />
+								Solutions
 							</span>
 							.
 						</h2>

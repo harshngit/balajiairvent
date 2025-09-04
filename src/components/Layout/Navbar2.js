@@ -100,6 +100,9 @@ export default function NavbarCustom2() {
     >
       <div className=" mx-0 px-4 py-3 flex justify-between  items-center">
         {/* Logo */}
+        {!menuOpen && 
+        <>
+        
         <Link href="/">
           <img
             src={scrolling ? "/asset/navbar/logo.webp" : "/asset/navbar/logo-white.webp"}
@@ -107,7 +110,6 @@ export default function NavbarCustom2() {
             className="h-[32px] md:h-[40px]"
           />
         </Link>
-
         <div className="block lg:hidden" onClick={() => setMenuOpen(true)}>
           <Image
             src={scrolling ? "/asset/navbar/iconblue.png" : "/asset/navbar/icon.png"}
@@ -116,6 +118,8 @@ export default function NavbarCustom2() {
             alt="menu"
           />
         </div>
+        </>
+        }
 
         {/* Navigation Menu */}
         <ul
@@ -223,7 +227,7 @@ export default function NavbarCustom2() {
         </Link>
 
         {menuOpen && (
-          <div className="fixed inset-0 z-[99999] bg-[#0F2850] opacity-[80%] backdrop-blur-md flex flex-col justify-start items-start px-6 py-8 text-white transition-all duration-700 ease-in-out h-[100vh]">
+          <div className="fixed inset-0 z-[99999] bg-[#0F2850] opacity-[90%] backdrop-blur-md flex flex-col justify-start items-start px-6 py-8 text-white transition-all duration-700 ease-in-out h-[100vh]">
             {/* Close Button */}
             <div className="absolute top-10 right-6 cursor-pointer" onClick={() => setMenuOpen(false)}>
               <Image src={"/asset/navbar/cross.png"} width={24} height={24} alt="close" />

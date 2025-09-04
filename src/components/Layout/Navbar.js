@@ -112,6 +112,8 @@ export default function NavbarCustom() {
     >
       <div className=" mx-0 px-4 py-3 flex justify-between items-center">
         {/* Logo */}
+       {!menuOpen && 
+        <>
         <Link href="/">
           <img
             src={scrolled ? "/asset/navbar/logo.webp" : "/asset/navbar/logo-white.webp"}
@@ -119,8 +121,6 @@ export default function NavbarCustom() {
             className="h-[32px] md:h-[40px]"
           />
         </Link>
-
-        {/* Mobile burger */}
         <button className="block lg:hidden" onClick={() => setMenuOpen(true)} aria-label="Open menu">
           <Image
             src={scrolled ? "/asset/navbar/iconblue.png" : "/asset/navbar/icon.png"}
@@ -129,6 +129,11 @@ export default function NavbarCustom() {
             alt="Menu"
           />
         </button>
+        </>
+       }
+
+        {/* Mobile burger */}
+       
 
         {/* Desktop nav */}
         <ul className={`hidden lg:flex items-center justify-center pl-[7px] pr-[7px] py-2 rounded-full ${scrolled ? "bg-white shadow-lg border-gray-200" : "bg-[#ffffff33] text-white"}`}>
@@ -197,7 +202,7 @@ export default function NavbarCustom() {
 
         {/* Mobile full-screen menu */}
         {menuOpen && (
-          <div className="fixed inset-0 z-[99999] bg-[#0F2850] opacity-[80%] backdrop-blur-md flex flex-col justify-start items-start px-6 py-8 text-white transition-all duration-700 h-[100vh]">
+          <div className="fixed inset-0 z-[99999] bg-[#0F2850] opacity-[90%] backdrop-blur-md flex flex-col justify-start items-start px-6 py-8 text-white transition-all duration-700 h-[100vh]">
             <button className="absolute top-10 right-6 cursor-pointer" onClick={() => setMenuOpen(false)} aria-label="Close menu">
               <Image src={"/asset/navbar/cross.png"} width={24} height={24} alt="Close" />
             </button>

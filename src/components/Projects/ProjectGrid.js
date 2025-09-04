@@ -222,9 +222,9 @@ const ProjectGrid = () => {
   </div>
             </div>
             </div>
-            <div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
+            <div className='flex lg:flex-row mt-5 flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
 				<div className='lg:w-[30%] flex justify-start items-center'>
-					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[32px] font-light '>Dynamic Airflow <br className='lg:block   hidden' /> Balancing</h3>
+					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[24px] font-light '>Dynamic Airflow <br className='lg:block   hidden' /> Balancing</h3>
 				</div>
 				<div className='lg:w-[70%] w-full'>
 					<p className='lg:text-[26px] text-[18px] text-secondary font-light'>75F’s proactive zone control system with smart dampers prevents hot & cold spots before they occur.</p>
@@ -254,7 +254,7 @@ const ProjectGrid = () => {
 					<p className='lg:text-[26px] text-[18px] text-secondary font-light'>75F designed an end-to-end solution for the chilled water system to maintain comfort while using less chilled water and saving more energy.</p>
 				</div>
 	    		  </div>
-            <div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
+            <div className='flex lg:flex-row flex-col py-3 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
 				<div className='lg:w-[30%] flex justify-start items-center'>
 					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[24px] font-light '>Advanced Lighting</h3>
 				</div>
@@ -383,9 +383,9 @@ const ProjectGrid = () => {
         </div>
               </div>
             </div>
-            <div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
+            <div className='flex lg:flex-row mt-5 flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
 				<div className='lg:w-[30%] flex justify-start items-center'>
-					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[32px] font-light '>ATEX-Certified <br className='lg:block hidden' /> Products</h3>
+					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[40px] text-[24px] font-light '>ATEX-Certified <br className='lg:block hidden' /> Products</h3>
 				</div>
 				<div className='lg:w-[70%] w-full'>
 					<p className='lg:text-[26px] text-[18px] text-secondary font-light'>All Teryair air motors and AODD pumps meet stringent ATEX certification standards, ensuring safety and reliability in hazardous environments.</p>
@@ -431,7 +431,7 @@ const ProjectGrid = () => {
                             alt="Product Advantages"
                             width={350}
                             height={380}
-                            className='lg:w-[350px] lg:h-[380px] w-[350px] h-[200px]'
+                            className='lg:w-[350px] lg:h-[380px]'
                         />
                          <Image
                             src={"/asset/projects/collabration/advantages2/2.webp"} 

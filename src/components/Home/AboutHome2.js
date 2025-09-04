@@ -23,7 +23,7 @@ const AboutHome2 = () => {
 						<p>
 							From large-scale factories to modern workspaces, our air vent systems power efficient environments.
 							We collaborate closely with industry leaders to solve complex air distribution challenges.
-							<br />
+							
 							Our key collaborations reflect a legacy of quality, scale, and innovation.
 						</p>
 					</div>

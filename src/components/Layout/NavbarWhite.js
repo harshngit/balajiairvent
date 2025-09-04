@@ -98,7 +98,7 @@ export default function NavbarCustom1() {
         scrolling ? "bg-white shadow-sm" : ` ${isActive("/contactus") && "bg-secondary lg:bg-transparent"} `
       } ${pinned ? "translate-y-0" : "-translate-y-full"} will-change-transform`}
     >
-      <div className=" mx-0 px-4 py-3 flex justify-start gap-[250px] items-center">
+      <div className=" mx-0 px-4 py-3 flex lg:justify-start justify-between lg:gap-[250px] items-center">
         {/* Logo */}
         <Link href="/">
           <img

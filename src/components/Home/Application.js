@@ -131,9 +131,9 @@ export default function Application() {
 	);
 
 	return (
-		<div className="font-onset bg-white my-[50px]">
+		<div className="font-onset bg-white lg:my-[50px]">
 			{/* Header */}
-			<div className="w-full lg:px-10 px-5 lg:py-10 py-6 xxl:max-w-[1800px] lg:w-full mx-auto">
+			<div className="w-full lg:px-10 lg:py-10 py-6 xxl:max-w-[1800px] lg:w-full mx-auto">
 				<div className="flex flex-col lg:flex-row justify-between items-end gap-8 mx-6">
 					{/* Left */}
 					<div className="flex flex-col text-left lg:w-1/2 w-full">

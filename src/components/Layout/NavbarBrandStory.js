@@ -103,18 +103,24 @@ export default function NavbarCustom() {
     >
       <div className=" mx-0 px-4 py-3 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/">
+        {!menuOpen && 
+        
+<>
+<Link href="/">
           <img
             src={"/asset/navbar/logo.webp"}
             alt="Logo"
             className="h-[32px] md:h-[40px]"
           />
         </Link>
-
-        {/* Mobile menu button */}
         <div className="block lg:hidden" onClick={() => setMenuOpen(true)}>
           <Image src={"/asset/navbar/iconblue.png"} width={24} height={24} alt="menu" />
         </div>
+</>
+        }
+
+        {/* Mobile menu button */}
+        
 
         {/* Navigation Menu (desktop) */}
         <ul className={`hidden lg:flex items-center justify-center pl-[7px] pr-[7px] py-2 rounded-full ${scrolling ? "bg-white shadow-lg border-gray-200" : "bg-white shadow-lg border-gray-200 text-white"}`}>
