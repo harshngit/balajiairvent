@@ -6,48 +6,72 @@ import Scrollup from "@/components/Layout/Scrollup";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Balaji Airvent",
-
-  // description: "Experience precision-engineered doors with durability, aesthetics, and performance.",
-  // keywords: [
-  //   "Hav'dor",
-  //   "Premium Doors",
-  //   "Designer Doors",
-  //   "Moisture Resistant Doors",
-  //   "Termite Proof Doors",
-  //   "Luxury Door Manufacturer"
-  // ],
-
-  // openGraph: {
-  //   title: "Hav'dor | Premium & Durable Designer Doors",
-  //   description:
-  //     "Every Hav'dor door is engineered for lasting strength, sound insulation, and contemporary aesthetics. Discover the modern standard in door technology.",
-  //   url: "https://havdor.com/",
-  //   siteName: "Hav'dor",
-  //   images: [
-  //     {
-  //       url: "/asset/favicon.png", // use your logo or preview image here
-  //       width: 800,
-  //       height: 600,
-  //       alt: "Hav'dor Doors",
-  //     },
-  //   ],
-  //   type: "website",
-  // },
-
-  // alternates: {
-  //   canonical: "https://havdor.com/",
-  // },
-
-  // icons: {
-  //   icon: "/asset/favicon.png",         // Favicon for all browsers
-  //   shortcut: "/asset/favicon.png",     // Shortcut icon for legacy support
-  //   apple: "/asset/favicon.png",        // iOS home screen
-  //   other: {
-  //     rel: "apple-touch-icon-precomposed",
-  //     url: "/asset/favicon.png",
-  //   },
-  // },
+  title: {
+    default: "Balaji Airvent | Premium HVAC Solutions & Air Ventilation Systems",
+    template: "%s | Balaji Airvent"
+  },
+  description: "Leading manufacturer of premium HVAC solutions, air ventilation systems, and industrial air handling equipment. Expert engineering, quality products, and reliable service across India.",
+  keywords: [
+    "Balaji Airvent",
+    "HVAC Solutions",
+    "Air Ventilation Systems",
+    "Industrial Air Handling",
+    "Air Conditioning Equipment",
+    "Ventilation Fans",
+    "Air Ducts",
+    "HVAC Manufacturing",
+    "Industrial Ventilation",
+    "Air Quality Solutions",
+    "Commercial HVAC",
+    "Residential HVAC"
+  ],
+  authors: [{ name: "Balaji Airvent" }],
+  creator: "Balaji Airvent",
+  publisher: "Balaji Airvent",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://balajiairvent.com",
+    siteName: "Balaji Airvent",
+    title: "Balaji Airvent | Premium HVAC Solutions & Air Ventilation Systems",
+    description: "Leading manufacturer of premium HVAC solutions, air ventilation systems, and industrial air handling equipment. Expert engineering, quality products, and reliable service across India.",
+    images: [
+      {
+        url: "/asset/favicon_balaji.png",
+        width: 1200,
+        height: 630,
+        alt: "Balaji Airvent - Premium HVAC Solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Balaji Airvent | Premium HVAC Solutions & Air Ventilation Systems",
+    description: "Leading manufacturer of premium HVAC solutions, air ventilation systems, and industrial air handling equipment.",
+    images: ["/asset/favicon_balaji.png"],
+  },
+  alternates: {
+    canonical: "https://balajiairvent.com",
+  },
+  icons: {
+    icon: "/asset/favicon_balaji.ico",
+    shortcut: "/asset/favicon_balaji.ico",
+    apple: "/asset/favicon_balaji.ico",
+  },
+  verification: {
+    google: "your-google-verification-code", // Add your Google Search Console verification code
+  },
 };
 
 
