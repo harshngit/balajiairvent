@@ -150,7 +150,7 @@ export default function Application() {
 
 					{/* Right */}
 					<div className="flex items-end justify-end flex-col lg:w-1/2 w-full lg:border-l-[2px] py-0 lg:px-[25px] border-[#E77853]">
-						<p className="lg:pl-4 text-[15px] text-[#0F2850] mb-4 leading-relaxed">
+						<p className="lg:pl-4 text-[16px] text-[#0F2850] mb-4 leading-relaxed">
 							We are able to simulate air flow in our customers premises and
 							suggest a suitable product. Our knowledge and years of experience
 							allow us to put hundreds of technical details together so as to
@@ -219,7 +219,7 @@ export default function Application() {
 											</div>
 
 											{/* Horizontal descriptive text */}
-											<div className="text-secondary text-[14px] max-w-[150px] leading-relaxed">
+											<div className="text-secondary text-[16px] max-w-[150px] leading-relaxed">
 												{item?.description}
 											</div>
 										</div>

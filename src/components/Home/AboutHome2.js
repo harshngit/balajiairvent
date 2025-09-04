@@ -19,7 +19,7 @@ const AboutHome2 = () => {
 
 				{/* Right Content Block */}
 				<div className="flex flex-col lg:w-1/2 w-full lg:border-l-[2px] lg:px-[25px] lg:border-[#E77853]">
-					<div className="lg:pl-4 text-[14px] text-[#0F2850] mb-4 leading-relaxed">
+					<div className="lg:pl-4 text-[16px] text-[#0F2850] mb-4 leading-relaxed">
 						<p>
 							From large-scale factories to modern workspaces, our air vent systems power efficient environments.
 							We collaborate closely with industry leaders to solve complex air distribution challenges.
@@ -46,7 +46,7 @@ const AboutHome2 = () => {
 					<div className="flex flex-wrap gap-6 justify-start">
 						{/* Card 1 */}
 
-						<Link href={"#"} className="lg:w-[40%] lg:block hidden relative w-full">
+						<Link href={"/projects?tab=collabration"} className="lg:w-[40%] lg:block hidden relative w-full">
 							<Image
 								src="/asset/home/projects/1.webp"
 								alt="75F Solutions"
@@ -55,7 +55,7 @@ const AboutHome2 = () => {
 								className="object-cover"
 							/>
 						</Link>
-						<Link href={"#"} className="lg:w-[40%] lg:hidden block relative w-full">
+						<Link href={"/projects?tab=collabration"} className="lg:w-[40%] lg:hidden block relative w-full">
 							<Image
 								src="/asset/home/projects/1mob.webp"
 								alt="75F Solutions"
@@ -67,7 +67,7 @@ const AboutHome2 = () => {
 
 
 						{/* Card 2 */}
-						<Link href={"#"} className='lg:w-[28%] w-full relative group'>
+						<Link href={"/projects?tab=projects"} className='lg:w-[28%] w-full relative group'>
 							<div className="">
 								<div className="relative w-full  ">
 									<Image
@@ -90,7 +90,7 @@ const AboutHome2 = () => {
 						</Link>
 
 						{/* Card 3 */}
-						<Link href={"#"} className='lg:w-[28%] w-full relative group'>
+							<Link href={"/projects?tab=projects"} className='lg:w-[28%] w-full relative group'>
 							<div className="">
 								<div className="relative w-full group">
 									<Image

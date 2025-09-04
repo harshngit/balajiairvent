@@ -13,7 +13,7 @@ const InsideStory = () => {
 						</h2>
 					</div>
 					<div className='lg:px-[25px]  py-5 w-full lg:w-[40%] lg:border-l-[2px] border-orange'>
-						<p className='font-light text-secondary text-[14px]'>
+						<p className='font-light text-secondary text-[16px]'>
 							Step inside our state-of-the-art manufacturing facility and witness how quality products come to life.
 							Our factory is equipped with advanced machinery, streamlined production processes, and a skilled workforce dedicated to precision and innovation.
 							From raw materials to the finished product, every stage is handled with the highest standards of safety, efficiency, and quality control.

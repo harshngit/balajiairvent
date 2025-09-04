@@ -375,10 +375,10 @@ const ProductGrid = () => {
                                                         </div>
                                                     </div>
 
-                                                    <div className="mt-4 text-[12px] md:text-[14px] text-secondary">
-                                                        {activeTab === "Description" && <p className="text-[14px]">{expandedProduct.desc}</p>}
+                                                    <div className="mt-4 text-[12px] md:text-[16px] text-secondary">
+                                                        {activeTab === "Description" && <p className="text-[16px]">{expandedProduct.desc}</p>}
                                                         {activeTab === "Key Benefits" && (
-                                                            <ul className="list-disc list-inside space-y-1">
+                                                            <ul className="list-disc list-inside space-y-1 text-[16px]">
                                                                 {(expandedProduct.KeyFeatures || []).map((k, i) => (
                                                                     <li key={i}>{k}</li>
                                                                 ))}

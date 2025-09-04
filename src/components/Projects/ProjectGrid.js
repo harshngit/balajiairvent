@@ -8,14 +8,41 @@ import Link from 'next/link';
 const ProjectGrid = () => {
   const [activeCategory, setActiveCategory] = useState("collabration");
   const [activeCollab, setActiveCollab] = useState("collab1");
+  
+  // Available functions for other components:
+  // - getActiveTabLink(): Returns the current active tab's link
+  // - getAllTabLinks(): Returns all tab links with their details
+  // - productTabs: Array of tab configurations with links
   const productTabs = [
-    { label: "Collabration", category: "collabration" },
-    { label: "Projects", category: "projects" },
-    { label: "Clients", category: "clients" },
+    { label: "Collabration", category: "collabration", href: "/projects#collabration", link: "/projects?tab=collabration" },
+    { label: "Projects", category: "projects", href: "/projects#projects", link: "/projects?tab=projects" },
+    { label: "Clients", category: "clients", href: "/projects#clients", link: "/projects?tab=clients" },
   ];
-  const handleClick = (tab) => setActiveCategory(tab.category);
+  const handleClick = (tab) => {
+    setActiveCategory(tab.category);
+    // Update URL with tab parameter
+    const url = new URL(window.location);
+    url.searchParams.set('tab', tab.category);
+    window.history.pushState({}, '', url);
+  };
   const [isCollabDropdownOpen, setIsCollabDropdownOpen] = useState(false);
   const collabDropdownRef = useRef(null);
+
+  // Function to get the current active tab's link for use by other components
+  const getActiveTabLink = () => {
+    const activeTab = productTabs.find(tab => tab.category === activeCategory);
+    return activeTab ? activeTab.link : null;
+  };
+
+  // Function to get all tab links for use by other components
+  const getAllTabLinks = () => {
+    return productTabs.map(tab => ({
+      label: tab.label,
+      category: tab.category,
+      link: tab.link,
+      href: tab.href
+    }));
+  };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -25,6 +52,15 @@ const ProjectGrid = () => {
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Handle URL parameters to set active tab
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tabParam = urlParams.get('tab');
+    if (tabParam && productTabs.some(tab => tab.category === tabParam)) {
+      setActiveCategory(tabParam);
+    }
   }, []);
   const collabConfig = {
     collab1: { title: '75F Solutions', link: 'https://www.75f.io/en-in/' },
@@ -49,10 +85,10 @@ const ProjectGrid = () => {
           <div className='flex mt-8 space-x-6 border-b border-gray-200 lg:mb-[20px] mx-6'>
           {productTabs.map((tab) => (
             tab.category === 'collabration' ? (
-              <div key={tab.category} className='relative flex items-center' ref={collabDropdownRef}>
+              <div  key={tab.category} className='relative flex items-center' ref={collabDropdownRef}>
                 <button
                   onClick={() => handleClick(tab)}
-                  className={`relative pb-2 lg:px-[20px] hover:text-[#90C4FD] transition-all duration-300 px-2 w-[120px] lg:w-auto flex justify-between items-center text-sm md:text-[20px] lg:gap-5 gap-2 transition-colors ${
+                  className={`relative pb-2 lg:px-[20px] hover:text-[#90C4FD] transition-all duration-300 px-2 w-[120px] lg:w-auto flex justify-between items-center text-sm md:text-[20px] lg:gap-5 gap-2  ${
                     activeCategory === tab.category
                       ? "font-medium text-[#fff]"
                       : "font-light text-[#fff]/80"}
@@ -73,7 +109,15 @@ const ProjectGrid = () => {
                     <li>
                       <button
                         className='w-full text-left px-4 py-3 hover:bg-gray-100 hover:text-[#90C4FD] transition-all duration-300'
-                        onClick={() => { setActiveCollab('collab1'); setActiveCategory('collabration'); setIsCollabDropdownOpen(false); }}
+                        onClick={() => { 
+                          setActiveCollab('collab1'); 
+                          setActiveCategory('collabration'); 
+                          setIsCollabDropdownOpen(false);
+                          // Update URL
+                          const url = new URL(window.location);
+                          url.searchParams.set('tab', 'collabration');
+                          window.history.pushState({}, '', url);
+                        }}
                       >
                         75F Solutions
                       </button>
@@ -81,7 +125,15 @@ const ProjectGrid = () => {
                     <li>
                       <button
                         className='w-full text-left px-4 py-3 hover:bg-gray-100 hover:text-[#90C4FD] transition-all duration-300  '
-                        onClick={() => { setActiveCollab('collab2'); setActiveCategory('collabration'); setIsCollabDropdownOpen(false); }}
+                        onClick={() => { 
+                          setActiveCollab('collab2'); 
+                          setActiveCategory('collabration'); 
+                          setIsCollabDropdownOpen(false);
+                          // Update URL
+                          const url = new URL(window.location);
+                          url.searchParams.set('tab', 'collabration');
+                          window.history.pushState({}, '', url);
+                        }}
                       >
                         Teryair
                       </button>
@@ -152,7 +204,7 @@ const ProjectGrid = () => {
             </div>
             {/* Below image: Description + Key Features */}
             <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 mt-6 lg:mt-10">
-              <div className="text-secondary text-[14px] leading-relaxed lg:p-6 ">
+              <div className="text-secondary text-[16px] leading-relaxed lg:p-6 ">
                 <p className="mb-4">75F offers a vertically-integrated suite of wireless sensors, equipment controllers and cloud-based software delivering predictive, proactive building automation right out of the box.</p>
                 <p className="mb-4">It takes control of your commercial building indoor environments, proactively eliminating hot and cold spots before they occur, improving air quality and saving energy, regardless of which heating or cooling systems you have. It understands when to take advantage of outside air to provide free cooling and improve the health and well-being of your staff and guests.</p>
                 <p>The suite of products and solutions can be implemented at commercial real estate, office, tech parks, hospitality, restaurants and retail etc.</p>
@@ -160,7 +212,7 @@ const ProjectGrid = () => {
               <div className="p-[1px] rounded-2xl bg-blue-gradient">
   <div className="rounded-2xl p-5 lg:p-6 bg-[#F0F0F0] h-full">
     <h4 className="text-[#0F2850] text-lg font-medium mb-3">Key Features</h4>
-    <ul className="list-disc pl-5 space-y-2 text-[#0F2850]/90 text-sm">
+    <ul className="list-disc pl-5 space-y-2 text-[#0F2850]/90 text-[16px]">
       <li>Multi-site, zone-specific and equipment-specific monitoring and control</li>
       <li>Predictive and intelligent system can reduce energy costs up to 50%</li>
       <li>Suitable for existing equipment or new equipment</li>
@@ -320,14 +372,14 @@ const ProjectGrid = () => {
             </div>
             {/* Below image: Description + Key Features */}
             <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 mt-6 lg:mt-10">
-              <div className="text-secondary text-[14px] leading-relaxed lg:p-6 ">
+              <div className="text-secondary text-[16px] leading-relaxed lg:p-6 ">
                 <p className="mb-4">Teryair, a premier name in pneumatic equipment manufacturing since 2003, commands a state-of-the-art 65,000 sq. ft. facility in Vasai, located 30 km from Mumbai’s city center. The company specializes in designing and producing a comprehensive range of cost-efficient products, including pneumatic diaphragm pumps, surface preparation equipment, air motors, airless painting systems, ventilation fans, industrial high-pressure jetting systems, and an array of handheld pneumatic tools.</p>
                 <p className="mb-4">With a global footprint across 30+ countries, Teryair has established a sterling reputation for reliability and superior performance. Distributors in key markets like Germany and Holland have partnered with the brand for over two decades, collectively generating sales worth millions of Euros. The extensive deployment of Teryair products aboard seagoing vessels is evidenced by consistent worldwide demand for consumables, a need expertly fulfilled by our responsive distributor network.</p>
               </div>
               <div className="p-[1px] rounded-2xl bg-blue-gradient">
               <div className="rounded-2xl p-5 lg:p-6 bg-[#F0F0F0] h-full flex flex-col justify-center items-start">
                   <h4 className="text-[#0F2850] text-lg font-medium mb-3">Teryair’s Philosophy</h4>
-                  <p className="text-[14px] text-secondary ">Robust, straightforward designs crafted under stringent quality controls within a cutting-edge manufacturing environment. This commitment, coupled with assured global spare parts availability and highly competitive manufacturing standards, delivers an unparalleled value proposition for distributors and end users alike.</p>
+                  <p className="text-[16px] text-secondary ">Robust, straightforward designs crafted under stringent quality controls within a cutting-edge manufacturing environment. This commitment, coupled with assured global spare parts availability and highly competitive manufacturing standards, delivers an unparalleled value proposition for distributors and end users alike.</p>
         </div>
               </div>
             </div>
