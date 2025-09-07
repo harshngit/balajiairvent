@@ -133,7 +133,7 @@ export default function NavbarCustom() {
             >
               <Link
                 href={item.href}
-                className={`text-[16px] px-2 py-1 ${scrolling ? "text-[#141414] hover:text-[#1666B6]" : "text-[#141414] hover:text-primary"} ${isActive(item.href) ? "text-primary font-bold" : ""}`}
+                className={`xl:text-[16px] md:text-[14px] px-2 py-1 ${scrolling ? "text-[#141414] hover:text-[#1666B6]" : "text-[#141414] hover:text-primary"} ${isActive(item.href) ? "text-primary font-bold" : ""}`}
               >
                 {item.label}
               </Link>
@@ -158,7 +158,7 @@ export default function NavbarCustom() {
           <li>
             <Link href="https://forms.gle/LFuvgta8s3Qe29T8A" target=" _blank" className="hidden lg:block">
               <button
-                className={`group text-sm flex items-center gap-[20px] ml-5 lg:pl-[20px] lg:pr-[7px] lg:py-2 font-light rounded-full border transition-all duration-200 text-[16px]
+                className={`group text-sm flex items-center gap-[20px] ml-5 lg:pl-[20px] lg:pr-[7px] lg:py-2 font-light rounded-full border transition-all duration-200 xl:text-[16px] md:text-[14px]
                 ${scrolling ? "bg-primary hover:bg-[#fff] hover:border-primary hover:text-primary text-white border-primary shadow-md" : "hidden"}`}
               >
                 Send Inquiry
@@ -172,7 +172,7 @@ export default function NavbarCustom() {
         {/* Send Inquiry Button (right, desktop) */}
         <Link href="https://forms.gle/LFuvgta8s3Qe29T8A" target="_blank" className="hidden lg:block">
           <button
-            className={`group text-sm flex items-center gap-[20px] pr-[7px] pl-[20px] py-[10px] rounded-full border transition-all duration-200 w-[162px] h-[40px]
+            className={`group text-sm flex items-center gap-[20px] pr-[7px] pl-[20px] py-[10px] rounded-full border transition-all duration-200 w-[162px] h-[40px] xl:text-[16px] md:text-[14px]
             ${scrolling ? "hidden" : "bg-transparent border-primary text-primary hover:border-[#1666B6] hover:bg-[#1666B6] hover:text-[#fff]"}`}
           >
             Send Inquiry
@@ -181,7 +181,7 @@ export default function NavbarCustom() {
           </button>
 
           <button
-            className={`group text-sm flex items-center gap-[20px] pr-[7px] pl-[20px] py-[10px] rounded-full border transition-all duration-200 w-[162px] h-[40px]
+            className={`group text-sm flex items-center gap-[20px] pr-[7px] pl-[20px] py-[10px] rounded-full border transition-all duration-200 w-[162px] h-[40px] xl:text-[16px] md:text-[14px]
             ${scrolling ? "bg-primary hover:bg-[#fff] hover:border-primary hover:text-primary text-white border-primary shadow-md hidden" : "hidden"}`}
           >
             Send Inquiry

@@ -8,7 +8,7 @@ const Testinomial = () => {
         {/* Left text column */}
         <div className="flex flex-col gap-3">
           <span className="text-[#E77853] text-[28px] font-light">Testimonial</span>
-          <h2 className="text-[#0F2850] font-light leading-snug text-3xl md:text-[40px] max-w-[520px]">
+          <h2 className="text-[#0F2850] font-light leading-snug text-3xl xl:text-[40px] md:text-[32px] max-w-[520px]">
             What our <span className="bg-blue-gradient text-transparent bg-clip-text">Clients</span> have
             <br className='hidden md:block' /> to say about us...
           </h2>
@@ -24,7 +24,7 @@ const Testinomial = () => {
               {/* comma icon */}
               <Image src={'/asset/commaup.png'} alt="quote" width={36} height={36} className="absolute lg:-left-14 -left-3 lg:-top-3 -top-5 w-[38px] h-[38px] md:w-[76px] md:h-[76px]" />
 
-              <div className="text-[#0F2850] text-[14px] md:text-[24px] font-light leading-relaxed">
+              <div className="text-[#0F2850] text-[14px] xl:text-[24px] md:text-[18px] font-light leading-relaxed">
                 <p>Balaji AirVent’s team has consistently demonstrated a deep understanding of our needs and delivered innovative solutions that meet our expectations. Their customer-focused approach is truly commendable.</p>
                 <p className="mt-2">We appreciate your business.<br/>Thank you!</p>
               </div>

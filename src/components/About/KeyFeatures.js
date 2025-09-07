@@ -114,10 +114,10 @@ const KeyFeatures = () => {
 			{/* Heading */}
 			<div className='flex justify-start gap-[10px] lg:flex-row flex-col items-center'>
 				<div className="mb-10 lg:w-[30%] w-full px-5 space-y-4">
-					<p className="text-[#000000] font-light lg:text-[28px] text-[20px]">
+					<p className="text-[#000000] font-light xl:text-[28px] md:text-[20px] text-[18px]">
 						<span className='text-transparent bg-clip-text bg-blue-gradient'>Key feature </span>
 						of our company</p>
-					<h2 className="text-[32px] md:text-[30px] font-light whitespace-wrap lg:leading-[40px] text-[#0F2850] mt-2">
+					<h2 className="text-[32px] xl:text-[30px] md:text-[25px] font-light whitespace-wrap lg:leading-[40px] text-[#0F2850] mt-2">
 						What Sets Balaji Airvent Systems Apart?
 					</h2>
 				</div>

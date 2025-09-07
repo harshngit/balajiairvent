@@ -137,20 +137,20 @@ export default function Application() {
 				<div className="flex flex-col lg:flex-row justify-between items-end gap-8 mx-6">
 					{/* Left */}
 					<div className="flex flex-col text-left lg:w-1/2 w-full">
-						<h2 className="font-light lg:text-[28px] text-[18px] text-orange">
+						<h2 className="font-light xl:text-[28px] md:text-[20px] text-[18px] text-orange">
 							Applications we developed
 						</h2>
-						<h2 className="text-3xl md:text-[54px] font-light text-[#0F2850] leading-snug">
+						<h2 className="text-3xl xl:text-[54px] md:text-[40px] font-light text-[#0F2850] leading-snug">
 							Expanding Horizons, Creating
-							<span className="text-3xl pl-4 md:text-[54px] font-light bg-blue-gradient  text-transparent bg-clip-text">
-								Opportunities.
+							<span className="text-3xl pl-4 xl:text-[54px] md:text-[40px] font-light bg-blue-gradient  text-transparent bg-clip-text">
+								Opportunities
 							</span>
 						</h2>
 					</div>
 
 					{/* Right */}
 					<div className="flex items-end justify-end flex-col lg:w-1/2 w-full lg:border-l-[2px] py-0 lg:px-[25px] border-[#E77853]">
-						<p className="lg:pl-4 text-[16px] text-[#0F2850] mb-4 leading-relaxed">
+						<p className="lg:pl-4 xl:text-[16px] md:text-[14px] text-[14px] text-[#0F2850] mb-4 leading-relaxed">
 							We are able to simulate air flow in our customers premises and
 							suggest a suitable product. Our knowledge and years of experience
 							allow us to put hundreds of technical details together so as to
@@ -165,7 +165,7 @@ export default function Application() {
 			<section
 				ref={ref}
 				style={{ height: `${data.length * 100}vh` }}
-				className="relative lg:block hidden bottom-[150px]  m-auto"
+				className="relative lg:block hidden lg:bottom-[150px] m-auto"
 			>
 				<div className="sticky top-0 left-0 right-0 h-screen overflow-hidden">
 					<div className="relative h-[90%] xxl:h-[80%]">
@@ -173,7 +173,7 @@ export default function Application() {
 							{data.map((item, i) => (
 								<div
 									key={i}
-									className="w-[99vw] relative flex-shrink-0 flex items-end justify-center gap-[50px] mx-auto"
+									className="xl:w-[99vw] md:w-[99vw] relative flex-shrink-0 flex items-end justify-center gap-[50px] mx-auto"
 								>
 								{/* Image section */}
 								<div className="flex gap-6">
@@ -183,14 +183,14 @@ export default function Application() {
 											src={item.images[0]}
 											width={473}
 											height={300}
-											className="rounded-xl object-cover"
+											className="rounded-xl object-cover xl:w-[473px] md:w-[350px] w-[250px]"
 											alt=""
 										/>
 										<Image
 											src={item.images[1]}
 											width={473}
 											height={162}
-											className="rounded-xl object-cover"
+											className="rounded-xl object-cover xl:w-[473px] md:w-[350px] w-[250px]"
 											alt=""
 										/>
 									</div>
@@ -200,7 +200,7 @@ export default function Application() {
 										src={item.images[2]}
 										width={473}
 										height={400}
-										className="rounded-xl object-cover"
+										className="rounded-xl object-cover xl:w-[473px] md:w-[350px] w-[250px]"
 										alt=""
 									/>
 								</div>
@@ -213,13 +213,13 @@ export default function Application() {
 										{/* Text content */}
 										<div className="flex items-end ml-5">
 											{/* Main vertical text "Airports" */}
-											<div className="writing-mode-vertical text-[54px] font-light   transform rotate-180 bg-blue-gradient text-transparent bg-clip-text"
+											<div className="writing-mode-vertical xl:text-[54px] md:text-[40px] text-[32px] font-light   transform rotate-180 bg-blue-gradient text-transparent bg-clip-text"
 												style={{ writingMode: 'vertical-rl' }}>
 												{item?.title}
 											</div>
 
 											{/* Horizontal descriptive text */}
-											<div className="text-secondary text-[16px] max-w-[150px] leading-relaxed">
+											<div className="text-secondary xl:text-[16px] md:text-[14px] text-[14px] max-w-[150px] leading-relaxed">
 												{item?.description}
 											</div>
 										</div>

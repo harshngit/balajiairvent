@@ -8,30 +8,30 @@ const AboutBanner = () => {
 			<div className="flex flex-col lg:flex-row lg:pt-[100px] pt-[80px] lg:pb-[40px] justify-between items-end gap-10">
 				{/* Left Heading */}
 				<div className="lg:w-[40%] w-full">
-					<h2 className="text-[32px] lg:text-[32px] text-[#0F2850] font-light">
+					<h2 className="text-[32px] xl:text-[32px] md:text-[28px] text-[#0F2850] font-light">
 						Your one stop source for <br className='lg:block hidden' />
-						<span className=" bg-blue-gradient text-transparent bg-clip-text font-light lg:text-[40px]">
+						<span className=" bg-blue-gradient text-transparent bg-clip-text font-light xl:text-[40px] md:text-[32px] text-[28px]">
 							Air Management Solutions
 						</span>
 					</h2>
 				</div>
 
 				{/* Right Paragraphs */}
-				<div className="lg:w-[60%] w-full flex lg:flex-row flex-col justify-start items-start text-sm text-[#0F2850] leading-relaxed gap-[20px]">
+				<div className="lg:w-[60%] w-full flex lg:flex-row flex-col justify-end items-end  text-[#0F2850] leading-relaxed gap-[20px]">
 					<div className='flex lg:w-1/2 w-full flex-col space-y-5'>
-						<p className='font-light text-[16px]'>
+						<p className='font-light xl:text-[16px] md:text-[14px] text-[16px]'>
 							Balaji Airvent Systems Private Limited is a Quality and Customer conscious Company with long experience in Metal and Air Distribution field. We work with big OEMs and deeply understand the importance of quality and prompt services.
 						</p>
-						<p className='font-light text-[16px]'>
+						<p className='font-light xl:text-[16px] md:text-[14px] text-[16px]'>
 							It is said that all it takes to excel is commitment to quality, mutual respect for one's customers and above all complete confidence in oneself and one's product. And Balaji Airvent Systems Private Limited has substantiated this claim with its own example.
 						</p>
-						<p className='font-light text-[16px]'>In spite of being a fledging venture, it is already a ranked manufacturer of Air Distribution Products.</p>
+						<p className='font-light xl:text-[16px] md:text-[14px] text-[16px]'>In spite of being a fledging venture, it is already a ranked manufacturer of Air Distribution Products.</p>
 					</div>
 					<div className='flex lg:w-1/2 w-full flex-col space-y-5'>
-						<p className='font-light text-[16px]'>
+						<p className='font-light xl:text-[16px] md:text-[14px] text-[16px]'>
 						At Balaji Airvent Systems Private Limited, we believe that this was achieved simply by sticking to our core competence and doing what we do best, which is applying our technical and commercial expertise and years of experience in the field of Air Distribution Management to manufacture and supply good quality, super-efficient products. This, along with our transparent and ethical business practice and professional approach is what has established for us a formidable reputation in the arena and an even growing list of distinguished clients.
 						</p>
-						<p className='font-light text-[16px]'>
+						<p className='font-light xl:text-[16px] md:text-[14px] text-[16px]'>
 						Balaji Air vent Systems Private Limited is quite literally and figuratively "a breath of fresh air" the in field of Air Distribution Management.
 						</p>
 						
@@ -51,18 +51,18 @@ const AboutBanner = () => {
 			</div>
 			<div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
 				<div className='lg:w-[30%] w-full flex justify-start items-center'>
-					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[48px] text-[32px] font-light '>Our Vision</h3>
+					<h3 className=' bg-blue-gradient text-transparent bg-clip-text xl:text-[48px] md:text-[32px] text-[28px] font-light '>Our Vision</h3>
 				</div>
 				<div className='lg:w-[70%] w-full'>
-					<p className='lg:text-[32px] text-[18px] text-secondary font-light'>To make the name "Balaji Airvent Systems Private Limited" synonymous with Air Distribution Products.</p>
+					<p className='xl:text-[32px] md:text-[28px] text-[18px] text-secondary font-light'>To make the name "Balaji Airvent Systems Private Limited" synonymous with Air Distribution Products.</p>
 				</div>
 			</div>
 			<div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>
 				<div className='lg:w-[30%] w-full flex justify-start items-center'>
-					<h3 className=' bg-blue-gradient text-transparent bg-clip-text lg:text-[48px] text-[32px] font-light '>Our Mission</h3>
+					<h3 className=' bg-blue-gradient text-transparent bg-clip-text xl:text-[48px] md:text-[32px] text-[28px] font-light '>Our Mission</h3>
 				</div>
 				<div className='lg:w-[70%] w-full'>
-					<p className='lg:text-[32px] text-[18px] text-secondary font-light'>To provide superlative, yet cost effective air management solutions using best quality products and efficient technical support constantly boosted by continuous R&D and innovations.</p>
+					<p className='xl:text-[32px] md:text-[28px] text-[18px] text-secondary font-light'>To provide superlative, yet cost effective air management solutions using best quality products and efficient technical support constantly boosted by continuous R&D and innovations.</p>
 				</div>
 			</div>
 		</div>
