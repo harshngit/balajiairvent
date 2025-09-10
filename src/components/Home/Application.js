@@ -133,7 +133,7 @@ export default function Application() {
 	return (
 		<div className="font-onset bg-white lg:my-[50px]">
 			{/* Header */}
-			<div className="w-full lg:px-10 lg:py-10 py-6 xxl:max-w-[1800px] lg:w-full mx-auto">
+			<div className="w-full xxl:px-[220px] xl:px-[96px] md:px-[64px] px-5 lg:py-10 py-6 xxl:max-w-[1800px] lg:w-full mx-auto">
 				<div className="flex flex-col lg:flex-row justify-between items-end gap-8 mx-6">
 					{/* Left */}
 					<div className="flex flex-col text-left lg:w-1/2 w-full">
@@ -236,7 +236,7 @@ export default function Application() {
 				</div>
 			</section>
 
-			<section className="w-full lg:hidden flex flex-col max-w-[1400px] mx-auto lg:px-10 px-5 lg:py-10 py-6">
+			<section className="w-full lg:hidden flex flex-col max-w-[1400px] mx-auto xxl:px-[220px] xl:px-[96px] md:px-[64px] px-5 lg:py-10 py-6">
 				{data?.map((item) => (
 					<div className="flex justify-start flex-col border-t-2 border-orange pb-5">
 						<div className="flex justify-start items-start flex-col gap-[7px]">

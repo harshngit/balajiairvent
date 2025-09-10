@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const AboutBanner = () => {
 	return (
-		<div className="lg:mx-10  lg:px-6 px-2 py-12 space-y-10">
+		<div className="lg:mx-10  xxl:px-[220px] xl:px-[96px] md:px-[64px] px-5  py-12 space-y-10">
 			{/* Text Section */}
 			<div className="flex flex-col lg:flex-row lg:pt-[100px] pt-[80px] lg:pb-[40px] justify-between items-end gap-10">
 				{/* Left Heading */}

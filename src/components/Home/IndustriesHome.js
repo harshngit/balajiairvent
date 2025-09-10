@@ -34,7 +34,7 @@ const industries = [
 
 const IndustriesHome = () => {
 	return (
-		<div className="w-full lg:px-10 px-5 lg:py-10 py-6 font-onset mt-10">
+		<div className="w-full xxl:px-[220px] xl:px-[96px] md:px-[64px] px-5 lg:py-10 py-6 font-onset mt-10">
 			<div className=" lg:mx-6 flex flex-col md:flex-row gap-[54px]">
 				{/* Left Text Section */}
 				<div className="lg:w-[50%]  w-full ">
@@ -72,7 +72,7 @@ const IndustriesHome = () => {
 					<div className='flex justify-start items-start flex-col gap-[20px]'>
 						<Link href={"/products#data"}>
 							<div
-								className={`relative w-full rounded-xl overflow-hidden group `}
+								className={`relative w-full rounded-xl overflow-hidden  `}
 							>
 								{/* Image */}
 								<Image
@@ -80,14 +80,14 @@ const IndustriesHome = () => {
 									alt=""
 									height={300}
 									width={400}
-									className="object-cover group-hover:scale-105 transition-transform duration-300"
+									className="object-cover scale-105 transition-transform duration-300"
 								/>
 
 								{/* Hover Gradient */}
-								<div className="absolute inset-0 bg-gradient-to-b from-[#0F2850]/80  opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
+								<div className="absolute inset-0 bg-gradient-to-b from-[#0F2850]/80  opacity-100 transition-opacity duration-300 z-10" />
 
 								{/* Hover Text From Top */}
-								<div className="absolute -top-10 group-hover:top-4 left-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out text-[#fff] font-normal text-[12px] md:text-[20px] flex items-center justify-start gap-[10px]">
+								<div className="absolute  top-4 left-4 right-4 z-20 opacity-100 transition-all duration-300 ease-out text-[#fff] font-normal text-[12px] md:text-[20px] flex items-center justify-start gap-[10px]">
 									View all Data Center Products
 									<Image
 										src="/asset/rightotline.png"
@@ -101,7 +101,7 @@ const IndustriesHome = () => {
 						</Link>
 						<Link href={"/products#industries"} className=''>
 							<div
-								className={`relative w-full rounded-xl overflow-hidden group  `}
+								className={`relative w-full rounded-xl overflow-hidden  `}
 							>
 								{/* Image */}
 								<Image
@@ -109,14 +109,14 @@ const IndustriesHome = () => {
 									alt=""
 									height={300}
 									width={400}
-									className="object-cover group-hover:scale-105 transition-transform duration-300"
+									className="object-cover scale-105 transition-transform duration-300"
 								/>
 
 								{/* Hover Gradient */}
-								<div className="absolute inset-0 bg-gradient-to-b from-[#0F2850]/80  opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
+								<div className="absolute inset-0 bg-gradient-to-b from-[#0F2850]/80  opacity-100 transition-opacity duration-300 z-10" />
 								<div className="absolute bottom-0 lg:block hidden left-0 w-full h-20 bg-gradient-to-t from-white to-transparent z-10" />
 								{/* Hover Text From Top */}
-								<div className="absolute -top-10 group-hover:top-4 left-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out text-[#fff] font-normal text-[12px] md:text-[20px] flex items-center justify-start gap-[10px]">
+								<div className="absolute  top-4 left-4 right-4 z-20 opacity-100 transition-all duration-300 ease-out text-[#fff] font-normal text-[12px] md:text-[20px] flex items-center justify-start gap-[10px]">
 									Industrial Dampers
 									<Image
 										src="/asset/rightotline.png"
@@ -133,7 +133,7 @@ const IndustriesHome = () => {
 					<div className='flex justify-start items-start flex-col gap-[20px]'>
 						<Link href={"/products#comfort"}>
 							<div
-								className={`relative w-full rounded-xl overflow-hidden group `}
+								className={`relative w-full rounded-xl overflow-hidden  `}
 							>
 								{/* Image */}
 								<Image
@@ -141,14 +141,14 @@ const IndustriesHome = () => {
 									alt=""
 									height={300}
 									width={400}
-									className="object-cover group-hover:scale-105 transition-transform duration-300"
+									className="object-cover scale-105 transition-transform duration-300"
 								/>
 
 								{/* Hover Gradient */}
-								<div className="absolute inset-0 bg-gradient-to-b from-[#0F2850]/80  opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
+								<div className="absolute inset-0 bg-gradient-to-b from-[#0F2850]/80  opacity-100 transition-opacity duration-300 z-10" />
 
 								{/* Hover Text From Top */}
-								<div className="absolute -top-10 group-hover:top-4 left-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out text-[#fff] font-normal text-[12px] md:text-[20px] flex items-center justify-start gap-[10px]">
+								<div className="absolute  top-4 left-4 right-4 z-20 opacity-100 transition-all duration-300 ease-out text-[#fff] font-normal text-[12px] md:text-[20px] flex items-center justify-start gap-[10px]">
 									Comfort Air Conditioning
 									<Image
 										src="/asset/rightotline.png"
@@ -162,7 +162,7 @@ const IndustriesHome = () => {
 						</Link>
 						<Link href={"/products#fans"}>
 							<div
-								className={`relative w-full rounded-xl overflow-hidden group  `}
+								className={`relative w-full rounded-xl overflow-hidden  `}
 							>
 								{/* Image */}
 								<Image
@@ -170,14 +170,14 @@ const IndustriesHome = () => {
 									alt=""
 									height={300}
 									width={400}
-									className="object-cover group-hover:scale-105 transition-transform duration-300"
+									className="object-cover scale-105 transition-transform duration-300"
 								/>
 
 								{/* Hover Gradient */}
-								<div className="absolute inset-0 bg-gradient-to-b from-[#0F2850]/80  opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
+								<div className="absolute inset-0 bg-gradient-to-b from-[#0F2850]/80  opacity-100 transition-opacity duration-300 z-10" />
 								<div className="absolute bottom-0 left-0 w-full h-[200px] bg-gradient-to-t from-white to-transparent z-10" />
 								{/* Hover Text From Top */}
-								<div className="absolute -top-10 group-hover:top-4 left-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out text-[#fff] font-normal text-[12px] md:text-[20px] flex items-center justify-start gap-[10px]">
+								<div className="absolute  top-4 left-4 right-4 z-20 opacity-100 transition-all duration-300 ease-out text-[#fff] font-normal text-[12px] md:text-[20px] flex items-center justify-start gap-[10px]">
 									Fans & Ventilation Accessories
 									<Image
 										src="/asset/rightotline.png"

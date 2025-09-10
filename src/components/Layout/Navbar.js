@@ -116,7 +116,7 @@ export default function NavbarCustom() {
         <>
         <Link href="/">
           <img
-            src={scrolled ? "/asset/navbar/logo.webp" : "/asset/navbar/logo-white.webp"}
+            src={scrolled ? "/asset/navbar/logo.webp" : "/asset/navbar/colorlogo.webp"}
             alt="Logo"
             className="h-[32px] md:h-[40px]"
           />

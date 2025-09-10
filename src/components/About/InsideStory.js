@@ -5,7 +5,7 @@ import React from 'react'
 const InsideStory = () => {
 	return (
 		<>
-			<div className='lg:mx-10'>
+			<div className='xxl:px-[220px] xl:px-[96px] md:px-[64px] px-5 lg:mx-10'>
 				<div className='flex justify-between items-start lg:pb-[100px] xl:px-[40px] md:px-[20px] py-5 px-5  lg:flex-row flex-col'>
 					<div className='flex w-full xl:w-[60%] md:w-[50%] justify-start items-center'>
 						<h2 className='text-secondary font-light xl:text-[40px] md:text-[30px] text-[28px]'>

@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Testinomial = () => {
   return (
-    <div className="w-full lg:px-10 px-5 lg:py-14 py-10 font-onest">
+    <div className="w-full xxl:px-[220px] xl:px-[96px] md:px-[64px] px-5 lg:py-14 py-10 font-onest">
       <div className="lg:mx-6 grid grid-cols-1 lg:grid-cols-2 gap-8 ">
         {/* Left text column */}
         <div className="flex flex-col gap-3">

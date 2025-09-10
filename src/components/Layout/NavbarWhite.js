@@ -102,7 +102,7 @@ export default function NavbarCustom1() {
         {/* Logo */}
         <Link href="/">
           <img
-            src={scrolling ? "/asset/navbar/logo.webp" : "/asset/navbar/logo-white.webp"}
+            src={scrolling ? "/asset/navbar/logo.webp" : "/asset/navbar/colorlogo.webp"}
             alt="Logo"
             className="h-[32px] md:h-[40px]"
           />
@@ -231,7 +231,7 @@ export default function NavbarCustom1() {
 
             {/* Logo */}
             <Link href="/" className="mb-10" onClick={() => setMenuOpen(false)}>
-              <img src="/asset/navbar/logo-white.webp" alt="Logo" className="h-[32px]" />
+              <img src="/asset/navbar/colorlogo.webp" alt="Logo" className="h-[32px]" />
             </Link>
 
             {/* Navigation Links */}

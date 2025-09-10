@@ -4,7 +4,7 @@ import React from 'react'
 
 const CTA = () => {
 	return (
-		<div className='banner_cta md:h-[550px] h-[700px] xl:h-[700px] relative'>
+		<div className='banner_cta md:h-[550px] h-[700px] xl:h-[612px] relative'>
 			<div className="w-full h-full relative">
 				<div className="mx-auto w-full h-full max-w-[1440px] xl:max-w-[1500px] 2xl:max-w-[1700px] relative">
 					<div className="absolute xl:bottom-[8rem] md:bottom-[5rem] bottom-[6rem] lg:right-20 left-1/2 -translate-x-1/2 lg:left-auto lg:translate-x-0 lg:w-[600px] w-[90%] max-w-[600px] p-[25px] rounded-lg bg-black/20 border border-orange z-10">

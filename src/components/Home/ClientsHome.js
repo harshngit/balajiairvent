@@ -27,11 +27,11 @@ const clientLogos = [
 
 const ClientsHome = () => {
 	return (
-		<div className="relative lg:block hidden w-full !px-5 !py-10 bg-[#0F2850] overflow-hidden">
+		<div className="relative lg:block hidden xxl:px-[220px] xl:px-[96px] md:px-[64px] w-full  bg-[#0F2850] overflow-hidden">
 			{/* Top gradient for smooth blending */}
 			{/* <div className="absolute -top-[50px] left-0 w-full h-4 bg-gradient-to-t from-[#162e54] to-transparent z-20 pointer-events-none" /> */}
 
-			<div className="max-w-[1700px] mx-auto flex items-center h-full px-6 relative z-10">
+			<div className=" flex    items-center h-full px-6 relative z-10">
 				{/* Left Title */}
 				<div className="flex-shrink-0 w-[200px] text-[#F0F0F0] text-[36px] font-light pr-6 z-20">
 					Clients

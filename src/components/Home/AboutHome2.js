@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const AboutHome2 = () => {
 	return (
-		<div className="w-full lg:px-10 px-5 lg:py-10 py-6 font-onset mt-10">
+		<div className="w-full xxl:px-[220px] xl:px-[96px] md:px-[64px] px-5 lg:py-10 py-6 font-onset mt-10">
 			<div className=" lg:h-[200px] lg:mx-6 flex flex-col lg:flex-row justify-between items-start gap-8">
 				{/* Left Title Section */}
 				<div className="flex flex-col text-left lg:w-1/2 w-full">
@@ -41,7 +41,7 @@ const AboutHome2 = () => {
 				</div>
 			</div>
 
-			<div className="w-full lg:px-5 py-10 bg-white font-onset">
+			<div className="w-full  px-5 py-10 bg-white font-onset">
 				<div className=" lg:mx-6 flex flex-col gap-6">
 					<div className="flex flex-wrap gap-6 justify-start">
 						{/* Card 1 */}

@@ -156,7 +156,7 @@ export default function NavbarCustom() {
             </li>
           ))}
           <li>
-            <Link href="https://forms.gle/LFuvgta8s3Qe29T8A" target=" _blank" className="hidden lg:block">
+            <Link href="https://forms.gle/LFuvgta8s3Qe29T8A" target="_blank" className="hidden lg:block">
               <button
                 className={`group text-sm flex items-center gap-[20px] ml-5 lg:pl-[20px] lg:pr-[7px] lg:py-2 font-light rounded-full border transition-all duration-200 xl:text-[16px] md:text-[14px]
                 ${scrolling ? "bg-primary hover:bg-[#fff] hover:border-primary hover:text-primary text-white border-primary shadow-md" : "hidden"}`}
@@ -172,7 +172,7 @@ export default function NavbarCustom() {
         {/* Send Inquiry Button (right, desktop) */}
         <Link href="https://forms.gle/LFuvgta8s3Qe29T8A" target="_blank" className="hidden lg:block">
           <button
-            className={`group text-sm flex items-center gap-[20px] pr-[7px] pl-[20px] py-[10px] rounded-full border transition-all duration-200 w-[162px] h-[40px] xl:text-[16px] md:text-[14px]
+            className={`group text-sm flex items-center gap-[20px] pr-[7px] pl-[20px] py-[10px] rounded-full border transition-all duration-200 w-[172px] h-[40px] xl:text-[16px] md:text-[14px]
             ${scrolling ? "hidden" : "bg-transparent border-primary text-primary hover:border-[#1666B6] hover:bg-[#1666B6] hover:text-[#fff]"}`}
           >
             Send Inquiry
@@ -181,7 +181,7 @@ export default function NavbarCustom() {
           </button>
 
           <button
-            className={`group text-sm flex items-center gap-[20px] pr-[7px] pl-[20px] py-[10px] rounded-full border transition-all duration-200 w-[162px] h-[40px] xl:text-[16px] md:text-[14px]
+            className={`group text-sm flex items-center gap-[20px] pr-[7px] pl-[20px] py-[10px] rounded-full border transition-all duration-200 w-[172px] h-[40px] xl:text-[16px] md:text-[14px]
             ${scrolling ? "bg-primary hover:bg-[#fff] hover:border-primary hover:text-primary text-white border-primary shadow-md hidden" : "hidden"}`}
           >
             Send Inquiry
@@ -218,7 +218,7 @@ export default function NavbarCustom() {
 
             <Link href="https://forms.gle/LFuvgta8s3Qe29T8A" target="_blank" onClick={() => setMenuOpen(false)}>
               <button
-                className={`group text-sm bg-white flex items-center mt-10 gap-[20px] pr-[7px] pl-[20px] py-[10px] rounded-full border transition-all duration-200 w-[162px] h-[40px]
+                  className={`group text-sm bg-white flex items-center mt-10 gap-[20px] pr-[7px] pl-[20px] py-[10px] rounded-full border transition-all duration-200 w-[172px] h-[40px]
                 ${scrolling ? "hidden" : "bg-transparent border-primary text-primary hover:border-[#1666B6] hover:bg-[#1666B6] hover:text-[#fff]"}`}
               >
                 Send Inquiry

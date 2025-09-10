@@ -89,7 +89,7 @@ const ProductGrid = () => {
     }, []);
 
 	return (
-		<div className="lg:mx-10 mx-1 pt-[50px]">
+		<div className="xxl:px-[220px] xl:px-[96px] md:px-[64px] px-5 lg:mx-10 mx-1 pt-[50px]">
 			<div className="lg:pt-[0px] pb-[50px]">
 				{/* Tabs */}
 				<div className="flex space-x-6 border-b border-gray-200 lg:w-full w-[370px] lg:overflow-auto overflow-scroll">
@@ -295,7 +295,7 @@ const ProductGrid = () => {
 							</div>
 						</>
 					}
-                    <div className="flex flex-wrap justify-start items-start mt-5 gap-x-[20px] gap-y-[50px] lg:px-0 px-1 relative">
+                    <div className="flex flex-wrap justify-start items-start mt-5 gap-x-[33px] gap-y-[50px] lg:px-0 px-1 relative">
                         {(() => {
                             const expandedIndex = filteredProducts.findIndex(p => p.id === expandedProductId);
                             const expandedProduct = expandedIndex >= 0 ? filteredProducts[expandedIndex] : null;
@@ -307,7 +307,7 @@ const ProductGrid = () => {
                                 const insertPanel = index === rowEnd && expandedIndex >= rowStart && expandedIndex <= rowEnd && expandedProduct;
                                 return (
                                     <React.Fragment key={product.id}>
-                                <div id={`product-card-${product.id}`} className="w-full xl:w-[30.33%] lg:w-[30.333%]">
+                                <div id={`product-card-${product.id}`} className="w-full xl:w-[31.33%] md:w-[31.333%]">
                                     <div className="group relative h-[220px] md:h-[200px] xl:h-[300px] overflow-hidden rounded-lg bg-white">
                                         <Image
                                             src={product.img1 || "/placeholder.jpg"}

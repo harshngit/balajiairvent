@@ -110,7 +110,7 @@ const KeyFeatures = () => {
 		reorderPagination(activeIndex);
 	}, [activeIndex]);
 	return (
-		<section className=" lg:py-[120px] lg:pl-[40px]">
+		<section className="xxl:px-[220px] xl:px-[96px] md:px-[64px] px-5 lg:py-[120px] lg:pl-[40px]">
 			{/* Heading */}
 			<div className='flex justify-start gap-[10px] lg:flex-row flex-col items-center'>
 				<div className="mb-10 lg:w-[30%] w-full px-5 space-y-4">

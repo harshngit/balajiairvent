@@ -34,7 +34,7 @@ const Footer = () => {
         <footer className="bg-[#0F2850] font-onest text-[#FFF1EA] lg:pl-[40px] px-5 lg:pr-[40px] pt-[80px] lg:h-[553px] w-full relative overflow-hidden">
             <div className='flex lg :flex-wrap  justify-start items-start lg:flex-row flex-col  gap-[48px]'>
                 <div className='flex justify-start lg:w-[20%] w-full flex-col items-start gap-[66px]'>
-                    <img src="/asset/navbar/logo-white.webp" className='w-[216px] h-[35px]' alt="" />
+                    <img src="/asset/navbar/colorlogo.webp" className='w-[216px] h-[35px]' alt="" />
                     <img src="/asset/footer/isoLogo.png" className='w-[96px] h-[80px]' alt="" />
                 </div>
                 <div className='flex justify-start xl:w-[15%] md:w-[14%] w-full font-light items-start flex-col gap-[20px]'>

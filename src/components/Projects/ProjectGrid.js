@@ -161,7 +161,7 @@ const ProjectGrid = () => {
           </div>
         </div>
         {activeCategory === "collabration" && (
-          <div className="flex justify-start lg:gap-[50px] items-start flex-col gap-4 lg:py-[50px] lg:px-[20px] px-3 py-5">
+          <div className="flex justify-start lg:gap-[50px] items-start flex-col gap-4 lg:py-[50px] xxl:px-[220px] xl:px-[96px] md:px-[64px] px-3 py-5">
             {activeCollab === "collab1" && (<div>
             <div className='flex justify-start items-center gap-2 '>
               <Link href={"https://www.75f.io/en-in/"} target='_blank' className='group flex justify-start items-center gap-2'>
@@ -461,8 +461,8 @@ const ProjectGrid = () => {
           </div>
         )}
         {activeCategory === "projects" && (
-          <div className="w-full xxl:pt-[100px] lg:pt-[50px] pt-[50px]">
-            <div className="grid grid-cols-1 pt-10 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-x-6 lg:gap-y-[50px] px-6">
+          <div className="w-full   xxl:pt-[100px] lg:pt-[50px] pt-[50px]">
+            <div className="grid xxl:px-[220px] xl:px-[96px] md:px-[64px] grid-cols-1 pt-10 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-x-6 lg:gap-y-[50px] px-6">
               {projectsData.map((project) => (
                 <div key={project.id} className="">
                   <div className="relative group ">
