@@ -111,27 +111,27 @@ const Footer = () => {
             <div className='border-t-[1px] border-[#E77853] lg:mt-[80px] xl:mb-[67px] lg:mb-[100px] lg:h-[130px] lg:pt-[60px] mt-[50px] py-10 lg:pl-[40px] lg:pr-[20rem] lg:pb-[72px] flex lg:flex-row flex-col lg:gap-[10rem] gap-5'>
                 <div className='flex justify-start items-center lg:gap-[40px] gap-5'>
                     <Link href="#" target='_blank'>
-                        <IoLogoFacebook className='text-[24px] text-[white] hover:text-[#90C4FD]' />
+                        <IoLogoFacebook className='xl:text-[24px] md:text-[18px] text-[1624] text-[white] hover:text-[#90C4FD]' />
                     </Link>
                     <Link href="#" target='_blank'>
-                        <FaInstagram className='text-[24px] text-[white] hover:text-[#90C4FD]' />
+                        <FaInstagram className='xl:text-[24px] md:text-[18px] text-[16px] text-[white] hover:text-[#90C4FD]' />
                     </Link>
                     <Link href="#" target='_blank'>
-                        <FaLinkedin className='text-[24px] text-[white] hover:text-[#90C4FD]' />
+                        <FaLinkedin className='xl:text-[24px] md:text-[18px] text-[16px] text-[white] hover:text-[#90C4FD]' />
                     </Link>
                 </div>
                 <div className='flex justify-start items-center lg:w-[126px]'>
-                    <h2 className='font-light text-[14px]'>All Rights Reserved</h2>
+                    <h2 className='font-light xl:text-[16px] md:text-[10px] text-[16px]'>All Rights Reserved</h2>
                 </div>
                 <div className='flex justify-start items-center'>
                     <Link href="/terms-and-conditions">
-                        <h2 className='font-light text-[14px] hover:text-[#90C4FD]'>Terms & Conditions</h2>
+                        <h2 className='font-light xl:text-[16px] md:text-[10px] text-[16px] hover:text-[#90C4FD]'>Terms & Conditions</h2>
                     </Link>
                 </div>
 
                 <div className='flex justify-start items-center'>
                     <Link href="/privacy-policy">
-                        <h2 className='font-light text-[14px] hover:text-[#90C4FD]'>Privacy Policy</h2>
+                        <h2 className='font-light xl:text-[16px] md:text-[10px] text-[16px] hover:text-[#90C4FD]'>Privacy Policy</h2>
                     </Link>
                 </div>
             </div>

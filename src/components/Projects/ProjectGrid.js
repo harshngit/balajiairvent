@@ -270,28 +270,28 @@ const ProjectGrid = () => {
                             alt="Product Advantages"
                             width={350}
                             height={380}
-                            className='w-[350px] h-[380px] lg:block hidden'
+                            className='w-[350px]  lg:block hidden'
                         />
                          <Image
                             src={"/asset/projects/collabration/advantages/2.webp"} 
                             alt="Product Advantages"
                             width={350}
                             height={380}
-                            className='w-[350px] h-[380px] lg:block hidden'
+                            className='w-[350px]  lg:block hidden'
                         />
                          <Image
                             src={"/asset/projects/collabration/advantages/3.webp"} 
                             alt="Product Advantages"
                             width={350}
                             height={380}
-                            className='w-[350px] h-[380px] lg:block hidden'
+                            className='w-[350px]  lg:block hidden'
                         />
                          <Image
                             src={"/asset/projects/collabration/advantages/4.webp"} 
                             alt="Product Advantages"
                             width={350}
                             height={380}
-                            className='w-[350px] h-[380px] lg:block hidden'
+                            className='w-[350px]  lg:block hidden'
                         />
 
                         {/* Mobile Images */}
@@ -431,28 +431,28 @@ const ProjectGrid = () => {
                             alt="Product Advantages"
                             width={350}
                             height={380}
-                            className='xl:w-[350px] md:w-[350px] lg:h-[380px] xl:h-[380px] md:h-[300px]'
+                            className='xl:w-[350px] md:w-[350px] '
                         />
                          <Image
                             src={"/asset/projects/collabration/advantages2/2.webp"} 
                             alt="Product Advantages"
                             width={350}
                             height={380}
-                            className='w-[350px] h-[380px]'
+                            className='w-[350px] '
                         />
                          <Image
                             src={"/asset/projects/collabration/advantages2/3.webp"} 
                             alt="Product Advantages"
                             width={350}
                             height={380}
-                            className='w-[350px] h-[380px]'
+                            className='w-[350px] '
                         />
                          <Image
                             src={"/asset/projects/collabration/advantages2/4.webp"} 
                             alt="Product Advantages"
                             width={350}
                             height={380}
-                            className='w-[350px] h-[380px]'
+                            className='w-[350px] '
                         />
                 </div>
             </div>
@@ -491,7 +491,7 @@ const ProjectGrid = () => {
             </div>
             <div className='flex mt-[50px] justify-center items-center'>
                 <Image 
-                    src={"/asset/projects/pro/Bottom.webp"}
+                    src={"/asset/projects/pro/probottom.webp"}
                     alt="Clients"
                     width={1512}
                     height={700}

@@ -326,7 +326,7 @@ const ProductGrid = () => {
                                         </div>
                                     </div>
                                     <div className="p-3 lg:mt-0 mt-2">
-										<h3 className={`text-[20px] md:text-[16px] xl:text-[26px]  font-medium ${isExpanded ? 'text-primary' : 'text-gray-800'}`}>{product.name}</h3>
+										<h3 className={`text-[20px] md:text-[12px] xl:text-[26px]  font-medium ${isExpanded ? 'text-primary' : 'text-gray-800'}`}>{product.name}</h3>
                                     </div>
                     
                                 </div>
