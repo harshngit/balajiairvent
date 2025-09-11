@@ -149,7 +149,7 @@ export default function NavbarCustom1() {
               {item.children && activeDropdown === idx && (
                 <ul
                   className={`absolute font-onest font-regular left-0 top-8 mt-2 space-y-2 px-[16px] py-[10px] w-[200px] shadow-lg rounded-lg ${
-                    scrolling ? "bg-white text-black" : "bg-[#ffffff33] text-white"
+                    scrolling ? "bg-white text-black" : "bg-[#fff] text-black"
                   }`}
                 >
                   {item.children.map((child, idx2) => (

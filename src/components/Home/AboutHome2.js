@@ -21,10 +21,7 @@ const AboutHome2 = () => {
 				<div className="flex flex-col lg:w-1/2 w-full lg:border-l-[2px] lg:px-[25px] lg:border-[#E77853]">
 					<div className="lg:pl-4 xl:text-[16px] md:text-[14px] text-[14px] text-[#0F2850] mb-4 leading-relaxed">
 						<p>
-							From large-scale factories to modern workspaces, our air vent systems power efficient environments.
-							We collaborate closely with industry leaders to solve complex air distribution challenges.
-							
-							Our key collaborations reflect a legacy of quality, scale, and innovation.
+						From expansive manufacturing plants to contemporary workspaces, our AirVent Systems drive efficiency and comfort. Partnering with industry leaders, we deliver tailored solutions to address the most complex air distribution challenges. Our key collaborations reflect a legacy of quality, scale, and innovation.
 						</p>
 					</div>
 

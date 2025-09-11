@@ -88,7 +88,7 @@ const IndustriesHome = () => {
 
 								{/* Hover Text From Top */}
 								<div className="absolute  top-4 left-4 right-4 z-20 opacity-100 transition-all duration-300 ease-out text-[#fff] font-normal text-[12px] md:text-[20px] flex items-center justify-start gap-[10px]">
-									View all Data Center Products
+									Data Center
 									<Image
 										src="/asset/rightotline.png"
 										alt="arrow"

@@ -152,7 +152,7 @@ export default function NavbarCustom() {
               </Link>
 
               {item.children && activeDropdown === idx && (
-                <ul className={`absolute font-onest font-regular left-0 top-8 mt-2 space-y-2 px-[16px] py-[10px] w-[200px] shadow-lg rounded-lg ${scrolled ? "bg-white text-black" : "bg-[#ffffff33] text-white"}`}>
+                <ul className={`absolute font-onest font-regular left-0 top-8 mt-2 space-y-2 px-[16px] py-[10px] w-[200px] shadow-lg rounded-lg ${scrolled ? "bg-white text-black" : "bg-[#fff] text-black"}`}>
                   {item.children.map((child, cidx) => (
                     <li key={cidx}>
                       <Link href={child.href} className="hover:text-[#90C4FD]">

@@ -27,7 +27,7 @@ const clientLogos = [
 
 const ClientsHome = () => {
 	return (
-		<div className="relative lg:block hidden xxl:px-[220px] xl:px-[96px] md:px-[64px] w-full  bg-[#0F2850] overflow-hidden">
+		<div className="relative lg:block hidden xxl:px-[220px] xl:px-[96px] md:px-[64px] w-full  bg-[#0F2850] overflow-hidden xl:pb-[50px] md:pb-[25px]">
 			{/* Top gradient for smooth blending */}
 			{/* <div className="absolute -top-[50px] left-0 w-full h-4 bg-gradient-to-t from-[#162e54] to-transparent z-20 pointer-events-none" /> */}
 

@@ -40,33 +40,33 @@ const Footer = () => {
                 <div className='flex justify-start xl:w-[15%] md:w-[14%] w-full font-light items-start flex-col gap-[20px]'>
                     {footerLink?.map((item, indx) => (
                         <Link key={indx} href={item?.href}>
-                            <h2 className='xl:text-[16px] md:text-[14px] text-[16px] text-[#F0F0F0] hover:text-[#90C4FD]'>{item?.label}</h2>
+                            <h2 className='xl:text-[16px] md:text-[10px] text-[16px] text-[#F0F0F0] hover:text-[#90C4FD]'>{item?.label}</h2>
                         </Link>
                     ))}
                 </div>
-                <div className='flex justify-start xl:w-[15%] md:w-[15%] w-full font-light items-start lg:flex-col lg:gap-[78px] gap-5'>
+                <div className='flex justify-start xl:w-[15%] md:w-[15%] w-full font-light items-start lg:flex-col xl:gap-[78px] md:gap-[50px] gap-5'>
                     <div className='flex justify-start flex-col gap-[7px] items-start'>
-                        <h2 className='xl:text-[14px] md:text-[12px] text-[14px] text-[#F0F0F0]'>PHONE NUMBER</h2>
+                        <h2 className='xl:text-[14px] md:text-[10px] text-[14px] text-[#F0F0F0]'>PHONE NUMBER</h2>
                         <Link href="tel:+919967249951">
-                            <p className='hover:text-[#90C4FD] xl:text-[16px] md:text-[14px] text-[16px]'>
+                            <p className='hover:text-[#90C4FD] xl:text-[16px] md:text-[10px] text-[16px]'>
                                 +91-9967249951
                             </p>
                         </Link>
                         <Link href="tel:+919833777476">
-                            <p className='hover:text-[#90C4FD] xl:text-[16px] md:text-[14px] text-[16px]'>
+                            <p className='hover:text-[#90C4FD] xl:text-[16px] md:text-[10px] text-[16px]'>
                                 +91-9833777476
                             </p>
                         </Link>
                         <Link href="tel:+919819903151">
-                            <p className='hover:text-[#90C4FD] xl:text-[16px] md:text-[14px] text-[16px]'>
+                            <p className='hover:text-[#90C4FD] xl:text-[16px] md:text-[10px] text-[16px]'>
                                 +91-9819903151
                             </p>
                         </Link>
                     </div>
                     <div className='flex justify-start flex-col gap-[7px] items-start'>
-                        <h2 className='xl:text-[14px] md:text-[12px] text-[14px] text-[#F0F0F0]'>EMAIL ID</h2>
+                        <h2 className='xl:text-[14px] md:text-[10px] text-[14px] text-[#F0F0F0]'>EMAIL ID</h2>
                         <Link href="mailto:balajiairvent@gmail.com">
-                            <p className='hover:text-[#90C4FD] xl:text-[16px] md:text-[14px] text-[16px]'>
+                            <p className='hover:text-[#90C4FD] xl:text-[16px] md:text-[10px] text-[16px]'>
                                 balajiairvent@gmail.com
                             </p>
                         </Link>
@@ -74,7 +74,7 @@ const Footer = () => {
                 </div>
                 <div className='flex justify-start xl:w-[20%] md:w-[15%] w-[20%] font-light items-start flex-col gap-[37px]'>
                     <div className='flex justify-start flex-col gap-[7px] w-[316px] items-start'>
-                        <h2 className='xl:text-[14px] md:text-[12px] text-[12px] text-[#F0F0F0]'>OFFICE ADDRESS</h2>
+                        <h2 className='xl:text-[14px] md:text-[10px] text-[12px] text-[#F0F0F0]'>OFFICE ADDRESS</h2>
                         <Link href="https://maps.app.goo.gl/cPeai3Y9YebVSz1fA" className='xl:block md:block hidden'>
                             <p className='hover:text-[#90C4FD] xl:text-[16px] md:text-[10px] text-[16px]'>
                                 305, Paras Business Centre, <br /> Carter Road  No.1, Near Kasturba <br /> Marg Police Station, Borivali East, <br /> Mumbai-400066, Maharashtra, India.
@@ -87,7 +87,7 @@ const Footer = () => {
                         </Link>
                     </div>
                     <div className='flex justify-start flex-col gap-[7px] xl:w-[316px] md:w-[250px] w-[400px] items-start'>
-                        <h2 className='xl:text-[14px] md:text-[12px] text-[16px] text-[#F0F0F0]'>FACTORY ADDRESS</h2>
+                        <h2 className='xl:text-[14px] md:text-[10px] text-[16px] text-[#F0F0F0]'>FACTORY ADDRESS</h2>
                             <Link href="#" className='xl:block md:block hidden'>
                                 <p className='hover:text-[#90C4FD] xl:text-[16px] md:text-[10px] text-[16px]'>
                                     002, Varun Industrial Estate, <br />  Near Blue Bell Imperial Estate, <br /> Manaspada  , Waliv,

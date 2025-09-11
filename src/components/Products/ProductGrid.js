@@ -97,7 +97,7 @@ const ProductGrid = () => {
 						<button
 							key={tab.href}
 							onClick={() => handleClick(tab)}
-							className={`relative pb-2 px-[20px] text-[18px] xl:text-[22px] md:text-[16px] lg:w-full transition-colors ${activeCategory === tab.category
+							className={`relative pb-2 px-[20px] text-[18px] xl:text-[22px] md:text-[14px] lg:w-full transition-colors ${activeCategory === tab.category
 								? "font-medium text-[#0F2850]"
 								: "font-light text-[#0F2850]/80"
 								}`}
@@ -295,7 +295,7 @@ const ProductGrid = () => {
 							</div>
 						</>
 					}
-                    <div className="flex flex-wrap justify-start items-start mt-5 gap-x-[33px] gap-y-[50px] lg:px-0 px-1 relative">
+                    <div className="flex flex-wrap justify-start items-start mt-5 xl:gap-x-[33px] md:gap-x-[20px] md:gap-y-[25px] xl:gap-y-[50px] lg:px-0 px-1 relative">
                         {(() => {
                             const expandedIndex = filteredProducts.findIndex(p => p.id === expandedProductId);
                             const expandedProduct = expandedIndex >= 0 ? filteredProducts[expandedIndex] : null;
@@ -326,7 +326,7 @@ const ProductGrid = () => {
                                         </div>
                                     </div>
                                     <div className="p-3 lg:mt-0 mt-2">
-										<h3 className={`text-[20px] md:text-[18px] xl:text-[26px]  font-medium ${isExpanded ? 'text-primary' : 'text-gray-800'}`}>{product.name}</h3>
+										<h3 className={`text-[20px] md:text-[16px] xl:text-[26px]  font-medium ${isExpanded ? 'text-primary' : 'text-gray-800'}`}>{product.name}</h3>
                                     </div>
                     
                                 </div>
