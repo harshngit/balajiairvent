@@ -317,7 +317,7 @@ const ProductGrid = () => {
                                         />
                                         <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-t from-[#0F2850] via-[#0F2850]/70 to-transparent" />
                                         <div className="absolute left-4 bottom-4 translate-y-3 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-										<button onClick={() => openDetails(product)} className="inline-flex items-center hover:bg-[#fff] hover:text-secondary gap-2 text-white text-[18px] md:text-[16px] xl:text-[18px] font-light xl:pl-[12px] md:pl-[8px] pr-[12px] pl-[12px] md:py-[8px] rounded-full ring-1 ring-white/40 bg-white/10 backdrop-blur-sm">
+										<button onClick={() => openDetails(product)} className="inline-flex items-center hover:bg-[#fff] hover:text-secondary gap-2 text-white text-[18px] md:text-[12px] xl:text-[18px] font-light xl:pl-[12px] md:pl-[8px] pr-[12px] pl-[12px] md:py-[8px] rounded-full ring-1 ring-white/40 bg-white/10 backdrop-blur-sm">
                                                 View Details
 												<Image src={"/asset/Arrowview.png"} alt="arrow" width={24
 
@@ -326,7 +326,7 @@ const ProductGrid = () => {
                                         </div>
                                     </div>
                                     <div className="p-3 lg:mt-0 mt-2">
-										<h3 className={`text-[20px] md:text-[12px] xl:text-[26px]  font-medium ${isExpanded ? 'text-primary' : 'text-gray-800'}`}>{product.name}</h3>
+										<h3 className={`text-[20px md:text-[12px] xl:text-[20px]  font-medium ${isExpanded ? 'text-primary' : 'text-gray-800'}`}>{product.name}</h3>
                                     </div>
                     
                                 </div>
