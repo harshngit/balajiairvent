@@ -94,9 +94,8 @@ export default function NavbarCustom1() {
 
   return (
     <div
-      className={`fixed font-onest top-0 left-0 w-full z-[9999] transition-all lg:pt-[30px] lg:pr-[40px] lg:pb-[20px] lg:pl-[40px] p-[15px] duration-300  ${
-        scrolling ? "bg-white shadow-sm" : ` ${isActive("/contactus") && "bg-secondary lg:bg-transparent"} `
-      } ${pinned ? "translate-y-0" : "-translate-y-full"} will-change-transform`}
+      className={`fixed font-onest top-0 left-0 w-full z-[9999] transition-all lg:pt-[30px] lg:pr-[40px] lg:pb-[20px] lg:pl-[40px] p-[15px] duration-300  ${scrolling ? "bg-white shadow-sm" : ` ${isActive("/contactus") && "bg-secondary lg:bg-transparent"} `
+        } ${pinned ? "translate-y-0" : "-translate-y-full"} will-change-transform`}
     >
       <div className=" mx-0 px-4 py-3 flex lg:justify-start justify-between xl:gap-[250px] md:gap-[100px] items-center">
         {/* Logo */}
@@ -119,9 +118,8 @@ export default function NavbarCustom1() {
 
         {/* Navigation Menu */}
         <ul
-          className={`hidden lg:flex items-center justify-center pl-[7px] pr-[7px] py-2 rounded-full ${
-            scrolling ? "bg-white shadow-lg border-gray-200" : "bg-[#ffffff33] text-white"
-          }`}
+          className={`hidden lg:flex items-center justify-center pl-[7px] pr-[7px] py-2 rounded-full ${scrolling ? "bg-white shadow-lg border-gray-200" : "bg-[#ffffff33] text-white"
+            }`}
         >
           {navItems.map((item, idx) => (
             <li
@@ -132,15 +130,13 @@ export default function NavbarCustom1() {
             >
               <Link
                 href={item.href}
-                className={`text-[16px] px-2 py-1 ${
-                  scrolling ? "text-[#141414] hover:text-[#1666B6]" : "text-white hover:text-[#90C4FD]"
-                } ${
-                  isActive(item.href)
+                className={`text-[16px] px-2 py-1 ${scrolling ? "text-[#141414] hover:text-[#1666B6]" : "text-white hover:text-[#90C4FD]"
+                  } ${isActive(item.href)
                     ? scrolling
                       ? "font-bold text-[#1666B6]"
                       : "font-bold text-white"
                     : "font-light"
-                }`}
+                  }`}
               >
                 {item.label}
               </Link>
@@ -148,9 +144,8 @@ export default function NavbarCustom1() {
               {/* Dropdown */}
               {item.children && activeDropdown === idx && (
                 <ul
-                  className={`absolute font-onest font-regular left-0 top-8 mt-2 space-y-2 px-[16px] py-[10px] w-[200px] shadow-lg rounded-lg ${
-                    scrolling ? "bg-white text-black" : "bg-[#fff] text-black"
-                  }`}
+                  className={`absolute font-onest font-regular left-0 top-8 mt-2 space-y-2 px-[16px] py-[10px] w-[200px] shadow-lg rounded-lg ${scrolling ? "bg-white text-black" : "bg-[#fff] text-black"
+                    }`}
                 >
                   {item.children.map((child, idx2) => (
                     <li key={idx2}>
@@ -169,24 +164,24 @@ export default function NavbarCustom1() {
             </li>
           ))}
           <li>
-           <Link href="https://forms.gle/LFuvgta8s3Qe29T8A" target="_blank">
-           <button
-              className={`group text-sm flex items-center gap-[20px] ml-5 lg:pl-[20px] lg:pr-[7px] lg:py-2 font-light  rounded-full border transition-all duration-200 text-[16px] group
+            <Link href="https://forms.gle/LFuvgta8s3Qe29T8A" target="_blank">
+              <button
+                className={`group text-sm flex items-center gap-[20px] ml-5 lg:pl-[20px] lg:pr-[7px] lg:py-2 font-light  rounded-full border transition-all duration-200 text-[16px] group
               ${scrolling ? "bg-primary hover:bg-[#fff] hover:border-primary hover:text-primary text-white border-primary shadow-md" : "hidden"}`}
-            >
-              Send Inquiry
-              <img
-                src="/asset/navbar/Arrow.png"
-                className="w-[28px] h-[28px] group-hover:opacity-0  group-hover:hidden transition-all duration-200 opacity-100"
-                alt="Arrow Hover"
-              />
-              <img
-                src="/asset/navbar/Arrowblue.png"
-                className="w-[28px] h-[28px] group-hover:opacity-100 hidden group-hover:block transition-all duration-200 opacity-100"
-                alt="Arrow Hover"
-              />
-            </button>
-           </Link>
+              >
+                Send Inquiry
+                <img
+                  src="/asset/navbar/Arrow.png"
+                  className="w-[28px] h-[28px] group-hover:opacity-0  group-hover:hidden transition-all duration-200 opacity-100"
+                  alt="Arrow Hover"
+                />
+                <img
+                  src="/asset/navbar/Arrowblue.png"
+                  className="w-[28px] h-[28px] group-hover:opacity-100 hidden group-hover:block transition-all duration-200 opacity-100"
+                  alt="Arrow Hover"
+                />
+              </button>
+            </Link>
           </li>
         </ul>
 
@@ -260,7 +255,7 @@ export default function NavbarCustom1() {
                 className={`group text-sm bg-white flex items-center mt-10 gap-[20px] pr-[7px] pl-[20px] py-[10px] rounded-full border transition-all duration-200 w-[162px] h-[40px]
                 ${scrolling ? "hidden" : "bg-transparent border-primary text-primary hover:border-[#1666B6] hover:bg-[#1666B6] hover:text-[#fff]"}`}
               >
-                Send Inquiry  
+                Send Inquiry
                 <img
                   src="/asset/Arrowoutlineblue.png"
                   className="w-[28px] h-[28px] group-hover:opacity-0  group-hover:hidden transition-all duration-200 opacity-100"
