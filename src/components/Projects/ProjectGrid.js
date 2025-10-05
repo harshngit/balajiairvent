@@ -515,8 +515,16 @@ const ProjectGrid = () => {
               alt="Clients"
               width={1440}
               height={1000}
-              className='lg:block hidden   w-full h-full object-cover'
+              className='xl:block hidden xxl:hidden   w-full h-full object-fill'
               />
+              <Image 
+              src={"/asset/projects/clients/1920.webp"}
+              alt="Clients"
+              width={1440}
+              height={1000}
+              className='xl:hidden hidden xxl:block   w-full h-full object-cover'
+              />
+
                <div className='absolute xl:top-[15%] md:top-[15%] top-[5%] left-0 inset-0 rounded-xl'>
                 <ClientsProject/>
                </div>

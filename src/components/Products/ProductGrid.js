@@ -274,7 +274,7 @@ const ProductGrid = () => {
 							<div className="grid grid-cols-1 lg:grid-cols-2 mt-5 px-5 py-5 gap-6">
 							<div className="lg:hidden flex justify-center items-center">
 									<Image
-										src={"/asset/product/firedoor/fire.webp"}
+										src={"/asset/product/firedoor/fire1.webp"}
 										width={620}
 										height={300}
 									/>
@@ -287,7 +287,7 @@ const ProductGrid = () => {
 								</div>
 								<div className="lg:flex hidden lg:w-[100%] w-full justify-center items-center">
 									<Image
-										src={"/asset/product/firedoor/fire.webp"}
+										src={"/asset/product/firedoor/fire1.webp"}
 										width={620}
 										height={300}
 									/>
