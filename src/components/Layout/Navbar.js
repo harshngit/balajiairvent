@@ -25,13 +25,8 @@ export default function NavbarCustom() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Keeps your original “past threshold” styling
+  // Keeps your original "past threshold" styling
   const [scrolled, setScrolled] = useState(false);
-
-  // New: hide/show based on scroll direction
-  const [pinned, setPinned] = useState(true); // true => visible, false => hidden
-  const lastYRef = useRef(0);
-  const tickingRef = useRef(false);
 
   // Dropdown hover delay
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -40,50 +35,14 @@ export default function NavbarCustom() {
   const isActive = (href) => pathname === href;
 
   useEffect(() => {
-    const THRESHOLD = 500;     // when to flip to “scrolled” styles
-    const DELTA = 8;           // minimal movement before reacting
+    const THRESHOLD = 500;     // when to flip to "scrolled" styles
 
     const onScroll = () => {
       const y = window.scrollY;
-
-      if (!tickingRef.current) {
-        window.requestAnimationFrame(() => {
-          // Maintain your original styling threshold
-          setScrolled(y > THRESHOLD);
-
-          // Ensure navbar is visible when at the very top (Safari bounce/top snap)
-          if (y <= 0) {
-            setPinned(true);
-            lastYRef.current = 0;
-            tickingRef.current = false;
-            return;
-          }
-
-          // Direction logic
-          const lastY = lastYRef.current;
-          const diff = y - lastY;
-
-          if (Math.abs(diff) > DELTA) {
-            if (diff > 0) {
-              // Scrolling down -> hide navbar
-              setPinned(false);
-            } else {
-              // Scrolling up -> show navbar
-              setPinned(true);
-            }
-            lastYRef.current = y;
-          }
-
-          // Always keep lastY updated on first run
-          if (lastY === 0) lastYRef.current = y;
-
-          tickingRef.current = false;
-        });
-        tickingRef.current = true;
-      }
+      // Maintain your original styling threshold
+      setScrolled(y > THRESHOLD);
     };
 
-    lastYRef.current = window.scrollY;
     setScrolled(window.scrollY > THRESHOLD);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -102,8 +61,6 @@ export default function NavbarCustom() {
     <div
       className={[
         "fixed top-0 left-0 w-full z-[9999] transition-all duration-300",
-        // slide out/in on scroll direction
-        pinned ? "translate-y-0" : "-translate-y-full",
         // spacing from your original
         "lg:pt-[30px] lg:pr-[40px] lg:pb-[20px] lg:pl-[40px] p-[15px]",
         scrolled ? "bg-white shadow-sm" : "bg-transparent",

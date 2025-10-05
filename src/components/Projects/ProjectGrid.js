@@ -14,7 +14,7 @@ const ProjectGrid = () => {
   // - getAllTabLinks(): Returns all tab links with their details
   // - productTabs: Array of tab configurations with links
   const productTabs = [
-    { label: "Collabration", category: "collabration", href: "/projects#collabration", link: "/projects?tab=collabration" },
+    { label: "Collaboration", category: "collabration", href: "/projects#Collaboration", link: "/projects?tab=Collaboration" },
     { label: "Projects", category: "projects", href: "/projects#projects", link: "/projects?tab=projects" },
     { label: "Clients", category: "clients", href: "/projects#clients", link: "/projects?tab=clients" },
   ];
@@ -166,7 +166,7 @@ const ProjectGrid = () => {
             <div className='flex justify-start items-center gap-2 '>
               <Link href={"https://www.75f.io/en-in/"} target='_blank' className='group flex justify-start items-center gap-2'>
               <h3 className='font-light text-[#F0F0F0] xl:text-[32px] md:text-[26px] group-hover:text-[#90C4FD] transition-all duration-300'>75F Solutions</h3>
-              <Link href={"https://www.teryair.com"} target='_blank' className=''>
+              <Link href={"https://www.75f.io/en-in/"} target='_blank' className=''>
               <Image 
                 src={"/asset/Arrowsideup.png"}
                 alt="75F Solutions"
@@ -502,7 +502,7 @@ const ProjectGrid = () => {
         )}
         {activeCategory === "clients" && (
           <div className="flex flex-col">
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 relative">
               <Image 
               src={"/asset/projects/clients/mob.webp"}
               alt="Clients"
@@ -517,8 +517,11 @@ const ProjectGrid = () => {
               height={1000}
               className='lg:block hidden   w-full h-full object-cover'
               />
+               <div className='absolute xl:top-[15%] md:top-[15%] top-[5%] left-0 inset-0 rounded-xl'>
+                <ClientsProject/>
+               </div>
             </div>
-            <ClientsProject/>
+           
           </div>
         )}
       </div>

@@ -28,49 +28,17 @@ export default function NavbarCustom() {
   // your original threshold styling (100px)
   const [scrolling, setScrolling] = useState(false);
 
-  // NEW: hide on scroll down, show on scroll up
-  const [pinned, setPinned] = useState(true);
-  const lastYRef = useRef(0);
-  const tickingRef = useRef(false);
-
   const isActive = (href) => pathname === href;
 
   useEffect(() => {
     const THRESHOLD = 100;
-    const DELTA = 8;
 
     const onScroll = () => {
       const y = (typeof window !== 'undefined' && (window.pageYOffset ?? document.documentElement.scrollTop ?? window.scrollY ?? 0)) || 0;
-
-      if (!tickingRef.current) {
-        window.requestAnimationFrame(() => {
-          setScrolling(y > THRESHOLD);
-
-          // ensure visible at very top (Safari bounce/top snap)
-          if (y <= 0) {
-            setPinned(true);
-            lastYRef.current = 0;
-            tickingRef.current = false;
-            return;
-          }
-
-          const lastY = lastYRef.current;
-          const diff = y - lastY;
-
-          if (Math.abs(diff) > DELTA) {
-            setPinned(diff <= 0); // up => show, down => hide
-            lastYRef.current = y;
-          }
-
-          if (lastY === 0) lastYRef.current = y; // initialize
-          tickingRef.current = false;
-        });
-        tickingRef.current = true;
-      }
+      setScrolling(y > THRESHOLD);
     };
 
-    lastYRef.current = (typeof window !== 'undefined' && (window.pageYOffset ?? document.documentElement.scrollTop ?? window.scrollY ?? 0)) || 0;
-    setScrolling(lastYRef.current > THRESHOLD);
+    setScrolling((typeof window !== 'undefined' && (window.pageYOffset ?? document.documentElement.scrollTop ?? window.scrollY ?? 0)) || 0 > THRESHOLD);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -92,13 +60,10 @@ export default function NavbarCustom() {
     <div
       className={[
         "fixed font-onest top-0 left-0 w-full z-[9999] transition-all duration-300",
-        // slide effect (no layout shift)
-        pinned ? "translate-y-0" : "-translate-y-full",
         // keep your paddings
         "lg:pt-[30px] lg:pr-[40px] lg:pb-[20px] lg:pl-[40px] p-[15px]",
         // your color swap after threshold
-        scrolling ? "bg-white shadow-sm" : "bg-transparent",
-        "will-change-transform"
+        scrolling ? "bg-white shadow-sm" : "bg-transparent"
       ].join(" ")}
     >
       <div className=" mx-0 px-4 py-3 flex justify-between items-center">

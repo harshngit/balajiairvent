@@ -32,15 +32,15 @@ const clientLogos = [
 ]
 
   return (
-    <div className="relative block w-full !px-5 !py-10 bg-[#0F2850] overflow-hidden">
+    <div className="relative block w-full bg-transparent overflow-hidden">
 			{/* Top gradient for smooth blending */}
 			{/* <div className="absolute -top-[50px] left-0 w-full h-4 bg-gradient-to-t from-[#162e54] to-transparent z-20 pointer-events-none" /> */}
 
-			<div className="max-w-[1700px] mx-auto flex flex-col items-start h-full lg:px-6 relative z-10">
+			<div className=" flex flex-col items-start h-full  relative z-10">
 				{/* Left Title */}
-				<div className="flex-shrink-0 w-[200px] text-[#F0F0F0] lg:text-[40px] text-[24px] font-light pr-6 z-20">
+				{/* <div className="flex-shrink-0 w-[200px] text-[#F0F0F0] lg:text-[40px] text-[24px] font-light pr-6 z-20">
 					Clients
-				</div>
+				</div> */}
 
 				{/* Gradient fade after "Clients" */}
 				<div className="absolute left-[0] top-0 h-full w-24 bg-gradient-to-r from-[#0F2850] to-transparent z-10 pointer-events-none" />

@@ -30,47 +30,14 @@ export default function NavbarCustom1() {
 
   const isActive = (href) => pathname === href;
 
-  // NEW: track scroll direction to hide/show bar
-  const [pinned, setPinned] = useState(true); // visible when true
-  const lastYRef = useRef(0);
-  const tickingRef = useRef(false);
-
   useEffect(() => {
     const handleScroll = () => {
       const y = (typeof window !== 'undefined' && (window.pageYOffset ?? document.documentElement.scrollTop ?? window.scrollY ?? 0)) || 0;
-
-      if (!tickingRef.current) {
-        window.requestAnimationFrame(() => {
-          // keep your original threshold (10px)
-          setScrolling(y > 100);
-
-          // ensure visible at very top (Safari bounce/top snap)
-          if (y <= 0) {
-            setPinned(true);
-            lastYRef.current = 0;
-            tickingRef.current = false;
-            return;
-          }
-
-          // direction logic
-          const lastY = lastYRef.current;
-          const diff = y - lastY;
-          const DELTA = 8; // small buffer to avoid jitter
-
-          if (Math.abs(diff) > DELTA) {
-            setPinned(diff <= 0); // up => show, down => hide
-            lastYRef.current = y;
-          }
-
-          if (lastY === 0) lastYRef.current = y; // initialize on first run
-          tickingRef.current = false;
-        });
-        tickingRef.current = true;
-      }
+      // keep your original threshold (100px)
+      setScrolling(y > 100);
     };
 
-    lastYRef.current = (typeof window !== 'undefined' && (window.pageYOffset ?? document.documentElement.scrollTop ?? window.scrollY ?? 0)) || 0;
-    setScrolling(lastYRef.current > 10);
+    setScrolling((typeof window !== 'undefined' && (window.pageYOffset ?? document.documentElement.scrollTop ?? window.scrollY ?? 0)) || 0 > 100);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -94,8 +61,7 @@ export default function NavbarCustom1() {
 
   return (
     <div
-      className={`fixed font-onest top-0 left-0 w-full z-[9999] transition-all lg:pt-[30px] lg:pr-[40px] lg:pb-[20px] lg:pl-[40px] p-[15px] duration-300  ${scrolling ? "bg-white shadow-sm" : ` ${isActive("/contactus") && "bg-secondary lg:bg-transparent"} `
-        } ${pinned ? "translate-y-0" : "-translate-y-full"} will-change-transform`}
+      className={`fixed font-onest top-0 left-0 w-full z-[9999] transition-all lg:pt-[30px] lg:pr-[40px] lg:pb-[20px] lg:pl-[40px] p-[15px] duration-300  ${scrolling ? "bg-white shadow-sm" : ` ${isActive("/contactus") && "bg-secondary lg:bg-transparent"} `}`}
     >
       <div className=" mx-0 px-4 py-3 flex lg:justify-start justify-between xl:gap-[250px] md:gap-[100px] items-center">
         {/* Logo */}

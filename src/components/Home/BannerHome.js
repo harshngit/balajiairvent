@@ -15,7 +15,7 @@ const BannerHome = () => {
 					{/* Fan Image */}
 					<div className="rounded-xl overflow-hidden w-[200px] h-[150px] flex-shrink-0 bg-white lg:w-[200px] xl:w-[220px] 2xl:w-[240px] lg:h-[150px] xl:h-[160px] 2xl:h-[170px]">
 						<Image
-							src={"/asset/home/home-product.webp"}
+							src={"/asset/home/newlylaunched.webp"}
 							alt="HVLS Fan"
 							width={160}
 							height={150}
@@ -27,10 +27,10 @@ const BannerHome = () => {
 					<div className="pl-6 text-white flex-1">
 						<h3 className="text-[24px] font-normal lg:text-[24px] xl:text-[26px] 2xl:text-[28px]">Newly launched!</h3>
 						<p className="text-[14px] font-light mt-1 max-w-[330px] lg:max-w-[330px] xl:max-w-[380px] 2xl:max-w-[420px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px]">
-							Firstfan HVLS Fans available in 5 sizes ranging from 12ft - 24 ft equipped with PMSM motor.
+						Portable Ventilation Fans - Electric and Pneumatic 200 to 500 mm
 						</p>
 
-						<Link href="/products#all">
+						<Link href="/asset/pdf/cat.pdf" target='_blank'>
 							<button className="mt-4 flex items-center gap-2 hover:bg-primary hover:text-white bg-[#F0F0F066] text-font rounded-full text-[16px] lg:pl-[20px] lg:pr-[7px] lg:py-2 font-light ">
 								View Product
 								<Image
@@ -66,7 +66,7 @@ const BannerHome = () => {
 				{/* Fan Image */}
 				<div className="rounded-xl overflow-hidden w-full h-[150px] flex-shrink-0 bg-white">
 					<Image
-						src={"/asset/home/home-product.webp"}
+						src={"/asset/home/newlylaunched.webp"}
 						alt="HVLS Fan"
 						width={350}
 						height={150}
@@ -78,10 +78,10 @@ const BannerHome = () => {
 				<div className=" text-white">
 					<h3 className="text-[24px] font-normal">Newly launched!</h3>
 					<p className="text-[14px] font-light mt-1 max-w-[330px]">
-						Firstfan HVLS Fans available in 5 sizes ranging from 12ft - 24 ft equipped with PMSM motor.
+					Portable Ventilation Fans - Electric and Pneumatic 200 to 500 mm
 					</p>
 
-					<Link href="/products#all">
+					<Link href="/asset/pdf/cat.pdf" target='_blank'>
 						<button className="mt-5  flex items-center gap-2 bg-[#F0F0F066] text-font rounded-full px-3 py-[5px] text-[16px] font-light transition-all">
 							View Product
 							<Image

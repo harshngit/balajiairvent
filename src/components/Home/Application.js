@@ -45,16 +45,16 @@ const data = [
 			"/asset/home/application/4/3.webp",
 		],
 	},
-	{
-		title: "Food Store",
-		description:
-			"Solution given for maintaining Food Quality and pleasant environment for customers.",
-		images: [
-			"/asset/home/application/5/1.webp",
-			"/asset/home/application/5/2.webp",
-			"/asset/home/application/5/3.webp",
-		],
-	},
+	// {
+	// 	title: "Food Store",
+	// 	description:
+	// 		"Solution given for maintaining Food Quality and pleasant environment for customers.",
+	// 	images: [
+	// 		"/asset/home/application/5/1.webp",
+	// 		"/asset/home/application/5/2.webp",
+	// 		"/asset/home/application/5/3.webp",
+	// 	],
+	// },
 	{
 		title: "Hotels",
 		description:
@@ -88,7 +88,7 @@ const data = [
 	{
 		title: "Corporate Offices",
 		description:
-			"Correctly manufactured and perfectly installed fabric diffusers become an elegant part of an interior.",
+			"Correctly manufactured and perfectly installed Slot diffusers become an elegant part of an interior.",
 		images: [
 			"/asset/home/application/9/1.webp",
 			"/asset/home/application/9/2.webp",

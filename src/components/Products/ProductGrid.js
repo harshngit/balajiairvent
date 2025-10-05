@@ -357,7 +357,7 @@ const ProductGrid = () => {
 												   {activeCategory == "Air" &&  <p className="text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] font-light text-secondary mt-1">Comfort Air Conditioning</p>}
 												   {activeCategory == "Industries" &&  <p className="text-[16px] md:text-[18px] xl:text-[20px] font-light text-secondary mt-1">Industrial Dampers</p>}
 												   {activeCategory == "Fans" &&  <p className="text-[16px] md:text-[18px] xl:text-[20px] font-light text-secondary mt-1">Fans & Ventilation Accessories</p>}
-												   {activeCategory == "Fire Door" &&  <p className="text-[16px] md:text-[18px] xl:text-[20px] font-light text-secondary mt-1">Fans & Ventilation Accessories</p>}
+												   {activeCategory == "Fire Door" &&  <p className="text-[16px] md:text-[18px] xl:text-[20px] font-light text-secondary mt-1">Fire Doors</p>}
                                                         </div>
                                                         <button onClick={() => setExpandedProductId(null)} className="text-gray-500 hover:text-gray-700">
 															<Image src={"/asset/crossnew.png"} alt="close" width={24} height={24} />
@@ -377,13 +377,13 @@ const ProductGrid = () => {
 
 												<div className="mt-4 text-secondary">
 													{activeTab === "Description" && <p className="text-[16px] md:text-[16px] xl:text-[20px] leading-relaxed">{expandedProduct.desc}</p>}
-													{activeTab === "Key Benefits" && (
-														<ul className="list-disc list-inside space-y-1 text-[16px] md:text-[16px] xl:text-[20px] leading-relaxed">
+									{activeTab === "Key Benefits" && (
+										<ul className="list-disc list-outside pl-6 space-y-1 text-[16px] md:text-[16px] xl:text-[20px] leading-relaxed">
 															{(expandedProduct.KeyFeatures || []).map((k, i) => (
 																<li key={i}>{k}</li>
 															))}
-														</ul>
-													)}
+										</ul>
+									)}
 												</div>
                                                 </div>
                                             </div>

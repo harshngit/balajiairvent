@@ -31,7 +31,7 @@ const Scrollup = () => {
 	return (
 		<div
 			onClick={scrollToTop}
-			className='fixed bottom-5 right-3 bg-secondary shadow-lg hover:bg-primary lg:w-[80px] lg:h-[80px] h-[40px] w-[40px]
+			className='fixed bottom-5 right-3 bg-[#1666B6]  hover:bg-secondary xl:w-[80px] xl:h-[80px] md:w-[60px] md:h-[60px] h-[40px] w-[40px]
 			 rounded-full p-[12px] cursor-pointer flex justify-center items-center z-50 shadow-lg'
 		>
 			<Image

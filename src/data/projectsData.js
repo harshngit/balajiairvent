@@ -11,14 +11,14 @@ const projectsData = [
 		title: "Capgemini",
 		location: " Navi Mumbai & Pune",
 		desc: "Supplied and Installed Cold Aisle Containment at their Data Centre",
-		img: "/asset/projects/pro/2.webp",
+		img: "/asset/projects/pro/3.webp",
 	},
 	{
 		id: 3,
 		title: "Hewlett Packard",
 		location: "Bangalore",
 		desc: "Supplied Active Extractor Ceiling Grilles through Climaveneta",
-		img: "/asset/projects/pro/3.webp",
+		img: "/asset/projects/pro/2.webp",
 	},
 	{
 		id: 4,

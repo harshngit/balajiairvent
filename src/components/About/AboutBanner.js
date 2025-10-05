@@ -17,7 +17,7 @@ const AboutBanner = () => {
 				</div>
 
 				{/* Right Paragraphs */}
-				<div className="lg:w-[60%] w-full flex lg:flex-row flex-col justify-end items-end  text-[#0F2850] leading-relaxed gap-[20px]">
+				<div className="lg:w-[60%] w-full flex lg:flex-row flex-col justify-start items-start  text-[#0F2850] leading-relaxed gap-[20px]">
 					<div className='flex lg:w-1/2 w-full flex-col space-y-5'>
 						<p className='font-light xl:text-[16px] md:text-[14px] text-[16px]'>
 							Balaji Airvent Systems Private Limited is a Quality and Customer conscious Company with long experience in Metal and Air Distribution field. We work with big OEMs and deeply understand the importance of quality and prompt services.
