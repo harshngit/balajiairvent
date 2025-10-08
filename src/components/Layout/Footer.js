@@ -74,7 +74,7 @@ const Footer = () => {
                 </div>
                 <div className='flex justify-start xl:w-[20%] md:w-[15%] w-[20%] font-light items-start flex-col gap-[37px]'>
                     <div className='flex justify-start flex-col gap-[7px] w-[316px] items-start'>
-                        <h2 className='xl:text-[14px] md:text-[10px] text-[12px] text-[#F0F0F0]'>OFFICE ADDRESS</h2>
+                        <h2 className='xl:text-[14px] md:text-[10px] text-[16px] text-[#F0F0F0]'>OFFICE ADDRESS</h2>
                         <Link href="https://maps.app.goo.gl/cPeai3Y9YebVSz1fA" className='xl:block md:block hidden'>
                             <p className='hover:text-[#90C4FD] xl:text-[16px] md:text-[10px] text-[16px]'>
                                 305, Paras Business Centre, <br /> Carter Road  No.1, Near Kasturba <br /> Marg Police Station, Borivali East, <br /> Mumbai-400066, Maharashtra, India.

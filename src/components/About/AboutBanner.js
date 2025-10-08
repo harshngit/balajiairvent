@@ -23,7 +23,7 @@ const AboutBanner = () => {
 							Balaji Airvent Systems Private Limited is a Quality and Customer conscious Company with long experience in Metal and Air Distribution field. We work with big OEMs and deeply understand the importance of quality and prompt services.
 						</p>
 						<p className='font-light xl:text-[16px] md:text-[14px] text-[16px]'>
-							It is said that all it takes to excel is commitment to quality, mutual respect for one's customers and above all complete confidence in oneself and one's product. And Balaji Airvent Systems Private Limited has substantiated this claim with its own example.
+							It is said that all it takes to excel is commitment to quality, mutual respect for one's customers and above all complete confidence in oneself and one's product. and, Balaji Airvent Systems Private Limited has substantiated this claim with its own example.
 						</p>
 						<p className='font-light xl:text-[16px] md:text-[14px] text-[16px]'>In spite of being a fledging venture, it is already a ranked manufacturer of Air Distribution Products.</p>
 					</div>
@@ -32,7 +32,7 @@ const AboutBanner = () => {
 						At Balaji Airvent Systems Private Limited, we believe that this was achieved simply by sticking to our core competence and doing what we do best, which is applying our technical and commercial expertise and years of experience in the field of Air Distribution Management to manufacture and supply good quality, super-efficient products. This, along with our transparent and ethical business practice and professional approach is what has established for us a formidable reputation in the arena and an even growing list of distinguished clients.
 						</p>
 						<p className='font-light xl:text-[16px] md:text-[14px] text-[16px]'>
-						Balaji Air vent Systems Private Limited is quite literally and figuratively "a breath of fresh air" the in field of Air Distribution Management.
+						Balaji Air vent Systems Private Limited is quite literally and figuratively "a breath of fresh air" in the field of Air Distribution Management.
 						</p>
 						
 					</div>

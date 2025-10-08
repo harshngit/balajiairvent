@@ -22,7 +22,7 @@ const InsideStory = () => {
 				</div>
 
 			</div>
-			<div className='lg:pb-[100px] w-full'>
+			<div className='lg:pb-[100px] xxl:px-[220px] xl:px-[96px] md:px-[64px] w-full'>
 				<div className="relative w-full lg:h-[800px] h-[300px] overflow-hidden">
 					<video
 						className="w-full h-full object-cover"

@@ -12,7 +12,7 @@ const navItems = [
     label: "Products", href: "/products",
     children: [
       { label: "All", href: "/products#all" },
-      { label: "Data Centre", href: "/products#data" },
+      { label: "Datacentre", href: "/products#data" },
       { label: "Comfort Air Conditioning", href: "/products#comfort" },
       { label: "Industrial Dampers", href: "/products#industries" },
       { label: "Fans & Ventilation Accessories", href: "/products#fans" },
@@ -202,7 +202,7 @@ export default function NavbarCustom2() {
 
             {/* Logo */}
             <Link href="/" className="mb-10" onClick={() => setMenuOpen(false)}>
-              <img src="/asset/navbar/logo-white.webp" alt="Logo" className="h-[32px]" />
+              <img src="/asset/navbar/colorlogo.webp" alt="Logo" className="h-[32px]" />
             </Link>
 
             {/* Navigation Links */}

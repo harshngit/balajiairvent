@@ -12,7 +12,7 @@ const navItems = [
     label: "Products", href: "/products",
     children: [
       { label: "All", href: "/products#all" },
-      { label: "Data Centre", href: "/products#data" },
+      { label: "Datacentre", href: "/products#data" },
       { label: "Comfort Air Conditioning", href: "/products#comfort" },
       { label: "Industrial Dampers", href: "/products#industries" },
       { label: "Fans & Ventilation Accessories", href: "/products#fans" },

@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const data = [
 	{
-		title: "Data Centre",
+		title: "Datacentre",
 		description:
 			"Various customised solutions given by us to our clients to reduce energy consumption.",
 		images: [
@@ -26,7 +26,7 @@ const data = [
 		],
 	},
 	{
-		title: "Cinema Theaters",
+		title: "Cinema Theatres",
 		description:
 			"Products designed and choosen in such a way so aesthetic look of Cinema Hall should not be hampered.",
 		images: [
@@ -36,9 +36,9 @@ const data = [
 		],
 	},
 	{
-		title: "Fitness Centers",
+		title: "Fitness Centres",
 		description:
-			"Positioning right solution at right place is most important for fitness centers.",
+			"Positioning right solution at right place is most important for fitness Centres.",
 		images: [
 			"/asset/home/application/4/1.webp",
 			"/asset/home/application/4/2.webp",
