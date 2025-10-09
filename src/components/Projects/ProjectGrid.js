@@ -14,7 +14,7 @@ const ProjectGrid = () => {
   // - getAllTabLinks(): Returns all tab links with their details
   // - productTabs: Array of tab configurations with links
   const productTabs = [
-    { label: "Collaboration", category: "collabration", href: "/projects#Collaboration", link: "/projects?tab=Collaboration" },
+    { label: "Collaborations", category: "collabration", href: "/projects#Collaboration", link: "/projects?tab=Collaboration" },
     { label: "Projects", category: "projects", href: "/projects#projects", link: "/projects?tab=projects" },
     { label: "Clients", category: "clients", href: "/projects#clients", link: "/projects?tab=clients" },
   ];

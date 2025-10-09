@@ -58,7 +58,7 @@ const data = [
 	{
 		title: "Hotels",
 		description:
-			"Perfect air distribution solution for Hotel Lobby creates good impression about Hotel.",
+			"Perfect air distribution solution for hotel lobby creates a good impression about the hotel.",
 		images: [
 			"/asset/home/application/6/1.webp",
 			"/asset/home/application/6/2.webp",
@@ -68,7 +68,7 @@ const data = [
 	{
 		title: "Malls",
 		description:
-			"Our experience of years shows that diffusers offers a substantially better & more unform air pattern than can be achieved with traditional systems in Malls.",
+			"Our experience of years shows that diffusers offer a substantially better & more unform air pattern than can be achieved with traditional systems in Malls.",
 		images: [
 			"/asset/home/application/7/1.webp",
 			"/asset/home/application/7/2.webp",
@@ -98,7 +98,7 @@ const data = [
 	{
 		title: "Pools",
 		description:
-			"Our many installations at sports and fitness centres provide comfortable cooling air movement for customers working out.",
+			"Our numerous installations at sports and fitness centres provide comfortable cooling air movement for customers working out.",
 		images: [
 			"/asset/home/application/10/1.webp",
 			"/asset/home/application/10/2.webp",
