@@ -4,14 +4,20 @@ import Image from 'next/image'
 
 // List of logo paths (make sure all files exist)
 const clientLogos = [
-	'/asset/home/clients/Aurionpro.webp',
+	'/asset/home/clients/Aurionpro.webp'
+	,'/asset/home/clients/Airody.webp',
 	'/asset/home/clients/bluebox.webp',
+	'/asset/home/clients/flaktgroup.webp',
 	'/asset/home/clients/bluestar.webp',
 	'/asset/home/clients/climaveneta.webp',
+	'/asset/home/clients/creativemetal.webp',
 	'/asset/home/clients/CTRLS.webp',
 	'/asset/home/clients/Gulf Computers.webp',
 	'/asset/home/clients/ironmoutain.webp',
 	'/asset/home/clients/maxheal.webp',
+	'/asset/home/clients/HP.webp',
+	'/asset/home/clients/statebank.webp',
+	'/asset/home/clients/pnbbank.webp',
 	'/asset/home/clients/nti.webp',
 	'/asset/home/clients/nxtra.webp',
 	'/asset/home/clients/rital.webp',
@@ -55,7 +61,7 @@ const ClientsHome = () => {
 						<div className="flex items-center gap-[85px]">
 							{clientLogos.map((logo, index) => (
 								<div key={`b-${index}`} className="flex items-center justify-center w-[200px] h-[50px]">
-									<Image src={logo} alt={`Client ${index + 1}`} width={200} height={50} className="w-[200px] h-[50px] object-contain" />
+									<Image src={logo} alt={`Client ${index + 1}`} width={200} height={50} className="w-[200px] h-[50px] object-cover" />
 								</div>
 							))}
 						</div>
