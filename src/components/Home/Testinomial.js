@@ -47,6 +47,18 @@ const Testinomial = () => {
             What our <span className="bg-blue-gradient text-transparent bg-clip-text">Clients</span> have
             <br className='hidden md:block' /> to say about us...
           </h2>
+          
+						<button onClick={() => swiperRef.current?.slideNext()} className="flex items-center w-[143px] gap-2 border border-[#0F2850] text-[#0F2850] 
+						pr-[7px] pl-[20px] py-[10px] rounded-full hover:bg-[#0F2850] hover:text-white transition-all text-[16px] ">
+							View Next
+							<Image
+								src={"/asset/rightbutton.png"}
+								width={28}
+								height={28}
+							/>
+
+						</button>
+					
         </div>
 
         {/* Right image with testimonial card on the right side */}
@@ -68,7 +80,7 @@ const Testinomial = () => {
             centeredSlides={false}
             spaceBetween={20}
             autoplay={{
-              delay: 500,
+              delay: 1000,
               disableOnInteraction: false,
               pauseOnMouseEnter: true
             }}

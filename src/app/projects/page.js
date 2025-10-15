@@ -9,7 +9,7 @@ export const metadata = {
   description: "Explore Balaji Airvent's successful HVAC projects and collaborations including 75F Solutions and Teryair partnerships. View our portfolio of industrial air handling, ventilation systems, and air conditioning installations.",
   keywords: [
     "HVAC Projects",
-    "Air Ventilation Projects",
+    "AirVentilation Projects",
     "Industrial HVAC Installations",
     "75F Solutions Collaboration",
     "Teryair Partnership",

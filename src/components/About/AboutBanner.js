@@ -32,7 +32,7 @@ const AboutBanner = () => {
 						At Balaji Airvent Systems Private Limited, we believe that this was achieved simply by sticking to our core competence and doing what we do best, which is applying our technical and commercial expertise and years of experience in the field of Air Distribution Management to manufacture and supply good quality, super-efficient products. This, along with our transparent and ethical business practice and professional approach is what has established for us a formidable reputation in the arena and an even growing list of distinguished clients.
 						</p>
 						<p className='font-light xl:text-[16px] md:text-[14px] text-[16px]'>
-						Balaji Air vent Systems Private Limited is quite literally and figuratively "a breath of fresh air" in the field of Air Distribution Management.
+						Balaji AirVent Systems Private Limited is quite literally and figuratively "a breath of fresh air" in the field of Air Distribution Management.
 						</p>
 						
 					</div>

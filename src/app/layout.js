@@ -7,14 +7,14 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: {
-    default: "Balaji Airvent | Premium HVAC Solutions & Air Ventilation Systems",
+    default: "Balaji Airvent | Premium HVAC Solutions & AirVentilation Systems",
     template: "%s | Balaji Airvent"
   },
-  description: "Leading manufacturer of premium HVAC solutions, air ventilation systems, and industrial air handling equipment. Expert engineering, quality products, and reliable service across India.",
+  description: "Leading manufacturer of premium HVAC solutions, AirVentilation systems, and industrial air handling equipment. Expert engineering, quality products, and reliable service across India.",
   keywords: [
     "Balaji Airvent",
     "HVAC Solutions",
-    "Air Ventilation Systems",
+    "AirVentilation Systems",
     "Industrial Air Handling",
     "Air Conditioning Equipment",
     "Ventilation Fans",
@@ -44,8 +44,8 @@ export const metadata = {
     locale: "en_IN",
     url: "https://balajiairvent.com",
     siteName: "Balaji Airvent",
-    title: "Balaji Airvent | Premium HVAC Solutions & Air Ventilation Systems",
-    description: "Leading manufacturer of premium HVAC solutions, air ventilation systems, and industrial air handling equipment. Expert engineering, quality products, and reliable service across India.",
+    title: "Balaji Airvent | Premium HVAC Solutions & AirVentilation Systems",
+    description: "Leading manufacturer of premium HVAC solutions, AirVentilation systems, and industrial air handling equipment. Expert engineering, quality products, and reliable service across India.",
     images: [
       {
         url: "/asset/favicon_balaji.png",
@@ -57,8 +57,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Balaji Airvent | Premium HVAC Solutions & Air Ventilation Systems",
-    description: "Leading manufacturer of premium HVAC solutions, air ventilation systems, and industrial air handling equipment.",
+    title: "Balaji Airvent | Premium HVAC Solutions & AirVentilation Systems",
+    description: "Leading manufacturer of premium HVAC solutions, AirVentilation systems, and industrial air handling equipment.",
     images: ["/asset/favicon_balaji.png"],
   },
   alternates: {

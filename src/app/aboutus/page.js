@@ -7,11 +7,11 @@ import React from 'react'
 
 export const metadata = {
   title: "About Us - Balaji Airvent",
-  description: "Learn about Balaji Airvent's journey as a leading HVAC manufacturer. Discover our vision, mission, key features, and commitment to delivering premium air ventilation systems and industrial air handling solutions across India.",
+  description: "Learn about Balaji Airvent's journey as a leading HVAC manufacturer. Discover our vision, mission, key features, and commitment to delivering premium AirVentilation systems and industrial air handling solutions across India.",
   keywords: [
     "About Balaji Airvent",
     "HVAC Company History",
-    "Air Ventilation Manufacturer",
+    "AirVentilation Manufacturer",
     "Industrial HVAC Company",
     "HVAC Vision Mission",
     "Air Handling Equipment Company",
@@ -22,7 +22,7 @@ export const metadata = {
   ],
   openGraph: {
     title: "About Us | Balaji Airvent - Leading HVAC Manufacturer",
-    description: "Learn about Balaji Airvent's journey as a leading HVAC manufacturer. Discover our vision, mission, and commitment to delivering premium air ventilation systems.",
+    description: "Learn about Balaji Airvent's journey as a leading HVAC manufacturer. Discover our vision, mission, and commitment to delivering premium AirVentilation systems.",
     url: "https://balajiairvent.com/aboutus",
     siteName: "Balaji Airvent",
     images: [

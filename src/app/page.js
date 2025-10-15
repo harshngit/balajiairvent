@@ -5,10 +5,10 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata = {
   title: "Home - Balaji Airvent",
-  description: "Discover Balaji Airvent's comprehensive HVAC solutions including air ventilation systems, industrial air handling equipment, and premium air conditioning solutions. Leading manufacturer with expert engineering and reliable service.",
+  description: "Discover Balaji Airvent's comprehensive HVAC solutions including AirVentilation systems, industrial air handling equipment, and premium air conditioning solutions. Leading manufacturer with expert engineering and reliable service.",
   keywords: [
     "HVAC Solutions India",
-    "Air Ventilation Systems",
+    "AirVentilation Systems",
     "Industrial Air Handling",
     "Commercial HVAC",
     "Residential Air Conditioning",
@@ -18,8 +18,8 @@ export const metadata = {
     "Balaji Airvent Home"
   ],
   openGraph: {
-    title: "Balaji Airvent | Premium HVAC Solutions & Air Ventilation Systems",
-    description: "Discover Balaji Airvent's comprehensive HVAC solutions including air ventilation systems, industrial air handling equipment, and premium air conditioning solutions.",
+    title: "Balaji Airvent | Premium HVAC Solutions & AirVentilation Systems",
+    description: "Discover Balaji Airvent's comprehensive HVAC solutions including AirVentilation systems, industrial air handling equipment, and premium air conditioning solutions.",
     url: "https://balajiairvent.com",
     siteName: "Balaji Airvent",
     images: [

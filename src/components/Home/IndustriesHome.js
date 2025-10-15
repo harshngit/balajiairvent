@@ -52,7 +52,7 @@ const IndustriesHome = () => {
 					</div>
 					</div>
 					<p className="text-[#0F2850] mb-6 xl:text-[16px] md:text-[14px] text-[14px] lg:w-[464px] w-full  leading-relaxed">
-						From concept to completion, every AirVent solution is meticulously crafted for maximum efficiency, durability, and ease of installation. Whether it’s Louvers , Industrial Dampers, or Specialized products for Data Centers and Cleanrooms, our focus is on delivering precision-engineered solutions that enhance comfort, safety, and energy efficiency.
+						From concept to completion, every AirVent solution is meticulously crafted for maximum efficiency, durability, and ease of installation. Whether it’s Louvers , Industrial Dampers, or Specialized products for datacenters and Cleanrooms, our focus is on delivering precision-engineered solutions that enhance comfort, safety, and energy efficiency.
 					</p>
 					<Link href="/products">
 						<button className="flex items-center gap-2 border border-[#0F2850] text-[#0F2850] 
@@ -88,7 +88,7 @@ const IndustriesHome = () => {
 
 								{/* Hover Text From Top */}
 								<div className="absolute  top-4 left-4 right-4 z-20 opacity-100 transition-all duration-300 ease-out text-[#fff] font-normal text-[12px] md:text-[20px] flex items-center justify-start gap-[10px]">
-									Data Center
+									datacenter
 									<Image
 										src="/asset/rightotline.png"
 										alt="arrow"

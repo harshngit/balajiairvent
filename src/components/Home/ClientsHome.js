@@ -61,7 +61,7 @@ const ClientsHome = () => {
 						<div className="flex items-center gap-[85px]">
 							{clientLogos.map((logo, index) => (
 								<div key={`b-${index}`} className="flex items-center justify-center w-[200px] h-[50px]">
-									<Image src={logo} alt={`Client ${index + 1}`} width={200} height={50} className="w-[200px] h-[50px] object-cover" />
+									<Image src={logo} alt={`Client ${index + 1}`} width={200} height={50} className="w-[200px] h-[50px] object-contain" />
 								</div>
 							))}
 						</div>

@@ -256,13 +256,13 @@ const productData = [
 		img2: "/asset/product/dataimg/1/2.webp",
 		img3: "",
 		img4: "",
-		desc: "Active Floor Grilles with integrated EC booster fans enhance cooling in raised-floor data centers by delivering targeted airflow to high-density server racks. Ideal for eliminating hot spots, these grilles draw chilled air from the underfloor plenum and boost it directly into cold aisles.",
+		desc: "Active Floor Grilles with integrated EC booster fans enhance cooling in raised-floor datacenters by delivering targeted airflow to high-density server racks. Ideal for eliminating hot spots, these grilles draw chilled air from the underfloor plenum and boost it directly into cold aisles.",
 		KeyFeatures: [
 			"Enhanced airflow to high-load zones",
 			"Energy-efficient EC fans with variable speed",
 			"Easy installation and plug-and-play design",
 			"Ideal for high-density and mission-critical areas.",
-			"A smart solution for efficient, scalable, and reliable data center cooling.",
+			"A smart solution for efficient, scalable, and reliable datacenter cooling.",
 		],
 	},
 	{
@@ -273,7 +273,7 @@ const productData = [
 		img2: "/asset/product/dataimg/2/2.webp",
 		img3: "/asset/product/dataimg/2/3.webp",
 		img4: "/asset/product/dataimg/2/4.webp",
-		desc: "Designed for maximum airflow, our 82% free area floor grilles ensure efficient cold air delivery in raised-floor data center environments. Ideal for low-impedance cooling, these grilles help maintain optimal temperatures across high-density racks.",
+		desc: "Designed for maximum airflow, our 82% free area floor grilles ensure efficient cold air delivery in raised-floor datacenter environments. Ideal for low-impedance cooling, these grilles help maintain optimal temperatures across high-density racks.",
 		KeyFeatures: [
 			"High open area for maximum airflow",
 			"Robust construction for heavy load capacity",
@@ -289,7 +289,7 @@ const productData = [
 		img2: "/asset/product/dataimg/3/2.webp",
 		img3: "/asset/product/dataimg/3/3.webp",
 		img4: "/asset/product/dataimg/3/4.webp",
-		desc: "ABS 1U Toolless Blanking Panels are designed to block unused rack spaces, preventing hot air recirculation and improving cooling efficiency in data centers. Made from durable ABS plastic, these panels snap into place without tools for quick and easy installation.",
+		desc: "ABS 1U Toolless Blanking Panels are designed to block unused rack spaces, preventing hot air recirculation and improving cooling efficiency in datacenters. Made from durable ABS plastic, these panels snap into place without tools for quick and easy installation.",
 		KeyFeatures: [
 			"Toolless 1U design for fast installation",
 			"Helps maintain proper airflow and cooling efficiency",
@@ -305,7 +305,7 @@ const productData = [
 		img2: "/asset/product/dataimg/4/2.webp",
 		img3: "/asset/product/dataimg/4/3.webp",
 		img4: "",
-		desc: "ABS Round Grommet Brushes are designed to seal cable openings in raised floors, preventing cold air loss and improving airflow efficiency in data centers. The brush insert allows cables to pass through while minimizing bypass air.",
+		desc: "ABS Round Grommet Brushes are designed to seal cable openings in raised floors, preventing cold air loss and improving airflow efficiency in datacenters. The brush insert allows cables to pass through while minimizing bypass air.",
 		KeyFeatures: [
 			"Maintains underfloor air pressure",
 			"Reduces energy loss from cable cutouts",
@@ -321,12 +321,12 @@ const productData = [
 		img2: "/asset/product/dataimg/5/2.webp",
 		img3: "",
 		img4: "",
-		desc: "Dehumidifiers help maintain optimal humidity levels in data centers, protecting sensitive equipment from moisture-related damage and ensuring reliable performance. They support precise environmental control for mission-critical operations",
+		desc: "Dehumidifiers help maintain optimal humidity levels in datacenters, protecting sensitive equipment from moisture-related damage and ensuring reliable performance. They support precise environmental control for mission-critical operations",
 		KeyFeatures: [
 			"Prevents condensation and corrosion",
 			"Enhances equipment longevity and reliability",
 			"Supports ASHRAE-recommended humidity levels",
-			"Essential for stable and safe data center environments.",
+			"Essential for stable and safe datacenter environments.",
 		],
 	},
 	{
@@ -337,7 +337,7 @@ const productData = [
 		img2: "/asset/product/dataimg/6/2.webp",
 		img3: "/asset/product/dataimg/6/3.webp",
 		img4: "",
-		desc: "Cold and Hot Aisle Containment Systems are designed to improve cooling efficiency in data centers by separating cold supply air from hot exhaust air. This targeted airflow management reduces energy consumption and supports higher rack densities.",
+		desc: "Cold and Hot Aisle Containment Systems are designed to improve cooling efficiency in datacenters by separating cold supply air from hot exhaust air. This targeted airflow management reduces energy consumption and supports higher rack densities.",
 		KeyFeatures: [
 			"Enhances cooling efficiency and airflow control",
 			"Supports ASHRAE thermal guidelines",
