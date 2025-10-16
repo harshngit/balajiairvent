@@ -20,16 +20,16 @@ const AboutBanner = () => {
 				<div className="lg:w-[60%] w-full flex lg:flex-row flex-col justify-start items-start  text-[#0F2850] leading-relaxed gap-[20px]">
 					<div className='flex lg:w-1/2 w-full flex-col space-y-5'>
 						<p className='font-light xl:text-[16px] md:text-[14px] text-[16px]'>
-							Balaji Airvent Systems Private Limited is a Quality and Customer conscious Company with long experience in Metal and Air Distribution field. We work with big OEMs and deeply understand the importance of quality and prompt services.
+							Balaji AirVent Systems Private Limited is a Quality and Customer conscious Company with long experience in Metal and Air Distribution field. We work with big OEMs and deeply understand the importance of quality and prompt services.
 						</p>
 						<p className='font-light xl:text-[16px] md:text-[14px] text-[16px]'>
-							It is said that all it takes to excel is commitment to quality, mutual respect for one's customers and above all complete confidence in oneself and one's product. and, Balaji Airvent Systems Private Limited has substantiated this claim with its own example.
+							It is said that all it takes to excel is commitment to quality, mutual respect for one's customers and above all complete confidence in oneself and one's product. and, Balaji AirVent Systems Private Limited has substantiated this claim with its own example.
 						</p>
 						<p className='font-light xl:text-[16px] md:text-[14px] text-[16px]'>In spite of being a fledging venture, it is already a ranked manufacturer of Air Distribution Products.</p>
 					</div>
 					<div className='flex lg:w-1/2 w-full flex-col space-y-5'>
 						<p className='font-light xl:text-[16px] md:text-[14px] text-[16px]'>
-						At Balaji Airvent Systems Private Limited, we believe that this was achieved simply by sticking to our core competence and doing what we do best, which is applying our technical and commercial expertise and years of experience in the field of Air Distribution Management to manufacture and supply good quality, super-efficient products. This, along with our transparent and ethical business practice and professional approach is what has established for us a formidable reputation in the arena and an even growing list of distinguished clients.
+						At Balaji AirVent Systems Private Limited, we believe that this was achieved simply by sticking to our core competence and doing what we do best, which is applying our technical and commercial expertise and years of experience in the field of Air Distribution Management to manufacture and supply good quality, super-efficient products. This, along with our transparent and ethical business practice and professional approach is what has established for us a formidable reputation in the arena and an even growing list of distinguished clients.
 						</p>
 						<p className='font-light xl:text-[16px] md:text-[14px] text-[16px]'>
 						Balaji AirVent Systems Private Limited is quite literally and figuratively "a breath of fresh air" in the field of Air Distribution Management.
@@ -54,7 +54,7 @@ const AboutBanner = () => {
 					<h3 className=' bg-blue-gradient text-transparent bg-clip-text xl:text-[48px] md:text-[32px] text-[28px] font-light '>Our Vision</h3>
 				</div>
 				<div className='lg:w-[70%] w-full'>
-					<p className='xl:text-[32px] md:text-[28px] text-[18px] text-secondary font-light'>To make the name "Balaji Airvent Systems Private Limited" synonymous with Air Distribution Products.</p>
+					<p className='xl:text-[32px] md:text-[28px] text-[18px] text-secondary font-light'>To make the name "Balaji AirVent Systems Private Limited" synonymous with Air Distribution Products.</p>
 				</div>
 			</div>
 			<div className='flex lg:flex-row flex-col py-2 px-2 lg:py-[70px] lg:px-[40px] justify-between item-center border-b-[1px] border-[#A3A3A3] bg-white'>

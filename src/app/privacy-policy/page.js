@@ -4,8 +4,8 @@ import PrivacyContent from '@/components/Privacy/PrivacyContent'
 import React from 'react'
 
 export const metadata = {
-  title: "Privacy Policy - Balaji Airvent",
-  description: "Read Balaji Airvent's privacy policy to understand how we collect, use, and protect your personal information. Learn about our data practices and your privacy rights when using our HVAC services.",
+  title: "Privacy Policy - Balaji AirVent",
+  description: "Read Balaji AirVent's privacy policy to understand how we collect, use, and protect your personal information. Learn about our data practices and your privacy rights when using our HVAC services.",
   keywords: [
     "Privacy Policy",
     "Data Protection",
@@ -13,22 +13,22 @@ export const metadata = {
     "Privacy Rights",
     "Data Collection",
     "Privacy Practices",
-    "Balaji Airvent Privacy",
+    "Balaji AirVent Privacy",
     "HVAC Privacy Policy",
     "Data Security",
     "Privacy Compliance"
   ],
   openGraph: {
-    title: "Privacy Policy | Balaji Airvent - Data Protection & Privacy",
-    description: "Read Balaji Airvent's privacy policy to understand how we collect, use, and protect your personal information and data practices.",
+    title: "Privacy Policy | Balaji AirVent - Data Protection & Privacy",
+    description: "Read Balaji AirVent's privacy policy to understand how we collect, use, and protect your personal information and data practices.",
     url: "https://balajiairvent.com/privacy-policy",
-    siteName: "Balaji Airvent",
+    siteName: "Balaji AirVent",
     images: [
       {
         url: "/asset/logo.png",
         width: 1200,
         height: 630,
-        alt: "Balaji Airvent Privacy Policy",
+        alt: "Balaji AirVent Privacy Policy",
       },
     ],
     type: "website",

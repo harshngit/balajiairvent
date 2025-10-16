@@ -129,10 +129,10 @@ const ProductGrid = () => {
 										The determination of cooling requirements for IT systems can be reduced to a simple process that can be done by anyone without special training. Expressing all measures of power and cooling in Watts simplifies the process. A general rule is that a CRAC system rating must be 1.3 times the anticipated IT load rating plus any capacity added for redundancy.
 									</p>
 									<p className="text-secondary text-[16px] md:text-[14px] xl:text-[18px]  leading-relaxed">
-										For larger datacenters, the cooling requirements alone are typically not sufficient to select an air conditioner. Typically, the effects of other heat sources such as walls and roof, along with recirculation, are significant and must be examined for a particular installation.
+										For larger Datacenters, the cooling requirements alone are typically not sufficient to select an air conditioner. Typically, the effects of other heat sources such as walls and roof, along with recirculation, are significant and must be examined for a particular installation.
 									</p>
 									<p className="text-secondary text-[16px] md:text-[14px] xl:text-[18px]  leading-relaxed">
-										The design of the air handling ductwork or raised floor has a significant effect on the overall system performance, and also greatly affects the uniformity of temperature within the datacenter. The adoption of a simple, standardized, and modular air distribution system architecture, combined with the simple heat load estimation method described, could significantly reduce the engineering requirements for datacenter design.
+										The design of the air handling ductwork or raised floor has a significant effect on the overall system performance, and also greatly affects the uniformity of temperature within the Datacenter. The adoption of a simple, standardized, and modular air distribution system architecture, combined with the simple heat load estimation method described, could significantly reduce the engineering requirements for Datacenter design.
 									</p>
 								</div>
 								<div className="lg:flex lg:w-[100%] w-full hidden justify-center items-center">
@@ -353,7 +353,7 @@ const ProductGrid = () => {
                                                         <div>
 													<h3 className="text-[22px] md:text-[18px] xl:text-[26px]  font-medium text-secondary">{expandedProduct.name}</h3>
 												   {activeCategory == "all" &&  <p className="text-[16px] md:text-[18px] xl:text-[20px] font-light text-secondary mt-1">All</p>}
-												   {activeCategory == "Data Centre" &&  <p className="text-[16px] md:text-[18px] xl:text-[20px] font-light text-secondary mt-1">datacenter</p>}
+												   {activeCategory == "Data Centre" &&  <p className="text-[16px] md:text-[18px] xl:text-[20px] font-light text-secondary mt-1">Datacenter</p>}
 												   {activeCategory == "Air" &&  <p className="text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] font-light text-secondary mt-1">Comfort Air Conditioning</p>}
 												   {activeCategory == "Industries" &&  <p className="text-[16px] md:text-[18px] xl:text-[20px] font-light text-secondary mt-1">Industrial Dampers</p>}
 												   {activeCategory == "Fans" &&  <p className="text-[16px] md:text-[18px] xl:text-[20px] font-light text-secondary mt-1">Fans & Ventilation Accessories</p>}

@@ -6,10 +6,10 @@ import NavbarBrandStory from '@/components/Layout/NavbarBrandStory'
 import React from 'react'
 
 export const metadata = {
-  title: "About Us - Balaji Airvent",
-  description: "Learn about Balaji Airvent's journey as a leading HVAC manufacturer. Discover our vision, mission, key features, and commitment to delivering premium AirVentilation systems and industrial air handling solutions across India.",
+  title: "About Us - Balaji AirVent",
+  description: "Learn about Balaji AirVent's journey as a leading HVAC manufacturer. Discover our vision, mission, key features, and commitment to delivering premium AirVentilation systems and industrial air handling solutions across India.",
   keywords: [
-    "About Balaji Airvent",
+    "About Balaji AirVent",
     "HVAC Company History",
     "AirVentilation Manufacturer",
     "Industrial HVAC Company",
@@ -17,20 +17,20 @@ export const metadata = {
     "Air Handling Equipment Company",
     "Ventilation Systems Manufacturer",
     "HVAC Company Profile",
-    "Balaji Airvent Story",
+    "Balaji AirVent Story",
     "HVAC Industry Leader"
   ],
   openGraph: {
-    title: "About Us | Balaji Airvent - Leading HVAC Manufacturer",
-    description: "Learn about Balaji Airvent's journey as a leading HVAC manufacturer. Discover our vision, mission, and commitment to delivering premium AirVentilation systems.",
+    title: "About Us | Balaji AirVent - Leading HVAC Manufacturer",
+    description: "Learn about Balaji AirVent's journey as a leading HVAC manufacturer. Discover our vision, mission, and commitment to delivering premium AirVentilation systems.",
     url: "https://balajiairvent.com/aboutus",
-    siteName: "Balaji Airvent",
+    siteName: "Balaji AirVent",
     images: [
       {
         url: "/asset/about/banner.webp",
         width: 1200,
         height: 630,
-        alt: "About Balaji Airvent - Leading HVAC Manufacturer",
+        alt: "About Balaji AirVent - Leading HVAC Manufacturer",
       },
     ],
     type: "website",

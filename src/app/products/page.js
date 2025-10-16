@@ -7,8 +7,8 @@ import NavbarCustom1 from '@/components/Layout/NavbarWhite'
 import NavbarCustom2 from '@/components/Layout/Navbar2'
 
 export const metadata = {
-  title: "Products - Balaji Airvent",
-  description: "Browse Balaji Airvent's comprehensive range of HVAC products including AirVentilation systems, industrial air handling equipment, fans, ducts, and air conditioning solutions. Premium quality products for commercial and residential applications.",
+  title: "Products - Balaji AirVent",
+  description: "Browse Balaji AirVent's comprehensive range of HVAC products including AirVentilation systems, industrial air handling equipment, fans, ducts, and air conditioning solutions. Premium quality products for commercial and residential applications.",
   keywords: [
     "HVAC Products",
     "AirVentilation Equipment",
@@ -20,19 +20,19 @@ export const metadata = {
     "Commercial HVAC Products",
     "Residential HVAC Equipment",
     "Air Quality Products",
-    "Balaji Airvent Products"
+    "Balaji AirVent Products"
   ],
   openGraph: {
-    title: "Products | Balaji Airvent - HVAC Equipment & AirVentilation Systems",
-    description: "Browse Balaji Airvent's comprehensive range of HVAC products including AirVentilation systems, industrial air handling equipment, fans, ducts, and air conditioning solutions.",
+    title: "Products | Balaji AirVent - HVAC Equipment & AirVentilation Systems",
+    description: "Browse Balaji AirVent's comprehensive range of HVAC products including AirVentilation systems, industrial air handling equipment, fans, ducts, and air conditioning solutions.",
     url: "https://balajiairvent.com/products",
-    siteName: "Balaji Airvent",
+    siteName: "Balaji AirVent",
     images: [
       {
         		url: "/asset/favicon_balaji.png",
         width: 1200,
         height: 630,
-        alt: "Balaji Airvent Products - HVAC Equipment & AirVentilation Systems",
+        alt: "Balaji AirVent Products - HVAC Equipment & AirVentilation Systems",
       },
     ],
     type: "website",

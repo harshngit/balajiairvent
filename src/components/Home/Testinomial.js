@@ -22,7 +22,7 @@ const Testinomial = () => {
     },
     {
       text1: "It gives us great pleasure to share a few words of appreciation for our valued partner, Balaji AirVent.",
-      text2: "We have been associated with Balaji Airvent for more than a decade now and truly value their professionalism, reliability, and commitment to quality. Their prompt support and consistent delivery have made them a trusted partner in our growth journey.\n We truly value this partnership and look forward to continuing our successful collaboration in the future.",
+      text2: "We have been associated with Balaji AirVent for more than a decade now and truly value their professionalism, reliability, and commitment to quality. Their prompt support and consistent delivery have made them a trusted partner in our growth journey.\n We truly value this partnership and look forward to continuing our successful collaboration in the future.",
       company: "Swegon Blue Box Private Limited, India",
       person: "Nilkanth Maindargi",
       role: "Asst. General Manager - Purchase & Import Logistics",

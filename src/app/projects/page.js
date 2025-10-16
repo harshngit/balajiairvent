@@ -5,8 +5,8 @@ import ProjectGrid from '@/components/Projects/ProjectGrid'
 import React from 'react'
 
 export const metadata = {
-    title: "Projects - Balaji Airvent",
-  description: "Explore Balaji Airvent's successful HVAC projects and collaborations including 75F Solutions and Teryair partnerships. View our portfolio of industrial air handling, ventilation systems, and air conditioning installations.",
+    title: "Projects - Balaji AirVent",
+  description: "Explore Balaji AirVent's successful HVAC projects and collaborations including 75F Solutions and Teryair partnerships. View our portfolio of industrial air handling, ventilation systems, and air conditioning installations.",
   keywords: [
     "HVAC Projects",
     "AirVentilation Projects",
@@ -17,19 +17,19 @@ export const metadata = {
     "Air Handling Projects",
     "Ventilation System Installations",
     "Commercial HVAC Projects",
-    "Balaji Airvent Projects"
+    "Balaji AirVent Projects"
   ],
   openGraph: {
-    title: "Projects | Balaji Airvent - HVAC Solutions & Collaborations",
-    description: "Explore Balaji Airvent's successful HVAC projects and collaborations including 75F Solutions and Teryair partnerships. View our portfolio of industrial installations.",
+    title: "Projects | Balaji AirVent - HVAC Solutions & Collaborations",
+    description: "Explore Balaji AirVent's successful HVAC projects and collaborations including 75F Solutions and Teryair partnerships. View our portfolio of industrial installations.",
     url: "https://balajiairvent.com/projects",
-    siteName: "Balaji Airvent",
+    siteName: "Balaji AirVent",
     images: [
       {
         url: "/asset/projects/collabration/1.webp",
         width: 1200,
         height: 630,
-        alt: "Balaji Airvent Projects - HVAC Solutions Portfolio",
+        alt: "Balaji AirVent Projects - HVAC Solutions Portfolio",
       },
     ],
     type: "website",

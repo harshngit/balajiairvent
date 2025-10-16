@@ -118,7 +118,7 @@ const KeyFeatures = () => {
 						<span className='text-transparent bg-clip-text bg-blue-gradient'>Key feature </span>
 						of our company</p>
 					<h2 className="text-[32px] xl:text-[30px] md:text-[25px] font-light whitespace-wrap lg:leading-[40px] text-[#0F2850] mt-2">
-						What Sets Balaji Airvent Systems Apart?
+						What Sets Balaji AirVent Systems Apart?
 					</h2>
 				</div>
 

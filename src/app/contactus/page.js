@@ -4,10 +4,10 @@ import NavbarCustom1 from '@/components/Layout/NavbarWhite'
 import React from 'react'
 
 export const metadata = {
-  title: "Contact Us - Balaji Airvent",
-  description: "Get in touch with Balaji Airvent for all your HVAC needs. Contact our expert team for AirVentilation systems, industrial air handling equipment, and HVAC solutions. Professional consultation and support available.",
+  title: "Contact Us - Balaji AirVent",
+  description: "Get in touch with Balaji AirVent for all your HVAC needs. Contact our expert team for AirVentilation systems, industrial air handling equipment, and HVAC solutions. Professional consultation and support available.",
   keywords: [
-    "Contact Balaji Airvent",
+    "Contact Balaji AirVent",
     "HVAC Consultation",
     "AirVentilation Support",
     "Industrial HVAC Contact",
@@ -15,20 +15,20 @@ export const metadata = {
     "Air Handling Equipment Support",
     "Ventilation Systems Contact",
     "HVAC Technical Support",
-    "Balaji Airvent Contact",
+    "Balaji AirVent Contact",
     "HVAC Sales Contact"
   ],
   openGraph: {
-    title: "Contact Us | Balaji Airvent - HVAC Solutions & Support",
-    description: "Get in touch with Balaji Airvent for all your HVAC needs. Contact our expert team for AirVentilation systems, industrial air handling equipment, and HVAC solutions.",
+    title: "Contact Us | Balaji AirVent - HVAC Solutions & Support",
+    description: "Get in touch with Balaji AirVent for all your HVAC needs. Contact our expert team for AirVentilation systems, industrial air handling equipment, and HVAC solutions.",
     url: "https://balajiairvent.com/contactus",
-    siteName: "Balaji Airvent",
+    siteName: "Balaji AirVent",
     images: [
       {
         url: "/asset/contact/banner.webp",
         width: 1200,
         height: 630,
-        alt: "Contact Balaji Airvent - HVAC Solutions & Support",
+        alt: "Contact Balaji AirVent - HVAC Solutions & Support",
       },
     ],
     type: "website",

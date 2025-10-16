@@ -7,12 +7,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: {
-    default: "Balaji Airvent | Premium HVAC Solutions & AirVentilation Systems",
-    template: "%s | Balaji Airvent"
+    default: "Balaji AirVent | Premium HVAC Solutions & AirVentilation Systems",
+    template: "%s | Balaji AirVent"
   },
   description: "Leading manufacturer of premium HVAC solutions, AirVentilation systems, and industrial air handling equipment. Expert engineering, quality products, and reliable service across India.",
   keywords: [
-    "Balaji Airvent",
+    "Balaji AirVent",
     "HVAC Solutions",
     "AirVentilation Systems",
     "Industrial Air Handling",
@@ -25,9 +25,9 @@ export const metadata = {
     "Commercial HVAC",
     "Residential HVAC"
   ],
-  authors: [{ name: "Balaji Airvent" }],
-  creator: "Balaji Airvent",
-  publisher: "Balaji Airvent",
+  authors: [{ name: "Balaji AirVent" }],
+  creator: "Balaji AirVent",
+  publisher: "Balaji AirVent",
   robots: {
     index: true,
     follow: true,
@@ -43,21 +43,21 @@ export const metadata = {
     type: "website",
     locale: "en_IN",
     url: "https://balajiairvent.com",
-    siteName: "Balaji Airvent",
-    title: "Balaji Airvent | Premium HVAC Solutions & AirVentilation Systems",
+    siteName: "Balaji AirVent",
+    title: "Balaji AirVent | Premium HVAC Solutions & AirVentilation Systems",
     description: "Leading manufacturer of premium HVAC solutions, AirVentilation systems, and industrial air handling equipment. Expert engineering, quality products, and reliable service across India.",
     images: [
       {
         url: "/asset/favicon_balaji.png",
         width: 1200,
         height: 630,
-        alt: "Balaji Airvent - Premium HVAC Solutions",
+        alt: "Balaji AirVent - Premium HVAC Solutions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Balaji Airvent | Premium HVAC Solutions & AirVentilation Systems",
+    title: "Balaji AirVent | Premium HVAC Solutions & AirVentilation Systems",
     description: "Leading manufacturer of premium HVAC solutions, AirVentilation systems, and industrial air handling equipment.",
     images: ["/asset/favicon_balaji.png"],
   },
