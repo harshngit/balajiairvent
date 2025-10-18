@@ -42,7 +42,7 @@ const Testinomial = () => {
       <div className="lg:mx-6 gap-8 flex flex-col lg:flex-row ">
         {/* Left text column */}
         <div className="flex flex-col gap-3 lg:w-[40%] w-full">
-          <span className="text-[#E77853] text-[28px] font-light">Testimonial</span>
+          <span className="text-[#E77853] text-[28px] font-light">Testimonials</span>
           <h2 className="text-[#0F2850] font-light leading-snug text-3xl xl:text-[40px] md:text-[32px] max-w-[520px]">
             What our <span className="bg-blue-gradient text-transparent bg-clip-text">Clients</span> have
             <br className='hidden md:block' /> to say about us...

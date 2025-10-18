@@ -80,7 +80,7 @@ const ProjectGrid = () => {
         <div className='w-full h-[360px] xl:h-[60vh] bg-secondary' />
       </div>}
 
-      <div className=' min-h-screen '>
+      <div className='min-h-screen'>
         <div className=" xxl:px-[220px] xl:px-[96px] md:px-[64px]">
           <div className='flex mt-8 space-x-6 border-b border-gray-200 lg:mb-[20px] mx-6 '>
           {productTabs.map((tab) => (
