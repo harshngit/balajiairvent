@@ -2,7 +2,7 @@
 import React, { useRef } from 'react'
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Autoplay } from 'swiper/modules'
+import { Navigation } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 
@@ -62,7 +62,7 @@ const Testinomial = () => {
         </div>
 
         {/* Right image with testimonial card on the right side */}
-        <div className=" rounded-xl relative lg:w-[60%] w-full" onMouseEnter={() => swiperRef.current?.autoplay?.stop()} onMouseLeave={() => swiperRef.current?.autoplay?.start()}>
+        <div className=" rounded-xl relative lg:w-[60%] w-full">
           {/* Side-centered Navigation Buttons */}
           <div className="pointer-events-none absolute inset-0 flex items-center justify-between px-2 z-10">
             {/* <button ref={prevRef} aria-label="Previous" className="pointer-events-auto flex absolute xl:left-[-44px] left-[-24px] top-1/2 -translate-y-1/2 items-center justify-center">
@@ -75,15 +75,10 @@ const Testinomial = () => {
 
           {/* Testimonial card Swiper */}
           <Swiper
-            modules={[Navigation, Autoplay]}
+            modules={[Navigation]}
             loop={true}
             centeredSlides={false}
             spaceBetween={20}
-            autoplay={{
-              delay: 1000,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true
-            }}
             slidesPerView={1}
             initialSlide={1}
             autoHeight={true}
@@ -99,8 +94,6 @@ const Testinomial = () => {
                 swiper.navigation.update()
               }
               swiperRef.current = swiper
-              // ensure autoplay starts on init
-              try { swiper.autoplay && swiper.autoplay.start && swiper.autoplay.start() } catch {}
             }}
             onSwiper={(swiper) => { swiperRef.current = swiper }}
             className='w-[100%] relative xl:min-h-[400px] md:min-h-[450px] min-h-[400px] !flex'

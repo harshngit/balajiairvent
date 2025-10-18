@@ -88,7 +88,7 @@ const ProjectGrid = () => {
               <div  key={tab.category} className='relative flex items-center' ref={collabDropdownRef}>
                 <button
                   onClick={() => handleClick(tab)}
-                  className={`relative pb-2 lg:px-[20px] hover:text-[#90C4FD] transition-all duration-300 px-2 w-[120px] lg:w-auto flex justify-between items-center text-sm xl:text-[20px] md:text-[16px] lg:gap-5 gap-2  ${
+                  className={`relative pb-2 lg:px-[20px] hover:text-[#90C4FD] transition-all duration-300  w-[120px] lg:w-auto flex justify-between items-center text-sm xl:text-[20px] md:text-[16px] lg:gap-5 gap-2  ${
                     activeCategory === tab.category
                       ? "font-medium text-[#fff]"
                       : "font-light text-[#fff]/80"}
@@ -101,7 +101,7 @@ const ProjectGrid = () => {
                   <div className='cursor-pointer'
                   onClick={() => setIsCollabDropdownOpen((prev) => !prev)}
                   >
-                    <Image src={'/asset/downsmall.png'} alt='toggle' width={24} height={24} className={`${isCollabDropdownOpen ? 'rotate-180' : ''} transition-transform xl:w-[20px] xl:h-[20px] md:w-[16px] md:h-[16px]`} />
+                    <Image src={'/asset/downsmall.png'} alt='toggle' width={24} height={24} className={`${isCollabDropdownOpen ? 'rotate-180' : ''} transition-transform xl:w-[20px] xl:h-[20px] md:w-[16px] md:h-[16px] w-[15px] h-[15px]`} />
                   </div>
                 </button>
                 {isCollabDropdownOpen && (
@@ -164,9 +164,9 @@ const ProjectGrid = () => {
           <div className="flex justify-start lg:gap-[50px] items-start flex-col gap-4 lg:py-[50px] xxl:px-[220px] xl:px-[96px] md:px-[64px] px-3 py-5">
             {activeCollab === "collab1" && (<div>
             <div className='flex justify-start items-center gap-2 '>
-              <Link href={"https://www.75f.io/en-in/"} target='_blank' className='group flex justify-start items-center gap-2'>
+              <Link href={"#"} className='group flex justify-start items-center gap-2'>
               <h3 className='font-light text-[#F0F0F0] xl:text-[32px] md:text-[26px] group-hover:text-[#90C4FD] transition-all duration-300'>75F Solutions</h3>
-              <Link href={"https://www.75f.io/en-in/"} target='_blank' className=''>
+              {/* <Link href={"https://www.75f.io/en-in/"} target='_blank' className=''>
               <Image 
                 src={"/asset/Arrowsideup.png"}
                 alt="75F Solutions"
@@ -181,7 +181,7 @@ const ProjectGrid = () => {
                 height={28}
                 className='w-[28px] h-[28px] group-hover:opacity-100 group-hover:block hidden opacity-0 transition-all duration-300'
               />    
-              </Link>
+              </Link> */}
               </Link>
             </div>
             <div className='w-full lg:block hidden shadow-lg rounded-2xl overflow-hidden'>
@@ -332,10 +332,10 @@ const ProjectGrid = () => {
             {activeCollab === "collab2" && (
               <div>
               <div className='flex justify-start items-center gap-2'>
-                <Link href={"https://www.teryair.com"} target='_blank' className='flex justify-start items-center gap-2 group'>
+                <Link href={"#"} className='flex justify-start items-center gap-2 group'>
                 <h3 className='font-light text-[#F0F0F0] xl:text-[32px] md:text-[26px] group-hover:text-[#90C4FD] transition-all duration-300'>Teryair</h3>
               <div className='group'>
-              <Image 
+              {/* <Image 
                 src={"/asset/Arrowsideup.png"}
                 alt="75F Solutions"
                 width={28}
@@ -348,7 +348,7 @@ const ProjectGrid = () => {
                 width={28}
                 height={28}
                 className='w-[28px] h-[28px] group-hover:opacity-100 group-hover:block hidden opacity-0 transition-all duration-300'
-              />    
+              />     */}
               </div>    
                 </Link>
             </div>

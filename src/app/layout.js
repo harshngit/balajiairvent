@@ -65,9 +65,12 @@ export const metadata = {
     canonical: "https://balajiairvent.com",
   },
   icons: {
-    icon: "/asset/favicon_balaji.ico",
+    icon: [
+      { url: "/asset/favicon_balaji.ico", sizes: "any" },
+      { url: "/asset/favicon_balaji.png", type: "image/png" }
+    ],
     shortcut: "/asset/favicon_balaji.ico",
-    apple: "/asset/favicon_balaji.ico",
+    apple: "/asset/favicon_balaji.png",
   },
   verification: {
     google: "your-google-verification-code", // Add your Google Search Console verification code
