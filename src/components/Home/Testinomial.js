@@ -36,6 +36,14 @@ const Testinomial = () => {
       role: "Managing Director",
       logo: "/asset/home/clients/nirvanacolor.webp",
     },
+    {
+      text1: "We’ve had a great experience working with Balaji Air Vent. Their innovative solutions and customer-centric approach have helped us achieve our goals. Balaji Air Vent is moving ahead with customized solutions that fulfill customer needs.",
+      text2: "",
+      company: "Rittal India Private Limited",
+      person: "Prashant Kunder",
+      role: "Sr. Manager - IT Projects",
+      logo: "/asset/home/clients/rittallogo.webp",
+    },
   ]
   return (
     <div className="w-full xxl:px-[220px] xl:px-[96px] md:px-[64px] px-5 lg:py-14 py-10 font-onest">
