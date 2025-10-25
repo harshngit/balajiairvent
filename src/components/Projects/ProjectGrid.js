@@ -74,10 +74,10 @@ const ProjectGrid = () => {
         <div className='w-full h-[260px] md:h-[70vh] bg-gradient-to-b from-[#0F2850] from-[40%] via-[#0f28507c] via-[80%] to-white to-[100%]' />
       </div>}
       {activeCategory === "projects" && <div className='absolute inset-x-0 top-0 -z-10 pointer-events-none'>
-        <div className='w-full h-[180px] xl:h-[30vh] md:h-[40vh] bg-secondary' />
+        <div className='w-full h-[180px] xl:h-[40vh] md:h-[40vh] bg-secondary' />
       </div>}
       {activeCategory === "clients" && <div className='absolute inset-x-0 top-0 -z-10 pointer-events-none'>
-        <div className='w-full h-[360px] xl:h-[60vh] bg-secondary' />
+        <div className='w-full h-[360px] xl:h-[40vh] bg-secondary' />
       </div>}
 
       <div className='min-h-screen'>
@@ -515,7 +515,7 @@ const ProjectGrid = () => {
               alt="Clients"
               width={1440}
               height={1000}
-              className='xl:block hidden xxl:hidden   w-full h-full object-fill'
+              className='xl:block md:block hidden xxl:hidden   w-full h-full object-fill'
               />
               <Image 
               src={"/asset/projects/clients/1920.webp"}

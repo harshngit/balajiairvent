@@ -56,8 +56,16 @@ const Testinomial = () => {
             <br className='hidden md:block' /> to say about us...
           </h2>
           
-						<button onClick={() => swiperRef.current?.slideNext()} className="flex items-center w-[143px] gap-2 border border-[#0F2850] text-[#0F2850] 
-						pr-[7px] pl-[20px] py-[10px] rounded-full hover:bg-[#0F2850] hover:text-white transition-all text-[16px] ">
+						<button 
+							onClick={() => {
+								if (swiperRef.current) {
+									swiperRef.current.slideNext();
+								}
+							}} 
+							className="flex items-center w-[143px] gap-2 border border-[#0F2850] text-[#0F2850] 
+							pr-[7px] pl-[20px] py-[10px] rounded-full hover:bg-[#0F2850] hover:text-white 
+							transition-all duration-300 ease-in-out text-[16px] transform hover:scale-105"
+						>
 							View Next
 							<Image
 								src={"/asset/rightbutton.png"}
@@ -90,6 +98,8 @@ const Testinomial = () => {
             slidesPerView={1}
             initialSlide={1}
             autoHeight={true}
+            speed={800}
+            effect="slide"
             navigation={{
               prevEl: prevRef.current,
               nextEl: nextRef.current,
@@ -107,7 +117,7 @@ const Testinomial = () => {
             className='w-[100%] relative xl:min-h-[400px] md:min-h-[450px] min-h-[400px] !flex'
           >
             {testimonials.map((t, idx) => (
-              <SwiperSlide key={idx} className='relative w-full !flex !justify-start !items-center'>
+              <SwiperSlide key={idx} className='relative w-full !flex !justify-start !items-center transition-all duration-500 ease-in-out'>
                 {/* Testimonial card (layout preserved) */}
                 <div className="">
                   <div className="relative w-[100%] rounded-xl bg-[#F0F0F0] border border-[#E6A694] shadow-sm p-4 md:p-6 pt-8 md:pt-10 overflow-hidden">
